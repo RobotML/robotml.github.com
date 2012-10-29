@@ -1,0 +1,1138 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>The Alf Generator API &mdash; PROTEUS 0.2 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PROTEUS 0.2 documentation" href="../../../index.html" />
+    <link rel="up" title="Code generators" href="../../CodeGenerators.html" />
+    <link rel="next" title="Naming conventions" href="../NamingConventions.html" />
+    <link rel="prev" title="Code generators" href="../../CodeGenerators.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../NamingConventions.html" title="Naming conventions"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../../CodeGenerators.html" title="Code generators"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PROTEUS 0.2 documentation</a> &raquo;</li>
+          <li><a href="../../../DevGuide.html" >Developer Guide</a> &raquo;</li>
+          <li><a href="../../CodeGenerators.html" accesskey="U">Code generators</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="the-alf-generator-api">
+<h1>The Alf Generator API<a class="headerlink" href="#the-alf-generator-api" title="Permalink to this headline">¶</a></h1>
+<p>In RobotML, the <em class="xref std std-term">Alf</em> language is used to describe the operation contents (only OpaqueBehavior). This language permit to have a generic modeling and generate it easily in more other langauge.</p>
+<p>For your needs, you can create a specific <em class="xref std std-term">Alf</em> generator language on using this <em class="xref std std-ref">Alf Generator API</em>.</p>
+<p>::warning:: The <em class="xref std std-term">Alf</em> knowkedge is clearly recommended. Go to see the Alf language site before start your work!</p>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<img alt="Alf API overview." class="align-center" src="DevGuide/CodeGenerators/AlfGenerators/../ATK_Scenario_images/Alf_overview.png" />
+<div class="section" id="alfservices">
+<h3>AlfServices<a class="headerlink" href="#alfservices" title="Permalink to this headline">¶</a></h3>
+<p>The module <strong>AlfServices</strong> contains all the methods to translate RobotML element to functional code.</p>
+<p><em>public</em></p>
+<p><strong>public static org.eclipse.papyrus.uml.alf.alf.Block createAlfBloc(org.eclipse.papyrus.uml2.NamedElement element)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="88%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>element</td>
+<td>UML element model.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Return an Alf Bloc corresponding to the UML element parameter.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Create an Alf bloc code from an Opaque behavior UML element.</p>
+<p><strong>public static String translateAlfBlocTo_Athena(org.eclipse.papyrus.uml.alf.alf.Block bloc)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="85%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>bloc</td>
+<td>Alf bloc to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Return the alf bloc translation on Athena language.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Translate an Alf bloc to Athena code.</p>
+<p><strong>public static String translateAlfBlocTo_CPP(org.eclipse.papyrus.uml.alf.alf.Block bloc)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="85%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>bloc</td>
+<td>Alf bloc to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Return the alf bloc translation on C++ language.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Translate an Alf bloc to C++ code.</p>
+</div>
+<div class="section" id="alfblock">
+<h3>AlfBlock<a class="headerlink" href="#alfblock" title="Permalink to this headline">¶</a></h3>
+<p><em>public</em></p>
+<p><strong>AlfBlock(org.eclipse.papyrus.uml.alf.alf.Block bloc)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="69%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>bloc</td>
+<td>Original Alf bloc.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Constructor, the alf bloc is mandatory, it will be transmited to the genrators.</p>
+<p><strong>void generateTo(IAlfGenerator generator)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="66%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>generator</td>
+<td>Translate generator</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Call the Alf translation on using the generator parameter to work.</p>
+<p><strong>org.eclipse.papyrus.uml.alf.alf.Block getBlock()</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>return</td>
+<td>Return the original Alf bloc</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf bloc to get the original information.</p>
+<p><strong>void setCodeTranslation(String code)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>code</td>
+<td>Code string to append on the result.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Append the code string parameter on the code string result.</p>
+<p><strong>String getCodeTranslation()</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="74%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>return</td>
+<td>Return the code string result.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the code string translation result.</p>
+</div>
+<div class="section" id="ialfgenerator">
+<h3>IAlfGenerator<a class="headerlink" href="#ialfgenerator" title="Permalink to this headline">¶</a></h3>
+<p>Alf generator interface, contains the mandatory method to implement for the Alf generator.</p>
+<p><em>public</em></p>
+<p><strong>abstract void generate(AlfBlock bloc)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="69%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>bloc</td>
+<td>Alf bloc to translate.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Abstract method to redefine in implementation. Translate the Alf bloc.</p>
+</div>
+<div class="section" id="alfgenerator">
+<h3>AlfGenerator<a class="headerlink" href="#alfgenerator" title="Permalink to this headline">¶</a></h3>
+<p>Abstract Alf base generator. Contains the common method for all Alf generators. It implement the <em class="xref std std-ref">IAlfGenerator</em> interface.</p>
+<p><em>public</em></p>
+<p><strong>abstract void generate(AlfBlock bloc)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="69%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>bloc</td>
+<td>Alf bloc to translate.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Translate the Alf bloc.</p>
+<p><em>protected</em></p>
+<p><strong>String generateAlfBlock(Block bloc)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="69%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>bloc</td>
+<td>Alf bloc to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf bloc translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf bloc translation.</p>
+<p><strong>String generateStatementSequence(StatementSequence aStatementSequence)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="66%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aStatementSequence</td>
+<td>Alf statement sequence to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf statement sequance translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf statement sequence translation.</p>
+<p><strong>String generateDocumentedStatement(DocumentedStatement aDocumentedStatement)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="36%" />
+<col width="64%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aDocumentedStatement</td>
+<td>Alf documented statment to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf documented statment translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf documeneted statment translation.</p>
+<p><strong>String generateSequenceStatement(Statement aStatement)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aStatement</td>
+<td>Alf statment to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf statment translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf documeneted statment translation.</p>
+<p><strong>String generateStatement(Statement aStatement)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aStatement</td>
+<td>Alf statment to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf statment translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf documeneted statment translation.</p>
+<p><strong>String generateInlineStatement(InlineStatement aInlineStatement)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="39%" />
+<col width="61%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aInLineStatement</td>
+<td>Alf inline statment to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf inline statment translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf inline statment translation.</p>
+<p><strong>String generateAnnotatedStatement(AnnotatedStatement aAnnotatedStatement)*</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="63%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aAnnotatedStatement</td>
+<td>Alf annotated statment to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf annotated statment translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf annotated statment translation.</p>
+<p><strong>String generateBlockStatement(BlockStatement aBlockStatement)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="39%" />
+<col width="61%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aBlockStatement</td>
+<td>Alf block statment to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf block statment translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf block statment translation.</p>
+<p><strong>String generateEmptyStatement(EmptyStatement aEmptyStatement)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="39%" />
+<col width="61%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aEmptyStatement</td>
+<td>Alf empty statment to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf empty statment translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf empty statment translation.</p>
+<p><strong>String generateIfStatement(IfStatement aIfStatement)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="58%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aIfStatement</td>
+<td>Alf if statment to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf if statment translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf if statment translation.</p>
+<p><strong>String generateSequentialClausesTemplate(SequentialClauses aSequentialClauses)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="63%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aSequentialClauses</td>
+<td>Alf sequential clauses to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf sequential clauses translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf sequential clauses translation.</p>
+<p><strong>String generateConcurrentClausesTemplate(ConcurrentClauses aConcurrentClauses)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="63%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aConcurrentClauses</td>
+<td>Alf concurrent clauses to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf concurrent clauses translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf concurrent clauses translation.</p>
+<p><strong>String generateNonFinalClauseTemplate(NonFinalClause aNonFinalClause)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="38%" />
+<col width="62%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aNonFinalClause</td>
+<td>Alf non final clause to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf non final clause translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf non final clause translation.</p>
+<p><strong>String generateFinalClauseTemplate(FinalClause aFinalClause)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="41%" />
+<col width="59%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aFianalClause</td>
+<td>Alf final clause to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf final clause translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf fianl clause translation.</p>
+<p><strong>String generateSwitchStatement(SwitchStatement aSwitchStatement)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="38%" />
+<col width="62%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aSwitchStatement</td>
+<td>Alf switch statement to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf switch statement translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf switch statement translation.</p>
+<p><strong>String generateSwitchDefaultclause(SwitchDefaultClause aSwitchDefaultClause)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="65%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aSwitchDefaultClause</td>
+<td>Alf switch default clause to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf switch default clause translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf switch default clause translation.</p>
+<p><strong>String generateSwitchClause(SwitchClause aSwitchClause)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aSwitchClause</td>
+<td>Alf switch clause to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf switch clause translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf switch clause translation.</p>
+<p><strong>String generateSwitchCase(SwitchCase aSwitchCase)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="58%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aSwitchCase</td>
+<td>Alf switch case to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf switch case translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf switch case translation.</p>
+<p><strong>String generateNonEmptyStatementSequence(NonEmptyStatementSequence aNonEmptyStatementSequence)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="63%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>anonEmptyStatementSequence</td>
+<td>Alf non empty statement sequence to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf non empty statement sequence translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf non empty statement sequence translation.</p>
+<p><strong>String generateWhileStatement(WhileStatement aWhileStatement)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="39%" />
+<col width="61%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aWhileStatement</td>
+<td>Alf while statement to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf while statement translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf while statement translation.</p>
+<p><strong>String generateDoStatement(DoStatement aDoStatement)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="41%" />
+<col width="59%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aDoStatement</td>
+<td>Alf do statement to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf do statement translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf do statement translation.</p>
+<p><strong>String generateForStatement(ForStatement aForStatement)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aForStatement</td>
+<td>Alf for statement to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf for statement translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf for statement translation.</p>
+<p><strong>String generateBreakStatement(BreakStatement aBreakStatement)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="39%" />
+<col width="61%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aBreakStatement</td>
+<td>Alf break statement to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf break statement translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf break statement translation.</p>
+<p><strong>String generateReturnStatement(ReturnStatement aReturnStatement)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="38%" />
+<col width="62%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aReturnStatement</td>
+<td>Alf return statement to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf return statement translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf return statement translation.</p>
+<p><strong>String generateAcceptStatement(AcceptStatement aAcceptStatement)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="38%" />
+<col width="62%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aAcceptStatement</td>
+<td>Alf accept statement to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf accepet statement translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf accept statement translation.</p>
+<p><strong>String generateClassifyStatement(ClassifyStatement aClassifyStatement)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="63%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aClassifyStatement</td>
+<td>Alf classify statement to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf classify statement translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf classify statement translation.</p>
+<p><strong>String generateInvocationOrAssignementOrDeclarationStatement(InvocationOrAssignementOrDeclarationStatement aInvocationOrAssignementOrDeclarationStatement)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="41%" />
+<col width="59%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aInvocationorAssignementOrDeclarationStatement</td>
+<td>Alf invocation or assignement or declaration statement to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf invocation or assignement or declaration statement translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf  invocation, or assignement, or declaration, statement translation.</p>
+<p><strong>String generateVariableDeclarationCompletion(VariableDeclarationCompletion aVariableDeclarationCompletion)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="39%" />
+<col width="61%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aVaraibleDeclarationCompletion</td>
+<td>Alf variable declaration completion to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf variable declaration completion translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf variable declaration completion  translation.</p>
+<p><strong>String generateAssignmentCompletion(AssignmentCompletion aAssignmentCompletion)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="36%" />
+<col width="64%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aAssignementCompletion</td>
+<td>Alf assignement completion to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf assignement completion translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf assignement completion translation.</p>
+<p><strong>String generateAssignmentOperator(AssignmentOperator aAssignmentOperator)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="65%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aAssignementOperator</td>
+<td>Alf assignement operator to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf assignement operator translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf assignement operator translation.</p>
+<p><strong>String generateSuperInvocationStatement(SuperInvocationStatement aSuperInvocationStatement)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="63%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aSuperInvocationStatement</td>
+<td>Alf super invocation statement to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf super invocation translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf super invocation statement translation.</p>
+<p><strong>String generateSuperInvocationExpression(SuperInvocationExpression aSuperInvocationExpression)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="63%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aSuperInvocationExpression</td>
+<td>Alf super invocation expression to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf super invocation expression translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf super invocation expression translation.</p>
+<p><strong>String generateOperationCallExpression(OperationCallExpression aOperationCallExpression)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="63%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aOperationCallExpression</td>
+<td>Alf operation call expression to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf operation call expression translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf operation call expression translation.</p>
+<p><strong>String generateTupleTemplate(Tuple aTuple)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aTuple</td>
+<td>Alf tuple to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf tuple translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf tuple translation.</p>
+<p><strong>String generateTupleElement(TupleElement aTupleElement)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="69%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aTupleElement</td>
+<td>Alf tuple element to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf tuple element translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf tuple element translation.</p>
+<p><strong>String generateOperationCallExpressionWithoutDot(OperationCallExpressionWithoutDot aOperationCallExpressionWithoutDot)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="39%" />
+<col width="61%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aOperationCallExpressionWithoutDot</td>
+<td>Alf operation call expression without dot to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf operation call expression without dot translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf operation call expression without dot translation.</p>
+<p><strong>String generateThisInvocationStatement(ThisInvocationStatement aThisInvocationStatement)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="63%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aThisInvocationstatement</td>
+<td>Alf this invocation statement to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf this invocation statement translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf this invocation statement translation.</p>
+<p><strong>String generateInstanceCreationInvocationStatement(InstanceCreationInvocationStatement aInstanceCreationInvocationStatement)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aInstanceCreationinvocationStatement</td>
+<td>Alf instance creation invocation statement to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf instance creation invocation statement translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf instance creation invocation statement translation.</p>
+<p><strong>String generateAnnotation(Annotation aAnnotation)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aAnnotation</td>
+<td>Alf annotation to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf annotation translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf annotation translation.</p>
+<p><strong>String generateExpressionForm(Expression aExpression)</strong></p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>aExpression</td>
+<td>Alf expression to translate.</td>
+</tr>
+<tr class="row-even"><td>return</td>
+<td>Alf expression translation.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Return the Alf expression translation.</p>
+<p><strong>String generateSequenceExpressionForm(EList&lt;Expression&gt; list)</strong></p>
+<p><strong>String generateConditionalTestExpression(ConditionalTestExpression aConditionalTestExpression)</strong></p>
+<p><strong>String generateConditionalOrExpression(ConditionalOrExpression aConditionalOrExpression)</strong></p>
+<p><strong>String generateConditionalAndExpression(ConditionalAndExpression aConditionalAndExpression)</strong></p>
+<p><strong>String generateInclusiveOrExpression(InclusiveOrExpression aInclusiveOrExpression)</strong></p>
+<p><strong>String generateExclusiveOrExpression(ExclusiveOrExpression aExclusiveOrExpression)</strong></p>
+<p><strong>String generateAndExpression(AndExpression aAndExpression)</strong></p>
+<p><strong>String generateEqualityExpression(EqualityExpression aEqualityExpression)</strong></p>
+<p><strong>String generateClassificationExpression(ClassificationExpression aClassificationExpression)</strong></p>
+<p><strong>String generateSequenceConstructionOrAccessCompletion(SequenceConstructionOrAccessCompletion aSequenceConstructionOrAccessCompletion)</strong></p>
+<p><strong>String generateQualifiedNamePath(QualifiedNamePath aQualifiedNamePath)</strong></p>
+<p><strong>String generateUnqualifiedName(UnqualifiedName aUnqualifiedName)</strong></p>
+<p><strong>String generateTemplateBinding(TemplateBinding aTemplateBinding)</strong></p>
+<p><strong>String generateRelationalExpression(RelationalExpression aRelationalExpression)</strong></p>
+<p><strong>String generateShiftExpression(ShiftExpression aShiftExpression)</strong></p>
+<p><strong>String generateAdditiveExpression(AdditiveExpression aAdditiveExpression)</strong></p>
+<p><strong>String generateMultiplicativeExpression(MultiplicativeExpression aMultiplicativeExpression)</strong></p>
+<p><strong>String generateUnaryExpression(UnaryExpression aUnaryExpression)</strong></p>
+<p><strong>String generatePrimaryExpression(PrimaryExpression aPrimaryExpression)</strong></p>
+<p><strong>String generateValueSpecification(ValueSpecification aValueSpecification)</strong></p>
+<p><strong>String generateThisExpression(ThisExpression aThisExpression)</strong></p>
+<p><strong>String generateNullExpression(NullExpression aNullExpression)</strong></p>
+<p><strong>String generateParenthesizedExpression(ParenthesizedExpression aParenthesizedExpression)</strong></p>
+<p><strong>String generateNonLiteralValueSpecification(NonLiteralValueSpecification aNonLiteralValueSpecification)</strong></p>
+<p><strong>String generateInstanceCreationExpression(InstanceCreationExpression aInstanceCreationExpression)</strong></p>
+<p><strong>String generateQualifiedNameWithBinding(QualifiedNameWithBinding aQualifiedNameWithBinding)</strong></p>
+<p><strong>String generateSequenceConstructionCompletion(SequenceConstructionCompletion aSequenceConstructionCompletion)</strong></p>
+<p><strong>String generateLiteral(LITERAL aLITERAL)</strong></p>
+<p><strong>String generateIntegerLiteral(INTEGER_LITERAL aINTEGER_LITERAL)</strong></p>
+<p><strong>String generateStringLiteral(STRING_LITERAL aSTRING_LITERAL)</strong></p>
+<p><strong>String generateBooleanLiteral(BOOLEAN_LITERAL aBOOLEAN_LITERAL)</strong></p>
+<p><strong>String generateNumberLiteral(NUMBER_LITERAL aNUMBER_LITERAL)</strong></p>
+<p><strong>String generateUnlimitedLiteral(UNLIMITED_LITERAL aUNLIMITED_LITERAL)</strong></p>
+<p><strong>String generateSuffixExpression(SuffixExpression aSuffixExpression, String dot_or_arrow)</strong></p>
+<p><strong>String generatePropertyCallExpression(PropertyCallExpression aPropertyCallExpression)</strong></p>
+<p><strong>String generateLinkOperationExpression(LinkOperationExpression aLinkOperationExpression)</strong></p>
+<p><strong>String generateLinkOperationTuple(LinkOperationTuple aLinkOperationTuple)</strong></p>
+<p><strong>String generateLinkOperationTupleElement(LinkOperationTupleElement aLinkOperationTupleElement)</strong></p>
+<p><strong>String generateLinkOperationKind(LinkOperationKind aLinkOperationKind)</strong></p>
+<p><strong>String generateSequenceOperationExpression(SequenceOperationExpression aSequenceOperationExpression)</strong></p>
+<p><strong>String generateSequenceReductionExpression(SequenceReductionExpression aSequenceReductionExpression)</strong></p>
+<p><strong>String generateSequenceExpansionExpression(SequenceExpansionExpression aSequenceExpansionExpression)</strong></p>
+<p><strong>String generateClassExtentExpression(ClassExtentExpression aClassExtentExpression)</strong></p>
+<p><strong>String generateLocalNameDeclarationStatement(LocalNameDeclarationStatement aLocalNameDeclarationStatement)</strong></p>
+<p><strong>String generateNameExpression(NameExpression aNameExpression, Boolean isNotNew)</strong></p>
+</div>
+<div class="section" id="athena-alfgenerator">
+<h3>Athena_AlfGenerator<a class="headerlink" href="#athena-alfgenerator" title="Permalink to this headline">¶</a></h3>
+<p>Specialized Alf generator to translate Alf bloc to Athena code. It inherit from <em class="xref std std-ref">AlfGenerator</em>.</p>
+<p><em>protected</em></p>
+<p><strong>String generateAlfBlock(Block bloc)</strong></p>
+<p><strong>String generateStatement(Statement aStatement)</strong></p>
+<p><strong>String generateIfStatement(IfStatement aIfStatement)</strong></p>
+<p><strong>String generateSequentialClausesTemplate(SequentialClauses aSequentialClauses)</strong></p>
+<p><strong>String generateConcurrentClausesTemplate(ConcurrentClauses aConcurrentClauses)</strong></p>
+<p><strong>String generateNonFinalClauseTemplate(NonFinalClause aNonFinalClause)</strong></p>
+<p><strong>String generateWhileStatement(WhileStatement aWhileStatement)</strong></p>
+<p><strong>String generateInvocationOrAssignementOrDeclarationStatement(InvocationOrAssignementOrDeclarationStatement aInvocationOrAssignementOrDeclarationStatement)</strong></p>
+<p><strong>String generateVariableDeclarationCompletion(VariableDeclarationCompletion aVariableDeclarationCompletion)</strong></p>
+<p><strong>String generateLocalNameDeclarationStatement(LocalNameDeclarationStatement aLocalNameDeclarationStatement)</strong></p>
+<p><strong>String generateNameExpression(NameExpression aNameExpression, Boolean isNotNew)</strong></p>
+</div>
+<div class="section" id="cpp-alfgenerator">
+<h3>CPP_AlfGenerator<a class="headerlink" href="#cpp-alfgenerator" title="Permalink to this headline">¶</a></h3>
+<p>Specialized Alf generator to translate Alfbloc to C++ code.  It inherit from <em class="xref std std-ref">AlfGenerator</em>.</p>
+<p><em>public</em></p>
+<p><strong>CPP_AlfGenerator()</strong></p>
+<p><em>protected</em></p>
+<p><strong>String generateAlfBlock(Block bloc)</strong></p>
+<p><strong>String generateStatement(Statement aStatement)</strong></p>
+<p><strong>String generateInlineStatement(InlineStatement aInLineStatement)</strong></p>
+<p><strong>String generateIfStatement(IfStatement aIfStatement)</strong></p>
+<p><strong>String generateSequentialClausesTemplate(SequentialClauses aSequentialClauses)</strong></p>
+<p><strong>String generateConcurrentClausesTemplate(ConcurrentClauses aConcurrentClauses)</strong></p>
+<p><strong>String generateNonFinalClauseTemplate(NonFinalClause aNonFinalClause)</strong></p>
+<p><strong>String generateSwitchStatement(SwitchStatement aSwitchStatement)</strong></p>
+<p><strong>String generateSwitchDefaultclause(SwitchDefaultClause aSwitchDefaultClause)</strong></p>
+<p><strong>String generateSwitchClause(SwitchClause aSwitchClause)</strong></p>
+<p><strong>String generateSwitchCase(SwitchCase aSwitchCase)</strong></p>
+<p><strong>String generateWhileStatement(WhileStatement aWhileStatement)</strong></p>
+<p><strong>String generateDoStatement(DoStatement aDoStatement)</strong></p>
+<p><strong>String generateInvocationOrAssignementOrDeclarationStatement</strong></p>
+<p><strong>String generateVariableDeclarationCompletion(VariableDeclarationCompletion aVariableDeclarationCompletion)</strong></p>
+<p><strong>String generateSuperInvocationExpression(SuperInvocationExpression aSuperInvocationExpression)</strong></p>
+<p><strong>String generateOperationCallExpressionWithoutDot(OperationCallExpressionWithoutDot aOperationCallExpressionWithoutDot)</strong></p>
+<p><strong>String generateThisExpression(ThisExpression aThisExpression)</strong></p>
+<p><strong>String generateInstanceCreationExpression(InstanceCreationExpression aInstanceCreationExpression)</strong></p>
+<p><strong>String generateQualifiedNameWithBinding(QualifiedNameWithBinding aQualifiedNameWithBinding)</strong></p>
+<p><strong>String generateLocalNameDeclarationStatement(LocalNameDeclarationStatement aLocalNameDeclarationStatement)</strong></p>
+<p><strong>String generateNameExpression(NameExpression aNameExpression, Boolean isNotNew)</strong></p>
+<p>}</p>
+</div>
+</div>
+<div class="section" id="how-to-use-an-existing-alf-generator">
+<h2>How to use an existing Alf generator<a class="headerlink" href="#how-to-use-an-existing-alf-generator" title="Permalink to this headline">¶</a></h2>
+<p>You can use an Alf generator in you :term`RobotML&lt;robotml&gt;` generator development.
+You have two solution to call an existing Alf generator. But that depend how you develop your <a class="reference internal" href="../../../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> generator.
+* If you use <em class="xref std std-term">OCL</em> template, you should to import the AlfServices into your template.Then call &#8220;createAlfBloc&#8221; to get an Alf bloc corresponding to your operation body, and call the right operation translation you need.
+* If you use Java class, you should to refrence the Alf generator API, and call the static metohds &#8220;createAlfBloc&#8221; and the translation operation.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">The Alf Generator API</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a><ul>
+<li><a class="reference internal" href="#alfservices">AlfServices</a></li>
+<li><a class="reference internal" href="#alfblock">AlfBlock</a></li>
+<li><a class="reference internal" href="#ialfgenerator">IAlfGenerator</a></li>
+<li><a class="reference internal" href="#alfgenerator">AlfGenerator</a></li>
+<li><a class="reference internal" href="#athena-alfgenerator">Athena_AlfGenerator</a></li>
+<li><a class="reference internal" href="#cpp-alfgenerator">CPP_AlfGenerator</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#how-to-use-an-existing-alf-generator">How to use an existing Alf generator</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../../CodeGenerators.html"
+                        title="previous chapter">Code generators</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../NamingConventions.html"
+                        title="next chapter">Naming conventions</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/DevGuide/CodeGenerators/AlfGenerators/AlfGenerators_API.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../NamingConventions.html" title="Naming conventions"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../../CodeGenerators.html" title="Code generators"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PROTEUS 0.2 documentation</a> &raquo;</li>
+          <li><a href="../../../DevGuide.html" >Developer Guide</a> &raquo;</li>
+          <li><a href="../../CodeGenerators.html" >Code generators</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Serge Stinckwich, Pierrick Koch, Bruno Patin.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
