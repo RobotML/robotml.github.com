@@ -159,10 +159,9 @@
 </li>
 <li>CarLikeOdometry structure content:<ul>
 <li>Header header</li>
-<li>uint32 seq = numbering from 0 and is incremented for each message</li>
-<li>time stamp</li>
 <li>float64 steering_angle;</li>
-<li>float64 velocity;</li>
+<li>float64 left_rear_wheel_distance;</li>
+<li>float64 right_rear_wheel_distance;</li>
 <li>float64 left_rear_wheel_velocity;</li>
 <li>float64 right_rear_wheel_velocity;</li>
 </ul>
@@ -177,8 +176,6 @@
 </li>
 <li>DifferencialOdometry structure content :<ul>
 <li>Header header</li>
-<li>uint32 seq = numbering from 0 and is incremented for each message</li>
-<li>time stamp</li>
 <li>float64 left_distance;</li>
 <li>float64 right_distance;</li>
 <li>float64 left_velocity;</li>
