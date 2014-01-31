@@ -51,10 +51,134 @@
             
   <div class="section" id="robotml-platform-installation">
 <span id="robotmlplatforminstallation"></span><h1>RobotML Platform Installation<a class="headerlink" href="#robotml-platform-installation" title="Permalink to this headline">¶</a></h1>
-<p>Contents:</p>
 <div class="toctree-wrapper compound">
 <ul class="simple">
 </ul>
+</div>
+</div>
+<div class="section" id="modeller">
+<h1>Modeller<a class="headerlink" href="#modeller" title="Permalink to this headline">¶</a></h1>
+<p>You need to download the <a class="reference external" href="http://www.eclipse.org/downloads/packages/eclipse-modeling-tools/keplersr1">Eclipse Modelling tools</a>.
+Then extract the modeller on your computer and launch it.
+Next, you need to install <a class="reference internal" href="Glossary.html#term-papyrus"><em class="xref std std-term">Papyrus</em></a>, with <a class="reference internal" href="Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> extra feature, and <a class="reference internal" href="Glossary.html#term-subclipse"><em class="xref std std-term">Subclipse</em></a>.</p>
+<div class="section" id="papyrus">
+<span id="papyrusinstallation"></span><h2>Papyrus<a class="headerlink" href="#papyrus" title="Permalink to this headline">¶</a></h2>
+<p>In <strong>Help</strong> menu, select &#8220;Install new software...&#8221;. Clic on &#8220;Add&#8221; button, and add the right update site.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="81%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Eclipse version</th>
+<th class="head">Update site</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Juno</td>
+<td><a class="reference external" href="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/juno">http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/juno</a></td>
+</tr>
+<tr class="row-odd"><td>Kepler</td>
+<td><a class="reference external" href="http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/kepler">http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/kepler</a></td>
+</tr>
+</tbody>
+</table>
+<p>Install the &#8220;Papyrus UML&#8221; components.</p>
+</div>
+<div class="section" id="robotml">
+<span id="robotmlinstallation"></span><h2>RobotML<a class="headerlink" href="#robotml" title="Permalink to this headline">¶</a></h2>
+<p>To install <a class="reference internal" href="Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a>, <em class="xref std std-term">Papyrus`is required. See :ref:`Papyrus installation</em> to install it.
+In <strong>Help</strong> menu, select <strong>Install new software...</strong>, and choose the <strong>Papyrus update site</strong>. Uncheck the <strong>group item</strong> option.
+In the filter field, enter <strong>RobotML</strong> and select the binary element. You can now validate the installation.</p>
+</div>
+<div class="section" id="robotml-extension">
+<span id="robotmlextensioninstallation"></span><h2>RobotML extension<a class="headerlink" href="#robotml-extension" title="Permalink to this headline">¶</a></h2>
+<p>RobotML extension is not include as feature of <a class="reference internal" href="Glossary.html#term-papyrus"><em class="xref std std-term">Papyrus</em></a>. You need to build the <em>RobotML extension</em> update site to install it.</p>
+<div class="section" id="robotml-extension-building">
+<h3>RobotML extension building<a class="headerlink" href="#robotml-extension-building" title="Permalink to this headline">¶</a></h3>
+<p>Create a new workspace named as <em>RobotML_Extension</em>. Import from <em class="xref std std-term">Git</em> the projet following project:
+- org.eclipse.papyrus.robotml.extension
+- org.eclipse.papyrus.robotml.extension.feature
+- org.eclipse.papyrus.robotml.extension.update</p>
+<p>In the <em>org.eclipse.papyrus.robotml.extension.update</em> open the file <em>site.xml</em>. And clic and the <strong>Build All</strong> button.</p>
+<img alt="RobotML extension building." class="align-center" src="images/robotml_extension_build.png" />
+<p>The files <em>Artfact.jar</em> and <em>XXXXXX.jar</em> as been created in the update site project.</p>
+<p>Now Got to the <strong>Help</strong> menu and choose <strong>Install new software...</strong>. Clic on the <strong>Add</strong> button and select to add a local update site.</p>
+<img alt="Add robotML extension update site" class="align-center" src="images/robotml_extension_add_site.png" />
+<p>Select the path of the update site project, and validate. In the update site viewer, check the <em>Dynamic validation</em> item.</p>
+<img alt="RobotML extension item selection update" class="align-center" src="images/robotML_extension_selection.png" />
+<p>Click next and accept the condition to finish the installation.</p>
+<p>Ok the extension as been install on your platform.</p>
+</div>
+</div>
+</div>
+<div class="section" id="generator">
+<h1>Generator<a class="headerlink" href="#generator" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="acceleo">
+<h2>Acceleo<a class="headerlink" href="#acceleo" title="Permalink to this headline">¶</a></h2>
+<p>To install <a class="reference internal" href="Glossary.html#term-acceleo"><em class="xref std std-term">Acceleo</em></a> on your platform, use the Eclips&#8217;s tool <strong>Install Modeling Component</strong>, from the <strong>*Help</strong> menu.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="DevGuide/Generator/Generator.html#devguidegeneratoracceleo"><em>Acceleo presentation</em></a></p>
+</div>
+</div>
+<div class="section" id="xtext">
+<h2>XText<a class="headerlink" href="#xtext" title="Permalink to this headline">¶</a></h2>
+<p>To install <a class="reference internal" href="Glossary.html#term-xtext"><em class="xref std std-term">Xtext</em></a> on your platform, use the Eclips&#8217;s tool <strong>Install Modeling Component</strong>, from the <strong>*Help</strong> menu.</p>
+</div>
+<div class="section" id="rtmaps">
+<h2>RTMaps<a class="headerlink" href="#rtmaps" title="Permalink to this headline">¶</a></h2>
+<p><em class="xref std std-term">RTMaps</em> has an extras feature of <a class="reference internal" href="Glossary.html#term-papyrus"><em class="xref std std-term">Papyrus</em></a>. To use you need to have <a class="reference internal" href="Glossary.html#term-papyrus"><em class="xref std std-term">Papyrus</em></a> and <a class="reference internal" href="Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> installed on yout platform.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#papyrusinstallation"><em>Papyrus installation</em></a> and <em class="xref std std-ref">RobotML installation&lt;RobotMLInstallation</em></p>
+</div>
+<p>In <strong>Help</strong> menu, select <strong>Install new software...</strong>, and choose the <strong>Papyrus update site</strong>. Uncheck the <strong>group item</strong> option.
+In the filter field, enter <strong>RTMaps</strong> and select the binary element. You can now validate the installation.</p>
+<img alt="Install RTMaps RobtoML generator" class="align-center" src="images/rtmpas_installation.png" />
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><em class="xref std std-ref">RTMaps presentation</em></p>
+</div>
+</div>
+<div class="section" id="orocos">
+<h2>OROCOS<a class="headerlink" href="#orocos" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="Glossary.html#term-orocos"><em class="xref std std-term">OROCOS</em></a> has an extras feature of <a class="reference internal" href="Glossary.html#term-papyrus"><em class="xref std std-term">Papyrus</em></a>. To use you need to have <a class="reference internal" href="Glossary.html#term-papyrus"><em class="xref std std-term">Papyrus</em></a> and <a class="reference internal" href="Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> installed on yout platform.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#papyrusinstallation"><em>Papyrus installation</em></a> and <em class="xref std std-ref">RobotML installation&lt;RobotMLInstallation</em></p>
+</div>
+<p>In <strong>Help</strong> menu, select <strong>Install new software...</strong>, and choose the <strong>Papyrus update site</strong>. Uncheck the <strong>group item</strong> option.
+In the filter field, enter <strong>OROCOS</strong> and select the binary element. You can now validate the installation.</p>
+<img alt="Install Orrocos RobtoML generator" class="align-center" src="images/orrocos_installation.png" />
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><em class="xref std std-ref">Orrocos presentation</em></p>
+</div>
+</div>
+<div class="section" id="arrocam">
+<h2>Arrocam<a class="headerlink" href="#arrocam" title="Permalink to this headline">¶</a></h2>
+<p><em class="xref std std-term">Arrocam</em> has an extras feature of <a class="reference internal" href="Glossary.html#term-papyrus"><em class="xref std std-term">Papyrus</em></a>. To use you need to have <a class="reference internal" href="Glossary.html#term-papyrus"><em class="xref std std-term">Papyrus</em></a> and <a class="reference internal" href="Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> installed on yout platform.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#papyrusinstallation"><em>Papyrus installation</em></a> and <em class="xref std std-ref">RobotML installation&lt;RobotMLInstallation</em></p>
+</div>
+<p>In <strong>Help</strong> menu, select <strong>Install new software...</strong>, and choose the <strong>Papyrus update site</strong>. Uncheck the <strong>group item</strong> option.
+In the filter field, enter <strong>Arrocam</strong> and select the binary element. You can now validate the installation.</p>
+<img alt="Install Arrocam RobtoML generator" class="align-center" src="images/arrocam_installation.png" />
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><em class="xref std std-ref">Arrocam presentation</em></p>
+</div>
+</div>
+<div class="section" id="dynamic-validation">
+<h2>Dynamic Validation<a class="headerlink" href="#dynamic-validation" title="Permalink to this headline">¶</a></h2>
+<p>Dynamic validation is a RobotML extension include. It be installed, with the extension.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><em class="xref std std-ref">Dynamic validation presentation</em></p>
+</div>
+<p><a class="reference internal" href="DevGuide/Platform installation/PlatformInstallation.html#platforminstallation"><em>Up</em></a></p>
 </div>
 </div>
 
@@ -64,6 +188,29 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">RobotML Platform Installation</a></li>
+<li><a class="reference internal" href="#modeller">Modeller</a><ul>
+<li><a class="reference internal" href="#papyrus">Papyrus</a></li>
+<li><a class="reference internal" href="#robotml">RobotML</a></li>
+<li><a class="reference internal" href="#robotml-extension">RobotML extension</a><ul>
+<li><a class="reference internal" href="#robotml-extension-building">RobotML extension building</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#generator">Generator</a><ul>
+<li><a class="reference internal" href="#acceleo">Acceleo</a></li>
+<li><a class="reference internal" href="#xtext">XText</a></li>
+<li><a class="reference internal" href="#rtmaps">RTMaps</a></li>
+<li><a class="reference internal" href="#orocos">OROCOS</a></li>
+<li><a class="reference internal" href="#arrocam">Arrocam</a></li>
+<li><a class="reference internal" href="#dynamic-validation">Dynamic Validation</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="IntroductionToRobotML/DownloadingAndInstalling.html"
                         title="previous chapter">Downloading and installing</a></p>
