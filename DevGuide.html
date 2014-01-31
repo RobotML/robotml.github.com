@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Developer Guide &mdash; RobotML 1.2 documentation</title>
+    <title>Developer Guide &mdash; RobotML 2.0alpha documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.2',
+        VERSION:     '2.0alpha',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,9 +23,9 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="RobotML 1.2 documentation" href="index.html" />
-    <link rel="next" title="Introduction to meta-modeling" href="DevGuide/IntroductionToMetaModeling.html" />
-    <link rel="prev" title="Generating documentation" href="UserGuide/GeneratingDocumentation.html" /> 
+    <link rel="top" title="RobotML 2.0alpha documentation" href="index.html" />
+    <link rel="next" title="Architecture application" href="DevGuide/Architecture application/ArchitectureApplication.html" />
+    <link rel="prev" title="How-to : CycabTK Simulator" href="UserGuide/ExamplesOfUse/HowToCycabTK.html" /> 
   </head>
   <body>
     <div class="related">
@@ -35,12 +35,12 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="DevGuide/IntroductionToMetaModeling.html" title="Introduction to meta-modeling"
+          <a href="DevGuide/Architecture application/ArchitectureApplication.html" title="Architecture application"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="UserGuide/GeneratingDocumentation.html" title="Generating documentation"
+          <a href="UserGuide/ExamplesOfUse/HowToCycabTK.html" title="How-to : CycabTK Simulator"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">RobotML 1.2 documentation</a> &raquo;</li> 
+        <li><a href="index.html">RobotML 2.0alpha documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -50,27 +50,30 @@
           <div class="body">
             
   <div class="section" id="developer-guide">
-<h1>Developer Guide<a class="headerlink" href="#developer-guide" title="Permalink to this headline">¶</a></h1>
+<span id="devguide"></span><h1>Developer Guide<a class="headerlink" href="#developer-guide" title="Permalink to this headline">¶</a></h1>
+<p>This section will describe how to install and use the RobotML Domain Specific-Language.</p>
 <p>Contents:</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="DevGuide/IntroductionToMetaModeling.html">Introduction to meta-modeling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DevGuide/RobotMLMetaModel.html">RobotML meta-model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DevGuide/IntroductionToCodeGeneration.html">Introduction to code generation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DevGuide/CreateANewGenerator.html">Create a new code generator / How to contribute to the code generation menu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DevGuide/CodeGenerators.html">Code generators</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="DevGuide/CodeGenerators/AlfGenerators/AlfGenerators_API.html">Alf generators API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="DevGuide/CodeGenerators/RobotMLGenerators/RobotMLGenerators.html">RobotML generator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="DevGuide/CodeGenerators/NamingConventions.html">Naming conventions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="DevGuide/CodeGenerators/StandardSensorsStructures.html">Standard sensors structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DevGuide/Architecture application/ArchitectureApplication.html">Architecture application</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DevGuide/Architecture application/ArchitectureApplication.html#generality">Generality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DevGuide/Architecture application/ArchitectureApplication.html#repository-architecture">Repository architecture</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="DevGuide/InstallationForDevelopers.html">Installation for developers</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="DevGuide/InstallationForDevelopers/RobotMLPlateformInstallationFromUpdateSite.html">RobotML plateform installation from update site</a></li>
-<li class="toctree-l2"><a class="reference internal" href="DevGuide/InstallationForDevelopers/RevisitOfDistributionInstallation.html">Revisit of RobotML-sdk Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="DevGuide/InstallationForDevelopers/VirtualBox.html">VirtualBox</a></li>
-<li class="toctree-l2"><a class="reference internal" href="DevGuide/InstallationForDevelopers/SVN.html">SVN</a></li>
-<li class="toctree-l2"><a class="reference internal" href="DevGuide/InstallationForDevelopers.html#description">Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DevGuide/Modeller/modeller.html">Modeller</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DevGuide/Modeller/modeller.html#meta-modelling">Meta modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DevGuide/Modeller/modeller.html#dsl-detailed">DSL detailed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DevGuide/Modeller/modeller.html#installation">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DevGuide/Generator/Generator.html">Generator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DevGuide/Generator/Generator.html#about-acceleo">About Acceleo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DevGuide/Generator/Generator.html#acceleo-tutorials">Acceleo tutorials</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DevGuide/Platform installation/PlatformInstallation.html">Platform Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DevGuide/Platform installation/PlatformInstallation.html#modeller">Modeller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DevGuide/Platform installation/PlatformInstallation.html#generator">Generator</a></li>
 </ul>
 </li>
 </ul>
@@ -84,11 +87,11 @@
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="UserGuide/GeneratingDocumentation.html"
-                        title="previous chapter">Generating documentation</a></p>
+  <p class="topless"><a href="UserGuide/ExamplesOfUse/HowToCycabTK.html"
+                        title="previous chapter">How-to : CycabTK Simulator</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="DevGuide/IntroductionToMetaModeling.html"
-                        title="next chapter">Introduction to meta-modeling</a></p>
+  <p class="topless"><a href="DevGuide/Architecture application/ArchitectureApplication.html"
+                        title="next chapter">Architecture application</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/DevGuide.txt"
@@ -118,17 +121,17 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="DevGuide/IntroductionToMetaModeling.html" title="Introduction to meta-modeling"
+          <a href="DevGuide/Architecture application/ArchitectureApplication.html" title="Architecture application"
              >next</a> |</li>
         <li class="right" >
-          <a href="UserGuide/GeneratingDocumentation.html" title="Generating documentation"
+          <a href="UserGuide/ExamplesOfUse/HowToCycabTK.html" title="How-to : CycabTK Simulator"
              >previous</a> |</li>
-        <li><a href="index.html">RobotML 1.2 documentation</a> &raquo;</li> 
+        <li><a href="index.html">RobotML 2.0alpha documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2009-2013, PROTEUS consortium.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+        &copy; Copyright 2009-2014, PROTEUS consortium.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
     </div>
   </body>
 </html>

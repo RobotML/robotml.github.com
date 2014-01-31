@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Effibox &mdash; RobotML 2.0alpha documentation</title>
+    
+    <link rel="stylesheet" href="../../../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../../',
+        VERSION:     '2.0alpha',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+    <link rel="top" title="RobotML 2.0alpha documentation" href="../../../../../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="../../../../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="effibox">
+<h1>Effibox<a class="headerlink" href="#effibox" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+<p>TODO mise en forme</p>
+<p>Generation RobotML to Effibox</p>
+<p>Effibox generated application</p>
+<p>The generator creates a complete Effibox application containing:
+- subscriptions to the sensors used in the modeling
+- all model classes assigned to the middleware
+- standard datatypes and custom datatypes
+Below is an example of a generated application tree:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../../../../_images/tree.png"><img alt="../../../../../_images/tree.png" src="../../../../../_images/tree.png" style="width: 300px;" /></a>
+</div>
+<p>In the &#8220;src&#8221; directory are placed all the c + + source files:
+ -. RoboCabApplication * pp is the main class
+- Data structures (standard and custom) are stored in a subdirectory Datatypes
+ - The components of the model are stored in a subdirectory Software</p>
+<p>Correspondence between the model and the generated code:
+Components:
+Component &#8220;RobotML&#8221; is translating as a C++ class. The elements of the component are declared as class attributes:
+- Instance of each sub-component
+- Input ports
+- Outputs ports
+- Internal and external connections between components
+- State machines and transitions</p>
+<p>Ports:</p>
+<p>Output Ports:</p>
+<p>Each output port is translated by an Effibox communication object named TaskBuffer.
+In this object is assigned to one or more processing functions.
+Each time data is added to TaskBuffer (push method), all associated processing functions are executed in parallel.</p>
+<p>Input port :
+An input port is translated as a method of the class corresponding to the component.
+This method can be associated with an output port as a processing function.
+Then, it&#8217;s automatically called when an event is transmitted by the output port connected.</p>
+<p>Connections:
+Internal:
+Within a macro-component, several sub-components may have their input/output ports / interconnected.
+The connection is simply an association with an input port and an output port, thanks to addFunctionToExecute method in TaskBuffer class (see output port).</p>
+<p>Example :
+//inner components connexions
+pathPlanner.pathDef-&gt;addFunctionToExecute(boost::bind(&amp;LocalisationModule::pathDefIn, &amp;localisation, _1));</p>
+<p>External:
+In a macro-component, an external connection is a connection between an input of an internal component and an input of the macro-component,
+or between an output of an internal component and an output of the macro-component.
+ - An external connection &#8220;input-input&#8221; is translated by encoding the input port of the macro-component as a method that calls the method corresponding to the input port of the subcomponent.
+ - An external connection &#8220;output-output&#8221; is translated by encoding the output port of the macro-component as a pointer to the input port of the internal component.</p>
+<p>State Machines :
+State names are translate into a structure enum. Transitions are implemented as methods. If a method has already a c++ content in modeling, this content is copied.</p>
+<p>Limits :
+- Only the contents of c++ transition functions are copied. If the content is written in another language, it will be ignored.
+- The change of state is currently not implemented correctly.</p>
+<p>Datatypes :
+- RobotML datatypes: the RobotML datatypes are converted into C++ structures using standard C + + language. Thus there may be differences between the datatypes and datatypes modeling after translation.
+- User datatypes: the user-defined datatypes are built the same way, based on the RobotML translate datatypes.</p>
+<p>External algorithms:
+Not supported by the generator for the moment.</p>
+<p>Port Service
+Not supported by the generator for the moment.</p>
+<p>Deployment plan :
+- All components containing the following stereotypes are generated as a sensor subscription: CameraSystem, GPSSystem, InertialMeasurementUnitSystem, InertialNavigationSystem, OdometrySystem, Robot (see next paragraph).
+- All components allocated on the platform are generated as an Effibox component, whatever their stereotype.</p>
+<p>Sensor connections:
+The sensor connections are translated as Effibox subscriptions.
+They are stored in the xml file describing the Effibox application .awp file.
+Processing functions associated with the sensors are encoded in the main application class. In each function, Effibox types are converted to RoboML type. Here dataflows are connected to inputs of instantiated components.</p>
+<p>To make the sensor data connections to your RobotML components works properly, you must respect some contraints into the model:
+- A RobotML IMU sensor must transmit the datatype Imu in an output dataflow.
+- A RobotML Gps sensor must transmit the datatype NavSatFix in an output dataflow.
+- A RobotML Camera sensor must transmit the datatype Image in an output dataflow.
+- A RobotML Lidar sensor must transmit the datatype LidarScan in an output dataflow.
+- A RobotML Odometry sensor must transmit the datatype CarLikeOdometry (Vipalab for example) or DifferentialOdometry (wifibot for example) in an output dataflow.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../../../_sources/UserGuide/RobotMLGenerationProcess/Generation/Targets/Middlewares/Effibox.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="../../../../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009-2014, PROTEUS consortium.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+    </div>
+  </body>
+</html>

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Revisit of RobotML-sdk Installation &mdash; RobotML 1.2 documentation</title>
+    <title>Revisit of RobotML-sdk Installation &mdash; RobotML 2.0alpha documentation</title>
     
     <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '1.2',
+        VERSION:     '2.0alpha',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,10 +23,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="RobotML 1.2 documentation" href="../../index.html" />
-    <link rel="up" title="Installation for developers" href="../InstallationForDevelopers.html" />
-    <link rel="next" title="VirtualBox" href="VirtualBox.html" />
-    <link rel="prev" title="RobotML plateform installation from update site" href="RobotMLPlateformInstallationFromUpdateSite.html" /> 
+    <link rel="top" title="RobotML 2.0alpha documentation" href="../../index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -35,15 +32,7 @@
         <li class="right" style="margin-right: 10px">
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="VirtualBox.html" title="VirtualBox"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="RobotMLPlateformInstallationFromUpdateSite.html" title="RobotML plateform installation from update site"
-             accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">RobotML 1.2 documentation</a> &raquo;</li>
-          <li><a href="../../DevGuide.html" >Developer Guide</a> &raquo;</li>
-          <li><a href="../InstallationForDevelopers.html" accesskey="U">Installation for developers</a> &raquo;</li> 
+        <li><a href="../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -63,7 +52,8 @@ Other tools installation are detailed and are associated to page of their own as
 <li><a class="reference external" href="https://dassault3.ddo.net/svn/proteus-wp2/trunk/S2.3.4-PROTEUS-Distribution/install/proteus.run">svn-wp2/trunk/S2.3.4-PROTEUS-Distribution/install/proteus.run</a></li>
 </ul>
 <p>with the following command in a terminal (do not <tt class="docutils literal"><span class="pre">sudo</span></tt>):</p>
-<div class="highlight-python"><pre>sh proteus.run</pre>
+<div class="highlight-python"><div class="highlight"><pre>sh proteus.run
+</pre></div>
 </div>
 <p>You will need to provided you login and password for the <a class="reference external" href="https://packages.greyc.fr/proteus">repository</a>. And your root pass as well to install the packages.</p>
 <p><em>nb</em>: in case of download or network failure, you can restart this script when you want. It will overwrite the configuration without re-downloading what was already done.</p>
@@ -128,7 +118,8 @@ Other tools installation are detailed and are associated to page of their own as
 <div class="section" id="installation-eclipse">
 <h2>Installation: Eclipse<a class="headerlink" href="#installation-eclipse" title="Permalink to this headline">¶</a></h2>
 <p>version: Eclipse Modeling Indigo (3.7) &amp; Papyrus 0.8.2</p>
-<div class="highlight-python"><pre>sudo apt-get install proteus-base-eclipse</pre>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install proteus-base-eclipse
+</pre></div>
 </div>
 <p><a class="reference external" href="http://apt.ubuntu.com/p/proteus-base-eclipse">Open proteus-base-eclipse in Software Center</a></p>
 <div class="section" id="test-install">
@@ -160,7 +151,8 @@ Other tools installation are detailed and are associated to page of their own as
 </pre></div>
 </div>
 <p>Then, in <tt class="docutils literal"><span class="pre">mgengine</span></tt> console</p>
-<div class="highlight-python"><pre>require "tutorial"</pre>
+<div class="highlight-python"><div class="highlight"><pre>require &quot;tutorial&quot;
+</pre></div>
 </div>
 <p>Which should display a vehicle with a camera, a laser scanner and two infrared sensors.</p>
 </div>
@@ -173,7 +165,8 @@ Other tools installation are detailed and are associated to page of their own as
 <div class="section" id="id2">
 <h4>Test install<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
 <p>Run the following command in a terminal:</p>
-<div class="highlight-python"><pre>morse check</pre>
+<div class="highlight-python"><div class="highlight"><pre>morse check
+</pre></div>
 </div>
 <p>see <a class="reference external" href="https://github.com/laas/morse#readme">MORSE README</a></p>
 </div>
@@ -229,17 +222,21 @@ Other tools installation are detailed and are associated to page of their own as
 <div class="section" id="update-the-distribution">
 <h2>Update the distribution<a class="headerlink" href="#update-the-distribution" title="Permalink to this headline">¶</a></h2>
 <p>First, you need to update the repositories list:</p>
-<div class="highlight-python"><pre>sudo apt-get update</pre>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get update
+</pre></div>
 </div>
 <p>Then, upgrade your packages:</p>
-<div class="highlight-python"><pre>sudo apt-get upgrade</pre>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get upgrade
+</pre></div>
 </div>
 <div class="section" id="remove-a-package">
 <h3>Remove a package<a class="headerlink" href="#remove-a-package" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python"><pre>sudo apt-get remove vle</pre>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get remove vle
+</pre></div>
 </div>
 <p>and autoremove to clean the former dependencies:</p>
-<div class="highlight-python"><pre>sudo apt-get autoremove</pre>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get autoremove
+</pre></div>
 </div>
 </div>
 </div>
@@ -252,22 +249,25 @@ Some assets can be accessed directly through the portal itself.</p>
 <div class="section" id="proxy">
 <h2>Proxy<a class="headerlink" href="#proxy" title="Permalink to this headline">¶</a></h2>
 <p>To update root&#8217;s proxy settings:</p>
-<div class="highlight-python"><pre>sudo gnome-network-properties</pre>
+<div class="highlight-python"><div class="highlight"><pre>sudo gnome-network-properties
+</pre></div>
 </div>
 <p>or see <tt class="docutils literal"><span class="pre">sudo</span> <span class="pre">-i</span></tt>:</p>
-<div class="highlight-python"><pre>The -i (simulate initial login) option runs the shell specified in the
+<div class="highlight-python"><div class="highlight"><pre>The -i (simulate initial login) option runs the shell specified in the
 passwd(5) entry of the target user as a login shell.  This means that
 login-specific resource files such as .profile or .login will be read by
 the shell.  If a command is specified, it is passed to the shell for
 execution.  Otherwise, an interactive shell is executed.  sudo attempts to
-change to that user's home directory before running the shell.  It also
+change to that user&#39;s home directory before running the shell.  It also
 initializes the environment, leaving DISPLAY and TERM unchanged, setting
 HOME, MAIL, SHELL, USER, LOGNAME, and PATH, as well as the contents of
 /etc/environment on Linux and AIX systems.  All other environment
-variables are removed.</pre>
+variables are removed.
+</pre></div>
 </div>
 <p>or with <tt class="docutils literal"><span class="pre">pip</span> <span class="pre">--proxy</span></tt>:</p>
-<div class="highlight-python"><pre>sudo pip install --proxy=http://myproxy:8080 -U rosinstall</pre>
+<div class="highlight-python"><div class="highlight"><pre>sudo pip install --proxy=http://myproxy:8080 -U rosinstall
+</pre></div>
 </div>
 </div>
 <div class="section" id="that-s-all-folks">
@@ -337,12 +337,6 @@ variables are removed.</pre>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="RobotMLPlateformInstallationFromUpdateSite.html"
-                        title="previous chapter"><tt class="docutils literal docutils literal"><span class="pre">RobotML</span></tt> plateform installation from update site</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="VirtualBox.html"
-                        title="next chapter">VirtualBox</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="../../_sources/DevGuide/InstallationForDevelopers/RevisitOfDistributionInstallation.txt"
@@ -371,20 +365,12 @@ variables are removed.</pre>
         <li class="right" style="margin-right: 10px">
           <a href="../../genindex.html" title="General Index"
              >index</a></li>
-        <li class="right" >
-          <a href="VirtualBox.html" title="VirtualBox"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="RobotMLPlateformInstallationFromUpdateSite.html" title="RobotML plateform installation from update site"
-             >previous</a> |</li>
-        <li><a href="../../index.html">RobotML 1.2 documentation</a> &raquo;</li>
-          <li><a href="../../DevGuide.html" >Developer Guide</a> &raquo;</li>
-          <li><a href="../InstallationForDevelopers.html" >Installation for developers</a> &raquo;</li> 
+        <li><a href="../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2009-2013, PROTEUS consortium.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+        &copy; Copyright 2009-2014, PROTEUS consortium.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
     </div>
   </body>
 </html>

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Install and use SVN &mdash; RobotML 1.2 documentation</title>
+    <title>Install and use SVN &mdash; RobotML 2.0alpha documentation</title>
     
     <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '1.2',
+        VERSION:     '2.0alpha',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,10 +23,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="RobotML 1.2 documentation" href="../../index.html" />
-    <link rel="up" title="Installation for developers" href="../InstallationForDevelopers.html" />
-    <link rel="next" title="OARPS" href="../../OARP.html" />
-    <link rel="prev" title="VirtualBox" href="VirtualBox.html" /> 
+    <link rel="top" title="RobotML 2.0alpha documentation" href="../../index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -35,15 +32,7 @@
         <li class="right" style="margin-right: 10px">
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="../../OARP.html" title="OARPS"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="VirtualBox.html" title="VirtualBox"
-             accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">RobotML 1.2 documentation</a> &raquo;</li>
-          <li><a href="../../DevGuide.html" >Developer Guide</a> &raquo;</li>
-          <li><a href="../InstallationForDevelopers.html" accesskey="U">Installation for developers</a> &raquo;</li> 
+        <li><a href="../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -64,21 +53,24 @@ We indicate here how to install it on the reference platform (UBUNTU) and then p
 <div class="section" id="get-the-workspace-from-a-server-with-your-login">
 <h2>Get the workspace from a server with your login<a class="headerlink" href="#get-the-workspace-from-a-server-with-your-login" title="Permalink to this headline">¶</a></h2>
 <p>This means to download on your own computer a copy of part of whole of the repository in the frame of what your credentials open.</p>
-<div class="highlight-python"><pre>svn checkout --username USERNAME URI LOCALDIR</pre>
+<div class="highlight-python"><div class="highlight"><pre>svn checkout --username USERNAME URI LOCALDIR
+</pre></div>
 </div>
 </div>
 <div class="section" id="update-your-local-copy">
 <h2>Update your local copy<a class="headerlink" href="#update-your-local-copy" title="Permalink to this headline">¶</a></h2>
 <p>One of the great advantage of this type of tools is to allow their user to synchronise the different changes applied by others very easily.
 It is not to be afraid to lose any of the development done locally as the tool will discover eventually discrepancies and offers you merging facilities if needed.</p>
-<div class="highlight-python"><pre>svn update</pre>
+<div class="highlight-python"><div class="highlight"><pre>svn update
+</pre></div>
 </div>
 </div>
 <div class="section" id="commit-your-changes-to-the-server">
 <h2>Commit your changes to the server<a class="headerlink" href="#commit-your-changes-to-the-server" title="Permalink to this headline">¶</a></h2>
 <p>If you need to upload part or whole of your work, then do it. You can always commit (meaning upload on the portal) not finished work.
 It is of no importance as <a class="reference internal" href="../../Glossary.html#term-user"><em class="xref std std-term">users</em></a> of the repository will always be able to revert to a working copy notwithstanding the capability to use the branching facility.</p>
-<div class="highlight-python"><pre>svn commit</pre>
+<div class="highlight-python"><div class="highlight"><pre>svn commit
+</pre></div>
 </div>
 </div>
 <div class="section" id="more-information">
@@ -109,12 +101,6 @@ It is of no importance as <a class="reference internal" href="../../Glossary.htm
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="VirtualBox.html"
-                        title="previous chapter">VirtualBox</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="../../OARP.html"
-                        title="next chapter">OARPS</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="../../_sources/DevGuide/InstallationForDevelopers/SVN.txt"
@@ -143,20 +129,12 @@ It is of no importance as <a class="reference internal" href="../../Glossary.htm
         <li class="right" style="margin-right: 10px">
           <a href="../../genindex.html" title="General Index"
              >index</a></li>
-        <li class="right" >
-          <a href="../../OARP.html" title="OARPS"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="VirtualBox.html" title="VirtualBox"
-             >previous</a> |</li>
-        <li><a href="../../index.html">RobotML 1.2 documentation</a> &raquo;</li>
-          <li><a href="../../DevGuide.html" >Developer Guide</a> &raquo;</li>
-          <li><a href="../InstallationForDevelopers.html" >Installation for developers</a> &raquo;</li> 
+        <li><a href="../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2009-2013, PROTEUS consortium.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+        &copy; Copyright 2009-2014, PROTEUS consortium.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
     </div>
   </body>
 </html>

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>The Alf Generator API &mdash; RobotML 1.2 documentation</title>
+    <title>The Alf Generator API &mdash; RobotML 2.0alpha documentation</title>
     
     <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../../',
-        VERSION:     '1.2',
+        VERSION:     '2.0alpha',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,10 +23,7 @@
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <link rel="top" title="RobotML 1.2 documentation" href="../../../index.html" />
-    <link rel="up" title="Code generators" href="../../CodeGenerators.html" />
-    <link rel="next" title="The RobotML generators" href="../RobotMLGenerators/RobotMLGenerators.html" />
-    <link rel="prev" title="Code generators" href="../../CodeGenerators.html" /> 
+    <link rel="top" title="RobotML 2.0alpha documentation" href="../../../index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -35,15 +32,7 @@
         <li class="right" style="margin-right: 10px">
           <a href="../../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="../RobotMLGenerators/RobotMLGenerators.html" title="The RobotML generators"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="../../CodeGenerators.html" title="Code generators"
-             accesskey="P">previous</a> |</li>
-        <li><a href="../../../index.html">RobotML 1.2 documentation</a> &raquo;</li>
-          <li><a href="../../../DevGuide.html" >Developer Guide</a> &raquo;</li>
-          <li><a href="../../CodeGenerators.html" accesskey="U">Code generators</a> &raquo;</li> 
+        <li><a href="../../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -62,9 +51,9 @@
 </div>
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<img alt="Alf API overview." class="align-center" src="DevGuide/CodeGenerators/AlfGenerators/../ATK_Scenario_images/alf_API_Overview.png" />
+<img alt="Alf API overview." class="align-center" src="../../../_images/alf_API_Overview.png" />
 <div class="section" id="alfservices">
-<span id="alfservcies"></span><h3>AlfServices<a class="headerlink" href="#alfservices" title="Permalink to this headline">¶</a></h3>
+<span id="id1"></span><h3>AlfServices<a class="headerlink" href="#alfservices" title="Permalink to this headline">¶</a></h3>
 <p>The module <strong>AlfServices</strong> contains all the methods to translate RobotML element to functional code.</p>
 <p><em>public</em></p>
 <p><strong>public static org.eclipse.papyrus.uml.alf.alf.Block createAlfBloc(org.eclipse.papyrus.uml2.NamedElement element)</strong></p>
@@ -123,7 +112,7 @@
 <p>Translate an Alf bloc to C++ code.</p>
 </div>
 <div class="section" id="alfblock">
-<span id="id1"></span><h3>AlfBlock<a class="headerlink" href="#alfblock" title="Permalink to this headline">¶</a></h3>
+<span id="id2"></span><h3>AlfBlock<a class="headerlink" href="#alfblock" title="Permalink to this headline">¶</a></h3>
 <p><em>public</em></p>
 <p><strong>AlfBlock(org.eclipse.papyrus.uml.alf.alf.Block bloc)</strong></p>
 <blockquote>
@@ -202,7 +191,7 @@
 <p>Return the code string translation result.</p>
 </div>
 <div class="section" id="ialfgenerator">
-<span id="id2"></span><h3>IAlfGenerator<a class="headerlink" href="#ialfgenerator" title="Permalink to this headline">¶</a></h3>
+<span id="id3"></span><h3>IAlfGenerator<a class="headerlink" href="#ialfgenerator" title="Permalink to this headline">¶</a></h3>
 <p>Alf generator interface, contains the mandatory method to implement for the Alf generator.</p>
 <p><em>public</em></p>
 <p><strong>abstract void generate(AlfBlock bloc)</strong></p>
@@ -222,7 +211,7 @@
 <p>Abstract method to redefine in implementation. Translate the Alf bloc.</p>
 </div>
 <div class="section" id="alfgenerator">
-<span id="id3"></span><h3>AlfGenerator<a class="headerlink" href="#alfgenerator" title="Permalink to this headline">¶</a></h3>
+<span id="id4"></span><h3>AlfGenerator<a class="headerlink" href="#alfgenerator" title="Permalink to this headline">¶</a></h3>
 <p>Abstract Alf base generator. Contains the common method for all Alf generators. It implement the <a class="reference internal" href="#ialfgenerator">IAlfGenerator</a> interface.</p>
 <p><em>public</em></p>
 <p><strong>abstract void generate(AlfBlock bloc)</strong></p>
@@ -476,7 +465,7 @@
 </div></blockquote>
 <p>Return the Alf non final clause translation.</p>
 <p><strong>String generateFinalClauseTemplate(org.eclipse.papyrus.uml.alf.alf.FinalClause aFinalClause)</strong></p>
-<blockquote>
+<blockquote id="alfgenerator-generatefinalclausetemplate">
 <div><table border="1" class="docutils">
 <colgroup>
 <col width="41%" />
@@ -1319,7 +1308,7 @@
 </table>
 </div></blockquote>
 <p>Return the Alf value specification translation.</p>
-<p id="algenerator-generatethisexpression"><strong>String generateThisExpression(org.eclipse.papyrus.uml.alf.alf.ThisExpression aThisExpression)</strong></p>
+<p id="alfgenerator-generatethisexpression"><strong>String generateThisExpression(org.eclipse.papyrus.uml.alf.alf.ThisExpression aThisExpression)</strong></p>
 <blockquote>
 <div><table border="1" class="docutils">
 <colgroup>
@@ -1777,7 +1766,7 @@
 <p>Return the Alf name expression translation.</p>
 </div>
 <div class="section" id="athena-alfgenerator">
-<span id="id4"></span><h3>Athena_AlfGenerator<a class="headerlink" href="#athena-alfgenerator" title="Permalink to this headline">¶</a></h3>
+<span id="id5"></span><h3>Athena_AlfGenerator<a class="headerlink" href="#athena-alfgenerator" title="Permalink to this headline">¶</a></h3>
 <p>Specialized Alf generator to translate Alf bloc to Athena code. It inherit from <a class="reference internal" href="#alfgenerator">AlfGenerator</a>.</p>
 <p><em>protected</em></p>
 <p><strong>String generateAlfBlock(org.eclipse.papyrus.uml.alf.alf.Block bloc)</strong></p>
@@ -1797,7 +1786,7 @@
 <div>see <a class="reference internal" href="#alfgenerator-generateconcurrentclausestemplate">AlfGenerator.generateConcurrentClausesTemplate</a></div></blockquote>
 <p><strong>String generateNonFinalClauseTemplate(org.eclipse.papyrus.uml.alf.alf.NonFinalClause aNonFinalClause)</strong></p>
 <blockquote>
-<div>see <a href="#id6"><span class="problematic" id="id7">AlfGenerator.generateFinalClauseTemplate_</span></a></div></blockquote>
+<div>see <a class="reference internal" href="#alfgenerator-generatefinalclausetemplate">AlfGenerator.generateFinalClauseTemplate</a></div></blockquote>
 <p><strong>String generateWhileStatement(org.eclipse.papyrus.uml.alf.alf.WhileStatement aWhileStatement)</strong></p>
 <blockquote>
 <div>see <a class="reference internal" href="#alfgenerator-generatewhilestatement">AlfGenerator.generateWhileStatement</a></div></blockquote>
@@ -1815,7 +1804,7 @@
 <div>see <a class="reference internal" href="#alfgenerator-generatenameexpression">AlfGenerator.generateNameExpression</a></div></blockquote>
 </div>
 <div class="section" id="cpp-alfgenerator">
-<span id="id5"></span><h3>CPP_AlfGenerator<a class="headerlink" href="#cpp-alfgenerator" title="Permalink to this headline">¶</a></h3>
+<span id="id6"></span><h3>CPP_AlfGenerator<a class="headerlink" href="#cpp-alfgenerator" title="Permalink to this headline">¶</a></h3>
 <p>Specialized Alf generator to translate Alfbloc to C++ code.  It inherit from <a class="reference internal" href="#alfgenerator">AlfGenerator</a>.</p>
 <p><em>public</em></p>
 <p><strong>CPP_AlfGenerator()</strong></p>
@@ -1875,7 +1864,7 @@
 <div>see <a class="reference internal" href="#alfgenerator-generateoperationcallexpressionwithoutdot">AlfGenerator.generateOperationCallExpressionWithoutDot</a></div></blockquote>
 <p><strong>String generateThisExpression(org.eclipse.papyrus.uml.alf.alf.ThisExpression aThisExpression)</strong></p>
 <blockquote>
-<div>see <a href="#id8"><span class="problematic" id="id9">AlfGenerator.generateThisExpression_</span></a></div></blockquote>
+<div>see <a class="reference internal" href="#alfgenerator-generatethisexpression">AlfGenerator.generateThisExpression</a></div></blockquote>
 <p><strong>String generateInstanceCreationExpression(org.eclipse.papyrus.uml.alf.alf.InstanceCreationExpression aInstanceCreationExpression)</strong></p>
 <blockquote>
 <div>see <a class="reference internal" href="#alfgenerator-generateinstancecreationexpression">AlfGenerator.generateInstanceCreationExpression</a></div></blockquote>
@@ -1897,13 +1886,14 @@ You have two solution to call an existing Alf generator. But that depend how you
 <ul class="simple">
 <li>If you use <a class="reference internal" href="../../../Glossary.html#term-acceleo"><em class="xref std std-term">Acceleo</em></a> template, you should to import the AlfServices into your template.Then call <cite>createAlfBloc</cite> to get an Alf bloc corresponding to your operation body, and call the right operation translation you need.</li>
 </ul>
-<div class="highlight-ocl"><pre>[let behavior : OpaqueBehavior = element.oclAsType(OpaqueBahevior)]
+<div class="highlight-ocl"><div class="highlight"><pre>[let behavior : OpaqueBehavior = element.oclAsType(OpaqueBahevior)]
    [let bloc : alf::Block = createAlfBloc(behavior)]
       [if((bloc = null) =(false))]
          [translateAlfBlocTo_Athena(bloc)/]
        [/if]
    [/let]
-[/let]</pre>
+[/let]
+</pre></div>
 </div>
 <ul class="simple">
 <li>If you use JAVA class, you should to refrence the Alf generator API, and call the static methods <cite>createAlfBloc</cite> and the translation operation.</li>
@@ -1975,12 +1965,6 @@ You have two solution to call an existing Alf generator. But that depend how you
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="../../CodeGenerators.html"
-                        title="previous chapter">Code generators</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="../RobotMLGenerators/RobotMLGenerators.html"
-                        title="next chapter">The RobotML generators</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="../../../_sources/DevGuide/CodeGenerators/AlfGenerators/AlfGenerators_API.txt"
@@ -2009,20 +1993,12 @@ You have two solution to call an existing Alf generator. But that depend how you
         <li class="right" style="margin-right: 10px">
           <a href="../../../genindex.html" title="General Index"
              >index</a></li>
-        <li class="right" >
-          <a href="../RobotMLGenerators/RobotMLGenerators.html" title="The RobotML generators"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="../../CodeGenerators.html" title="Code generators"
-             >previous</a> |</li>
-        <li><a href="../../../index.html">RobotML 1.2 documentation</a> &raquo;</li>
-          <li><a href="../../../DevGuide.html" >Developer Guide</a> &raquo;</li>
-          <li><a href="../../CodeGenerators.html" >Code generators</a> &raquo;</li> 
+        <li><a href="../../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2009-2013, PROTEUS consortium.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+        &copy; Copyright 2009-2014, PROTEUS consortium.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
     </div>
   </body>
 </html>

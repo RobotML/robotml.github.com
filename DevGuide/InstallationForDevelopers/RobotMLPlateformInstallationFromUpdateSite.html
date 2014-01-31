@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>RobotML plateform installation from update site &mdash; RobotML 1.2 documentation</title>
+    <title>RobotML platform installation from update site &mdash; RobotML 2.0alpha documentation</title>
     
     <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '1.2',
+        VERSION:     '2.0alpha',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,10 +23,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="RobotML 1.2 documentation" href="../../index.html" />
-    <link rel="up" title="Installation for developers" href="../InstallationForDevelopers.html" />
-    <link rel="next" title="Revisit of RobotML-sdk Installation" href="RevisitOfDistributionInstallation.html" />
-    <link rel="prev" title="Installation for developers" href="../InstallationForDevelopers.html" /> 
+    <link rel="top" title="RobotML 2.0alpha documentation" href="../../index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -35,15 +32,7 @@
         <li class="right" style="margin-right: 10px">
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="RevisitOfDistributionInstallation.html" title="Revisit of RobotML-sdk Installation"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="../InstallationForDevelopers.html" title="Installation for developers"
-             accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">RobotML 1.2 documentation</a> &raquo;</li>
-          <li><a href="../../DevGuide.html" >Developer Guide</a> &raquo;</li>
-          <li><a href="../InstallationForDevelopers.html" accesskey="U">Installation for developers</a> &raquo;</li> 
+        <li><a href="../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -52,12 +41,12 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="robotml-plateform-installation-from-update-site">
-<span id="dg-ifd-rpi"></span><h1><a class="reference internal" href="../../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> plateform installation from update site<a class="headerlink" href="#robotml-plateform-installation-from-update-site" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="robotml-platform-installation-from-update-site">
+<span id="dg-ifd-rpi"></span><h1><a class="reference internal" href="../../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> platform installation from update site<a class="headerlink" href="#robotml-platform-installation-from-update-site" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>As it was discussed in the <a class="reference internal" href="../../UserGuide/PlatformInstallation/InstallRobotmlTooling.html#ug-pi-irt"><em>RobotML tooling installation page</em></a>, The RobotML platform is constituted of many components. As a developer or for your information as an advanced user, you can be interested to discover it. Here follows the detailed description of how to install its many components one after the other.</p>
-<p>Directives provided here allow to install the complete platform, modelling, generation and validation, on every <a class="reference internal" href="../../Glossary.html#term-os"><em class="xref std std-term">OS</em></a> that supports JAVA and C/C++ compilation. However, when needed there could be indication specifying limits on this assumption.</p>
+<p>Directives provided here allow to install the complete platform for modelling, code generation and validation.</p>
 </div>
 <div class="section" id="how-to-install-modelling-components">
 <h2>How to install Modelling components<a class="headerlink" href="#how-to-install-modelling-components" title="Permalink to this headline">¶</a></h2>
@@ -65,11 +54,11 @@
 <div><ol class="arabic">
 <li><p class="first">Install the latest version of eclipse Juno: you have to download it from <a class="reference external" href="http://www.eclipse.org/downloads/packages/eclipse-modeling-tools/junosr1">Juno eclipse website</a>, then, if java is installed and thus whatever the OS</p>
 </li>
-<li><p class="first">Install the latest version of Papyrus, Xtext and Acceleo</p>
+<li><p class="first">Install the latest version of Papyrus</p>
 <blockquote>
 <div><ol class="loweralpha simple">
 <li>Open the modelling panel: on the menu, choose <em>help</em> then in it choose <em>Install modeling components</em></li>
-<li>select <a class="reference internal" href="../../Glossary.html#term-papyrus"><em class="xref std std-term">papyrus</em></a>, <a class="reference internal" href="../../Glossary.html#term-xtext"><em class="xref std std-term">Xtext</em></a> and <a class="reference internal" href="../../Glossary.html#term-acceleo"><em class="xref std std-term">Acceleo</em></a> components:</li>
+<li>select <a class="reference internal" href="../../Glossary.html#term-papyrus"><em class="xref std std-term">papyrus</em></a> component:</li>
 </ol>
 </div></blockquote>
 </li>
@@ -81,7 +70,7 @@
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">The modelling panel is in fact just a shortcut to the classical eclipse installation methodology. After installing the eclipse indigo flavour, you can click on <em>Help then Install New Software</em> then add the different needed update site linked to the three different component quoted above (The <a class="reference internal" href="../../Glossary.html#g"><em>glossary</em></a> provides more information on where to find the specific needed information for each of them).</p>
+<p class="last">The modelling panel is in fact just a shortcut to the classical eclipse installation methodology. After installing eclipse Juno, you can click on <em>Help then Install New Software</em> then add the different needed update site linked to the three different component quoted above (The <a class="reference internal" href="../../Glossary.html#g"><em>glossary</em></a> provides more information on where to find the specific needed information for each of them).</p>
 </div>
 </div>
 <div class="section" id="how-to-install-mandatory-components-for-robotml-platflorm">
@@ -109,12 +98,12 @@
 <blockquote>
 <div><blockquote>
 <div><ol class="loweralpha simple">
-<li>A name is interesting to give to this update site. RobotML name is not mandatory but is useful if you have to edit it in order to recognise your update site easily in the list of them.</li>
-<li>Location is mandatory and is <em>http://proteus.bourges.univ-orleans.fr/modelling_platform/org.eclipse.papyrus.robotml.update.site</em>. Copy/Paste to the Location field.</li>
+<li>You should add a name to your update site. RobotML name is not mandatory but is useful if you have to edit it in order to recognise your update site easily in the list.</li>
+<li>Location is mandatory and is <em>http://proteus.bourges.univ-orleans.fr/modelling_platform/org.eclipse.papyrus.robotml.update.site</em>.</li>
 </ol>
 </div></blockquote>
 <ol class="arabic simple" start="3">
-<li>Select <a class="reference internal" href="../../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> Modeling Tools and follow procedure (the complete procedure is similar to any similar things)</li>
+<li>Select <a class="reference internal" href="../../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> Modeling Tools and follow the procedure</li>
 </ol>
 </div></blockquote>
 </div>
@@ -126,7 +115,7 @@
 </div>
 <div class="section" id="install-svn">
 <h2>Install SVN<a class="headerlink" href="#install-svn" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="../../Glossary.html#term-svn"><em class="xref std std-term">SVN</em></a> is extremely important to the project as it is one of the <a class="reference internal" href="../../Glossary.html#term-portal"><em class="xref std std-term">portal</em></a>/<a class="reference internal" href="../../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> platform connection link. In order to install it on the platform, there are two steps (notwithstanding classical update site operations):</p>
+<p><a class="reference internal" href="../../Glossary.html#term-svn"><em class="xref std std-term">SVN</em></a> is extremely important to the project as it is one of the <a class="reference internal" href="../../Glossary.html#term-portal"><em class="xref std std-term">portal</em></a>/<a class="reference internal" href="../../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> platform connection link. In order to install it, there are two steps:</p>
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">Find the latest version of Eclipse update site</p>
@@ -160,7 +149,7 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#"><tt class="docutils literal"><span class="pre">RobotML</span></tt> plateform installation from update site</a><ul>
+<li><a class="reference internal" href="#"><tt class="docutils literal"><span class="pre">RobotML</span></tt> platform installation from update site</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a></li>
 <li><a class="reference internal" href="#how-to-install-modelling-components">How to install Modelling components</a></li>
 <li><a class="reference internal" href="#how-to-install-mandatory-components-for-robotml-platflorm">How to install mandatory components for RobotML platflorm</a></li>
@@ -169,12 +158,6 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="../InstallationForDevelopers.html"
-                        title="previous chapter">Installation for developers</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="RevisitOfDistributionInstallation.html"
-                        title="next chapter">Revisit of <tt class="docutils literal docutils literal docutils literal"><span class="pre">RobotML-sdk</span></tt> Installation</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="../../_sources/DevGuide/InstallationForDevelopers/RobotMLPlateformInstallationFromUpdateSite.txt"
@@ -203,20 +186,12 @@
         <li class="right" style="margin-right: 10px">
           <a href="../../genindex.html" title="General Index"
              >index</a></li>
-        <li class="right" >
-          <a href="RevisitOfDistributionInstallation.html" title="Revisit of RobotML-sdk Installation"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="../InstallationForDevelopers.html" title="Installation for developers"
-             >previous</a> |</li>
-        <li><a href="../../index.html">RobotML 1.2 documentation</a> &raquo;</li>
-          <li><a href="../../DevGuide.html" >Developer Guide</a> &raquo;</li>
-          <li><a href="../InstallationForDevelopers.html" >Installation for developers</a> &raquo;</li> 
+        <li><a href="../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2009-2013, PROTEUS consortium.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+        &copy; Copyright 2009-2014, PROTEUS consortium.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
     </div>
   </body>
 </html>

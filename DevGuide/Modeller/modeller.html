@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Modeller &mdash; RobotML 2.0alpha documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '2.0alpha',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="RobotML 2.0alpha documentation" href="../../index.html" />
+    <link rel="next" title="Generator" href="../Generator/Generator.html" />
+    <link rel="prev" title="Architecture application" href="../Architecture application/ArchitectureApplication.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../Generator/Generator.html" title="Generator"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../Architecture application/ArchitectureApplication.html" title="Architecture application"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <p id="devguidemodeller"><a class="reference internal" href="../../DevGuide.html#devguide"><em>return</em></a></p>
+<div class="section" id="modeller">
+<h1>Modeller<a class="headerlink" href="#modeller" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="meta-modelling">
+<h2>Meta modelling<a class="headerlink" href="#meta-modelling" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="about-papyrus">
+<h3>About Papyrus<a class="headerlink" href="#about-papyrus" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="../../Glossary.html#term-papyrus"><em class="xref std std-term">Papyrus</em></a> is aiming at providing an integrated and user-consumable environment for
+editing any kind of <a class="reference internal" href="../../Glossary.html#term-emf"><em class="xref std std-term">EMF</em></a> <a class="reference internal" href="../../Glossary.html#term-model"><em class="xref std std-term">model</em></a> and particularly supporting <a class="reference internal" href="../../Glossary.html#term-uml"><em class="xref std std-term">UML</em></a> and related modeling
+languages such as <a class="reference internal" href="../../Glossary.html#term-sysml"><em class="xref std std-term">SysML</em></a> and <a class="reference internal" href="../../Glossary.html#term-marte"><em class="xref std std-term">MARTE</em></a>. Papyrus provides diagram editors for EMF-based
+modeling languages amongst them <a class="reference internal" href="../../Glossary.html#term-uml"><em class="xref std std-term">UML</em></a> 2 and <a class="reference internal" href="../../Glossary.html#term-sysml"><em class="xref std std-term">SysML</em></a> and the glue required for integrating
+these editors (GMF-based or not) with other <a class="reference internal" href="../../Glossary.html#term-mbd"><em class="xref std std-term">MBD</em></a> and MDSD tools.</p>
+<p><a class="reference internal" href="../../Glossary.html#term-papyrus"><em class="xref std std-term">Papyrus</em></a> provides a very advanced support for <a class="reference internal" href="../../Glossary.html#term-uml"><em class="xref std std-term">UML</em></a> profiles enabling support for
+&#8220;pure&#8221; <a class="reference internal" href="../../Glossary.html#term-dsl"><em class="xref std std-term">DSL</em></a>. Every part of <a class="reference internal" href="../../Glossary.html#term-papyrus"><em class="xref std std-term">Papyrus</em></a> may be customized: model explorer, diagram editors,
+property editors, etc.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="http://www.eclipse.org/papyrus/">Papyrus website</a></p>
+</div>
+</div>
+<div class="section" id="papyrus-tutorials">
+<h3>Papyrus tutorials<a class="headerlink" href="#papyrus-tutorials" title="Permalink to this headline">¶</a></h3>
+<p>Go to <a class="reference external" href="http://www.eclipse.org/papyrus/usersTutorials/usersTutorialsIndex.php">Papyrus tutorials page</a>.</p>
+</div>
+</div>
+<div class="section" id="dsl-detailed">
+<h2>DSL detailed<a class="headerlink" href="#dsl-detailed" title="Permalink to this headline">¶</a></h2>
+<p>One of the objectives of the <a class="reference internal" href="../../Glossary.html#term-proteus"><em class="xref std std-term">PROTEUS</em></a> project is to provide domain specific languages (and related
+tools like editors, consistency checkers, etc.) suitable to specify missions, environments and robot
+behaviours that have been specified by robotics experts involved in the project. The discussions
+within the <a class="reference internal" href="../../Glossary.html#term-proteus"><em class="xref std std-term">PROTEUS</em></a> project have led to the decision of defining three :term:<a href="#id1"><span class="problematic" id="id2">`</span></a>DSL`s:</p>
+<p>1 The <a class="reference internal" href="#architecture-dsl"><em>Architecture DSL</em></a> which will ease the definition of specific robotic architectures (reactive,
+deliberative, hybrid) and specific components that form those architectures (sensors, actuators, planners).</p>
+<p>2 The &#8220;Control &amp; Communication DSL&#8221; that will control the robotic components and will ease
+the definition of communication mechanisms between components (sending/receiving of
+events and data).</p>
+<p>3 The &#8220;Algorithms DSL&#8221; that will ease the definition of algorithms which are to be used,
+triggered with the “Control &amp; Communication DSL” for implementing behaviours in the
+different components of an architecture described with the <a class="reference internal" href="#architecture-dsl"><em>Architecture DSL</em></a>.</p>
+<div class="section" id="domain-model">
+<h3>Domain model<a class="headerlink" href="#domain-model" title="Permalink to this headline">¶</a></h3>
+<p>The domain model of a given domain specific language defines the concepts and the terminology
+of the language domain. The relationships between the concepts are described as well. In this
+section, we present the domain model of the <a class="reference internal" href="../../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> <a class="reference internal" href="../../Glossary.html#term-dsl"><em class="xref std std-term">DSL</em></a> s based on the requirements defined in
+the previous section and on the knowledge base provided by the ontology. We have used <a class="reference internal" href="../../Glossary.html#term-uml"><em class="xref std std-term">UML</em></a> class diagrams to represent the domain model. Figure 1 show a generic view of the RobotML
+domain model which describe the architecture of the robotic system (ie. its internal structure), the
+behavior of components (through FSMs or algorithms) , the communications between them and the
+deployment of robotic systems to specific robotic platforms.</p>
+<div class="section" id="architecture-dsl">
+<span id="id3"></span><h4>Architecture DSL<a class="headerlink" href="#architecture-dsl" title="Permalink to this headline">¶</a></h4>
+<p>This section introduces a high-level “executive” summary of the subject matter of the relevant sub-
+package. It contains an informal and lightweight description that identifies the subject matter itself
+(key concepts and relationships), the general principles of operation (semantics), design rationale,
+relationship to other packages and their subject matter, etc. The idea is that, for a cursory reader,
+this should provide sufficient information of the subject without delving into technical details.</p>
+<img alt="Proteus architecture domain model package" class="align-center" src="../../_images/general_architecture_dsl.png" />
+<p>The Proteus architecture domain model package contains six sub-packages:</p>
+<ul class="simple">
+<li>The <a class="reference internal" href="#robotic-system-package"><em>robotic system package</em></a>: describes the concepts that help defining and composing a robotic system,</li>
+<li>The system environment package: since we not only model the robotic system but also its environment (for example for simulation purpose), this package defines the concepts composing the “real” environment where robots evolve,</li>
+<li>The data types package: defines the data items that will necessarily be exchanged between robotic components, between algorithms, etc,</li>
+<li>The robotic mission package: describes the concepts that are needed to define an operational mission and which are used by the components of an architecture performing it, The deployment package: specifies a set of constructs that can be used to define the execution architecture of robotic systems,</li>
+<li>The platform package: defines the concept of platform which represents a software,</li>
+<li>Execution environment that can be either a robotic simulator or a robotic middleware.</li>
+</ul>
+<div class="section" id="domain-model-detailed">
+<h5>Domain model detailed<a class="headerlink" href="#domain-model-detailed" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="robotic-system-package">
+<span id="id4"></span><h6>Robotic System Package<a class="headerlink" href="#robotic-system-package" title="Permalink to this headline">¶</a></h6>
+<p>A robotic <strong>System</strong> is composed of <strong>Systems</strong> that communicate with other <strong>Systems</strong> through <strong>Ports</strong>
+and have specific <strong>Evolution Models</strong> (i.e. behaviours). <strong>Systems</strong> could be <strong>Software</strong> or <strong>Hardware</strong>.
+<strong>Software</strong> systems are detailed in the <strong>RoboticSoftware</strong> package (Figure 6), <strong>Hardware Systems</strong> are
+detailed in the RobThe environment is the highest possible &#8220;container&#8221; for the physical objects to exist, and it is
+considered as part of the architecture of a robotic system. Figure 8 shows the robotic environment
+package which enables the specification of different types of environments.
+oticHardware package (Figure 7).</p>
+<img alt="Figure 3 : Robotic sytem packages" class="align-center" src="../../_images/robotic_system_package.png" />
+<p>The System concept corresponds to the component concept. The term system is more appropriate
+to describe a robotic component, this is due to the fact that the term system is more meaningful for
+a robotician than the term component. A System is composed of properties, ports and connectors.</p>
+<img alt="Robotic system package: details of properties" class="align-center" src="DevGuide/Modeller/images/robotic_system_packae_properties.png" />
+<p>Figure 4 shows the details of the concept of <strong>property</strong>. A system is composed of <strong>properties</strong> which
+can be a subsystem or a variable. The <strong>Part</strong> property is typed by a <strong>system</strong> and thus corresponds to a
+subsystem. The <strong>BasicProperty</strong> is typed by a <strong>data type</strong> and thus corresponds to a variable.</p>
+<p><strong>system</strong>. It is a special kind of <strong>properties</strong> that has a type and a <strong>communication policy</strong>. A
+<strong>ServicePort</strong> is a <strong>port</strong> that is specific to client/server communications. <strong>DataFlowPorts</strong> enable data
+flow-oriented communication between systems, where messages that flow across ports represent
+data items. <strong>ServicePorts</strong> support a request/reply communication paradigm (also called client/server
+model of communication), where messages that flow across ports represent <strong>operation</strong> calls.
+<strong>ServicePorts</strong> are typed by an interface which specifies a number of operations without stating how
+exactly they are implemented.</p>
+<p>Detail of the robotic software package:</p>
+<p>Figure 6 shows the details of the robotic software package. A software could be a driver which is
+the software system part of a DeviceSystem.</p>
+<img alt="Details of the robotic software package" class="align-center" src="DevGuide/Modeller/images/robottic_software_package.png" />
+<p>Details of the robotic hardware package:</p>
+<p>Figure 7 shows the details of the <strong>robotic hardware</strong> package. A <strong>hardware</strong> could be:
+• a <strong>physic device</strong>: represents the hardware part of a device system,
+• a <strong>storage hardware</strong>: represents different forms of memory,
+• a <strong>computing hardware</strong>: represents physical processing devices capable of storing and
+executing program code,
+• a <strong>timing hardware</strong>: represents a hardware entity that is capable of following and
+evidencing the pace of time.</p>
+<img alt="Details of the robotic hardware component package" class="align-center" src="../../_images/robotic_hardware_package.png" />
+</div>
+<div class="section" id="robotic-environment-package">
+<span id="id5"></span><h6>Robotic environment package<a class="headerlink" href="#robotic-environment-package" title="Permalink to this headline">¶</a></h6>
+<p>The <strong>environment</strong> is the highest possible &#8220;container&#8221; for the <strong>physical</strong> objects to exist, and it is
+considered as part of the architecture of a robotic system. Figure 8 shows the <strong>robotic environment</strong>
+package which enables the specification of different types of environments.</p>
+<img alt="The robotic environment package" class="align-center" src="DevGuide/Modeller/images/robotic_envrironment_package.png" />
+<p>See <a class="reference external" href="http://www.google.fr">RobotML API documentation</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>You need to download the <a class="reference external" href="http://www.eclipse.org/downloads/packages/eclipse-modeling-tools/keplersr1">Eclipse Modelling tools</a>.
+Then extract the modeller on your computer and launch it. You need to install <a class="reference internal" href="../../Glossary.html#term-papyrus"><em class="xref std std-term">Papyrus</em></a>, with <a class="reference internal" href="../../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> extra feature, <a class="reference internal" href="../../Glossary.html#term-acceleo"><em class="xref std std-term">Acceleo</em></a>, and <a class="reference internal" href="../../Glossary.html#term-subclipse"><em class="xref std std-term">Subclipse</em></a>.</p>
+<ul class="simple">
+<li>To install <a class="reference internal" href="../../Glossary.html#term-acceleo"><em class="xref std std-term">Acceleo</em></a>, clic on <strong>Help/install Modellign component</strong>, and selection <a class="reference internal" href="../../Glossary.html#term-acceleo"><em class="xref std std-term">Acceleo</em></a>.</li>
+<li>To install <a class="reference internal" href="../../Glossary.html#term-papyrus"><em class="xref std std-term">Papyrus</em></a> and <a class="reference internal" href="../../Glossary.html#term-subclipse"><em class="xref std std-term">Subclipse</em></a>, clic on <strong>Help/Install new software...</strong>, and add the following update site</li>
+</ul>
+<div class="section" id="juno-version">
+<h3>Juno version<a class="headerlink" href="#juno-version" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Plugin name</th>
+<th class="head">update site</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../../Glossary.html#term-papyrus"><em class="xref std std-term">Papyrus</em></a></td>
+<td><a class="reference external" href="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/juno">http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/juno</a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../../Glossary.html#term-subclipse"><em class="xref std std-term">Subclipse</em></a></td>
+<td><a class="reference external" href="http://subclipse.tigris.org/update_1.10.x">http://subclipse.tigris.org/update_1.10.x</a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The juno version not support the dynamic validation.</p>
+</div>
+</div>
+<div class="section" id="kepler-version">
+<h3>Kepler version<a class="headerlink" href="#kepler-version" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Plugin name</th>
+<th class="head">update site</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="../../Glossary.html#term-papyrus"><em class="xref std std-term">Papyrus</em></a> (nigthly)</td>
+<td><a class="reference external" href="http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/kepler">http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/kepler</a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="../../Glossary.html#term-subclipse"><em class="xref std std-term">Subclipse</em></a></td>
+<td><a class="reference external" href="http://subclipse.tigris.org/update_1.10.x">http://subclipse.tigris.org/update_1.10.x</a></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<p><a class="reference internal" href="#devguidemodeller"><em>Up</em></a></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Modeller</a><ul>
+<li><a class="reference internal" href="#meta-modelling">Meta modelling</a><ul>
+<li><a class="reference internal" href="#about-papyrus">About Papyrus</a></li>
+<li><a class="reference internal" href="#papyrus-tutorials">Papyrus tutorials</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#dsl-detailed">DSL detailed</a><ul>
+<li><a class="reference internal" href="#domain-model">Domain model</a><ul>
+<li><a class="reference internal" href="#architecture-dsl">Architecture DSL</a><ul>
+<li><a class="reference internal" href="#domain-model-detailed">Domain model detailed</a><ul>
+<li><a class="reference internal" href="#robotic-system-package">Robotic System Package</a></li>
+<li><a class="reference internal" href="#robotic-environment-package">Robotic environment package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#installation">Installation</a><ul>
+<li><a class="reference internal" href="#juno-version">Juno version</a></li>
+<li><a class="reference internal" href="#kepler-version">Kepler version</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../Architecture application/ArchitectureApplication.html"
+                        title="previous chapter">Architecture application</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../Generator/Generator.html"
+                        title="next chapter">Generator</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/DevGuide/Modeller/modeller.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../Generator/Generator.html" title="Generator"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../Architecture application/ArchitectureApplication.html" title="Architecture application"
+             >previous</a> |</li>
+        <li><a href="../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009-2014, PROTEUS consortium.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+    </div>
+  </body>
+</html>

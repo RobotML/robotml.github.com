@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>How-to : MORSE and ROS &mdash; RobotML 1.2 documentation</title>
+    <title>How-to : MORSE and ROS &mdash; RobotML 2.0alpha documentation</title>
     
     <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '1.2',
+        VERSION:     '2.0alpha',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="RobotML 1.2 documentation" href="../../index.html" />
+    <link rel="top" title="RobotML 2.0alpha documentation" href="../../index.html" />
     <link rel="up" title="Examples of Use" href="../ExamplesOfUse.html" />
     <link rel="next" title="Your First Scenario - attack an airport" href="ATKScenario.html" />
     <link rel="prev" title="Examples of Use" href="../ExamplesOfUse.html" /> 
@@ -41,7 +41,7 @@
         <li class="right" >
           <a href="../ExamplesOfUse.html" title="Examples of Use"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">RobotML 1.2 documentation</a> &raquo;</li>
+        <li><a href="../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li>
           <li><a href="../../UserGuide.html" >User Guide</a> &raquo;</li>
           <li><a href="../ExamplesOfUse.html" accesskey="U">Examples of Use</a> &raquo;</li> 
       </ul>
@@ -78,18 +78,20 @@ APIs (C++, Python, Java),</li>
 <p>Basic commands:</p>
 <p><a class="reference external" href="http://ros.org/wiki/roscd">roscd</a>: change directory within ROS
 environment</p>
-<div class="highlight-python"><pre>Usage: roscd [package]</pre>
+<div class="highlight-python"><div class="highlight"><pre>Usage: roscd [package]
+</pre></div>
 </div>
 <p><a class="reference external" href="http://ros.org/wiki/roslaunch">roslaunch</a>: launching ROS nodes via
 <tt class="docutils literal"><span class="pre">.launch</span></tt> files</p>
-<div class="highlight-python"><pre>Usage: roslaunch [options] [package] &lt;filename&gt; [arg_name:=value...]</pre>
+<div class="highlight-python"><div class="highlight"><pre>Usage: roslaunch [options] [package] &lt;filename&gt; [arg_name:=value...]
+</pre></div>
 </div>
 <p>cf. <a class="reference external" href="http://ros.org/wiki/ROS/Tutorials">Tutorials</a></p>
 </div>
 <hr class="docutils" />
 <div class="section" id="rostopic">
 <h2>rostopic<a class="headerlink" href="#rostopic" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><pre>rostopic
+<div class="highlight-python"><div class="highlight"><pre>rostopic
 rostopic is a command-line tool for printing information about ROS Topics.
 
 Commands:
@@ -102,15 +104,17 @@ Commands:
   rostopic pub   publish data to topic
   rostopic type  print topic type
 
-Type rostopic &lt;command&gt; -h for more detailed usage, e.g. 'rostopic echo -h'</pre>
+Type rostopic &lt;command&gt; -h for more detailed usage, e.g. &#39;rostopic echo -h&#39;
+</pre></div>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="rostopic-exemple">
 <h2>rostopic: exemple<a class="headerlink" href="#rostopic-exemple" title="Permalink to this headline">¶</a></h2>
 <p>Publish &amp; print a message on ROS bus:</p>
-<div class="highlight-python"><pre>rostopic pub /test std_msgs/String "Bonjour Proteus"
-rostopic echo /test</pre>
+<div class="highlight-python"><div class="highlight"><pre>rostopic pub /test std_msgs/String &quot;Bonjour Proteus&quot;
+rostopic echo /test
+</pre></div>
 </div>
 <p><a class="reference external" href="http://ros.org/wiki/rostopic">|rostopic|</a></p>
 </div>
@@ -192,7 +196,7 @@ Conventions</a></li>
 <a class="reference external" href="http://www.openrobots.org/morse/doc/latest/user/middlewares/ros.html#generation-of-ros-node-and-topics">topics</a></li>
 </ul>
 <p><tt class="docutils literal"><span class="pre">/Robot/Composant</span></tt> alphanumeric CamelCase</p>
-<div class="highlight-python"><pre>rostopic list -v
+<div class="highlight-python"><div class="highlight"><pre>rostopic list -v
 
 Published topics:
  * /ATRV/CameraMain [sensor_msgs/Image] 1 publisher
@@ -204,7 +208,8 @@ Published topics:
 
 Subscribed topics:
  * /rosout [rosgraph_msgs/Log] 1 subscriber
- * /ATRV/Motion_Controller [geometry_msgs/Twist] 1 subscriber</pre>
+ * /ATRV/Motion_Controller [geometry_msgs/Twist] 1 subscriber
+</pre></div>
 </div>
 </div>
 <hr class="docutils" />
@@ -217,9 +222,10 @@ Subscribed topics:
 <li>.py file (scene builder script)</li>
 </ul>
 <p>ie:</p>
-<div class="highlight-python"><pre>morse edit my_builder_script.py
+<div class="highlight-python"><div class="highlight"><pre>morse edit my_builder_script.py
 
-morse edit my_saved_scene.blend</pre>
+morse edit my_saved_scene.blend
+</pre></div>
 </div>
 <p>... respectively result in:</p>
 <ol class="arabic simple">
@@ -245,24 +251,25 @@ morse edit my_saved_scene.blend</pre>
 </div>
 <div class="section" id="robot-made-of-one-controler-v">
 <h2>robot made of one controler (v, ω)<a class="headerlink" href="#robot-made-of-one-controler-v" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><pre>!python
+<div class="highlight-python"><div class="highlight"><pre>!python
 from morse.builder import *
 
 # Add the robot
-simplebot = Robot('atrv')
+simplebot = Robot(&#39;atrv&#39;)
 
 # Add a motion controler
-motion = Actuator('v_omega')
+motion = Actuator(&#39;v_omega&#39;)
 motion.translate(z=0.3)
 # Connect the controler to the robot
 simplebot.append(motion)
 
 # Configure the controler with the ROS middleware
-motion.configure_mw('ros')
+motion.configure_mw(&#39;ros&#39;)
 
 # Setup the environment
-env = Environment('indoors-1/indoor-1')
-env.aim_camera([1.0470, 0, 0.7854])</pre>
+env = Environment(&#39;indoors-1/indoor-1&#39;)
+env.aim_camera([1.0470, 0, 0.7854])
+</pre></div>
 </div>
 <p>(<a class="reference external" href="https://github.com/anr-proteus/proteus/blob/master/proteus_demo/data/wifibot.py">code</a>)</p>
 </div>
@@ -279,7 +286,8 @@ env.aim_camera([1.0470, 0, 0.7854])</pre>
 </div>
 <div class="section" id="start-morse-with-a-builder-script-in-another-terminal">
 <h4>start MORSE with a builder script (in another Terminal)<a class="headerlink" href="#start-morse-with-a-builder-script-in-another-terminal" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-python"><pre>morse edit /usr/local/share/morse/examples/scenarii/ros_example.py</pre>
+<div class="highlight-python"><div class="highlight"><pre>morse edit /usr/local/share/morse/examples/scenarii/ros_example.py
+</pre></div>
 </div>
 <div class="section" id="press-p-in-the-3d-view-to-start-the-simulation-game-engine">
 <h5>⌨ Press &#8220;<tt class="docutils literal"><span class="pre">P</span></tt>&#8221; in the 3D view to start the simulation (Game Engine)<a class="headerlink" href="#press-p-in-the-3d-view-to-start-the-simulation-game-engine" title="Permalink to this headline">¶</a></h5>
@@ -290,7 +298,8 @@ env.aim_camera([1.0470, 0, 0.7854])</pre>
 </div>
 <div class="section" id="publish-a-message-on-the-controler-topic-in-another-terminal">
 <h4>publish a message on the controler topic (in another Terminal)<a class="headerlink" href="#publish-a-message-on-the-controler-topic-in-another-terminal" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-python"><pre>rostopic pub -1 /ATRV/Motion_Controller geometry_msgs/Twist [1,0,0] [0,0,1]</pre>
+<div class="highlight-python"><div class="highlight"><pre>rostopic pub -1 /ATRV/Motion_Controller geometry_msgs/Twist [1,0,0] [0,0,1]
+</pre></div>
 </div>
 </div>
 </div>
@@ -305,12 +314,13 @@ env.aim_camera([1.0470, 0, 0.7854])</pre>
 <h2>Demo: advanced<a class="headerlink" href="#demo-advanced" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="obstacles-avoidance-w-laser">
 <h3>obstacles avoidance w/ laser<a class="headerlink" href="#obstacles-avoidance-w-laser" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python"><pre>mkdir -p ~/work/ros-addons
+<div class="highlight-python"><div class="highlight"><pre>mkdir -p ~/work/ros-addons
 rosinstall ~/work/ros-addons /opt/ros/electric/ \
     http://anr-proteus.github.com/proteus.rosinstall
 source ~/work/ros-addons/setup.bash
 roscd proteus_demo &amp;&amp; git pull &amp;&amp; cd data
-morse run wifibot.py</pre>
+morse run wifibot.py
+</pre></div>
 </div>
 </div>
 <div class="section" id="run-the-master-node-in-another-terminal">
@@ -321,11 +331,13 @@ morse run wifibot.py</pre>
 </div>
 <div class="section" id="launch-our-node-to-control-the-robot-in-another-terminal">
 <h3>launch our node to control the robot (in another Terminal)<a class="headerlink" href="#launch-our-node-to-control-the-robot-in-another-terminal" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python"><pre>source ~/work/ros-addons/setup.bash
-roslaunch proteus_demo AvoidObstacleLaser.launch</pre>
+<div class="highlight-python"><div class="highlight"><pre>source ~/work/ros-addons/setup.bash
+roslaunch proteus_demo AvoidObstacleLaser.launch
+</pre></div>
 </div>
 <p><em>TIP</em>: if <tt class="docutils literal"><span class="pre">rosinstall</span></tt> is not recognized, install it as:</p>
-<div class="highlight-python"><pre>sudo pip install -U rosinstall</pre>
+<div class="highlight-python"><div class="highlight"><pre>sudo pip install -U rosinstall
+</pre></div>
 </div>
 </div>
 </div>
@@ -337,7 +349,7 @@ roslaunch proteus_demo AvoidObstacleLaser.launch</pre>
 <hr class="docutils" />
 <div class="section" id="demo-advanced-code">
 <h2>Demo: advanced (code)<a class="headerlink" href="#demo-advanced-code" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><pre>!python
+<div class="highlight-python"><div class="highlight"><pre>!python
 # callback for each laser scan
 def handle_sick(msg):
     mid = len(msg.ranges) // 2
@@ -359,14 +371,15 @@ def handle_sick(msg):
     # publie the command to the controler (Twist msg)
     topic.publish(cmd)
 
-if __name__ == '__main__':
-    rospy.init_node('wander')
-    topic=rospy.Publisher('/ATRV/Motion_Controller', Twist)
-    rospy.Subscriber('/ATRV/Sick', LaserScan, handle_sick)
+if __name__ == &#39;__main__&#39;:
+    rospy.init_node(&#39;wander&#39;)
+    topic=rospy.Publisher(&#39;/ATRV/Motion_Controller&#39;, Twist)
+    rospy.Subscriber(&#39;/ATRV/Sick&#39;, LaserScan, handle_sick)
     rospy.spin()
 
 # http://ros.org/doc/api/sensor_msgs/html/msg/LaserScan.html
-# http://ros.org/doc/api/geometry_msgs/html/msg/Twist.html</pre>
+# http://ros.org/doc/api/geometry_msgs/html/msg/Twist.html
+</pre></div>
 </div>
 <p>(<a class="reference external" href="https://github.com/anr-proteus/proteus/blob/master/proteus_demo/nodes/AvoidObstacleLaser.py">code</a>)</p>
 </div>
@@ -375,31 +388,35 @@ if __name__ == '__main__':
 <h2>Demo: Orocos<a class="headerlink" href="#demo-orocos" title="Permalink to this headline">¶</a></h2>
 <p>The example&#8217;s code is available on
 <a class="reference external" href="https://github.com/anr-proteus/proteus/tree/master/proteus_orocos_obstaclelaser">GitHub</a></p>
-<div class="highlight-python"><pre>roscd proteus_demo/data
+<div class="highlight-python"><div class="highlight"><pre>roscd proteus_demo/data
 morse run wifibot.py
 
 rosmake proteus_orocos_obstaclelaser
-roslaunch proteus_orocos_obstaclelaser AvoidObstacleLaser.launch</pre>
+roslaunch proteus_orocos_obstaclelaser AvoidObstacleLaser.launch
+</pre></div>
 </div>
 <p><a class="reference external" href="https://github.com/anr-proteus/proteus/tree/master/proteus_orocos_obstaclelaser">|morse-orocos|</a></p>
 </div>
 <hr class="docutils" />
 <div class="section" id="rviz-video">
 <h2>RViz (video)<a class="headerlink" href="#rviz-video" title="Permalink to this headline">¶</a></h2>
-<iframe src="http://player.vimeo.com/video/23244699?portrait=0" width="800" height="375" frameborder="0" allowfullscreen></iframe><div class="highlight-python"><pre>rosrun rviz rviz</pre>
+<iframe src="http://player.vimeo.com/video/23244699?portrait=0" width="800" height="375" frameborder="0" allowfullscreen></iframe><div class="highlight-python"><div class="highlight"><pre>rosrun rviz rviz
+</pre></div>
 </div>
 <div class="section" id="launch-rviz-with-a-configuration-file">
 <h3>launch rviz with a configuration file<a class="headerlink" href="#launch-rviz-with-a-configuration-file" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python"><pre>roscd proteus_demo/data
-rosrun rviz rviz -d rviz.vcg</pre>
+<div class="highlight-python"><div class="highlight"><pre>roscd proteus_demo/data
+rosrun rviz rviz -d rviz.vcg
+</pre></div>
 </div>
 <p>(<a class="reference external" href="http://vimeo.com/23244699">video</a>)</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="outdoor-video">
 <h3>Outdoor (video)<a class="headerlink" href="#outdoor-video" title="Permalink to this headline">¶</a></h3>
-<iframe src="http://player.vimeo.com/video/26054198?portrait=0" width="800" height="350" frameborder="0" allowfullscreen></iframe><div class="highlight-python"><pre>roscd proteus_demo/data
-morse run wifibot.py</pre>
+<iframe src="http://player.vimeo.com/video/26054198?portrait=0" width="800" height="350" frameborder="0" allowfullscreen></iframe><div class="highlight-python"><div class="highlight"><pre>roscd proteus_demo/data
+morse run wifibot.py
+</pre></div>
 </div>
 <p>(<a class="reference external" href="http://vimeo.com/26054198">video</a>)</p>
 </div>
@@ -407,11 +424,12 @@ morse run wifibot.py</pre>
 <hr class="docutils" />
 <div class="section" id="exploration-bosch-demo-w-stage">
 <h2>Exploration (Bosch demo w/ Stage)<a class="headerlink" href="#exploration-bosch-demo-w-stage" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><pre>sudo apt-get install ros-electric-bosch-common
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install ros-electric-bosch-common
 roslaunch explore_stage explore.launch
 
 roscd explore_stage
-rosrun rviz rviz -d explore.vcg</pre>
+rosrun rviz rviz -d explore.vcg
+</pre></div>
 </div>
 <p><a class="reference external" href="http://ros.org/wiki/explore_stage">|exploration|</a></p>
 </div>
@@ -428,7 +446,8 @@ rosrun rviz rviz -d explore.vcg</pre>
 <div class="section" id="tips">
 <h2>TIPS<a class="headerlink" href="#tips" title="Permalink to this headline">¶</a></h2>
 <p>MORSE create cache files in the current directory,</p>
-<div class="highlight-python"><pre>rm scene.*.blend</pre>
+<div class="highlight-python"><div class="highlight"><pre>rm scene.*.blend
+</pre></div>
 </div>
 <p>allow you to delete those files.</p>
 </div>
@@ -570,14 +589,14 @@ model</a> )</p>
         <li class="right" >
           <a href="../ExamplesOfUse.html" title="Examples of Use"
              >previous</a> |</li>
-        <li><a href="../../index.html">RobotML 1.2 documentation</a> &raquo;</li>
+        <li><a href="../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li>
           <li><a href="../../UserGuide.html" >User Guide</a> &raquo;</li>
           <li><a href="../ExamplesOfUse.html" >Examples of Use</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2009-2013, PROTEUS consortium.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+        &copy; Copyright 2009-2014, PROTEUS consortium.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
     </div>
   </body>
 </html>
