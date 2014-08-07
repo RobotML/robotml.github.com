@@ -3,22 +3,10 @@
 Life cycle
 ----------
 
-Rationale
-^^^^^^^^^
-
-PROTEUS project was based on a vision. A vision where those providing :term:`problem`\ s and those proposing :term:`solution`\ s would find a way to cooperate in order to leverage as best as possible in products or new research topics the knowledge so created. In order to reach such a goal a commonplace was deemed necessary as well as the design of associated tools allowing interactions with this commonplace embodied y a portal. Next schematic is presenting the different participants to the promoted cooperation.
-
-.. figure:: ./LifeCycle_images/D0.11-P0.8-P0.1-ProteusWorkflow-2.png
-   :align: center
-   :width: 500
-   :alt: Proteus Rationale graphical presentation
-
-   *PROTEUS Rationale*
-
 Roles
 ^^^^^
 
-As presented in the above picture there are several roles to be considered:
+As presented in picture :ref:`ITR-I-F1` there are several roles to be considered:
 
 	1. :term:`Provider <provider>`\ : Here it means someone that is able to upload something on the :term:`portal` either using the different tools developed in the :term:`PROTEUS` project or directly knowing the protocols to be used. These actions ask for an authentication that will allow to limit access to the different parts of the portal. 
 	2. :term:`User <user>`\ : Here it means someone that is able to download something from the portal in the same conditions as the :term:`provider` with as much authentication knowing that some parts will be relayed to private website askinng perhaps for other authentication steps

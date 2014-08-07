@@ -6,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>RobotML Modeling Platform &mdash; RobotML 2.0alpha documentation</title>
+    <title>RobotML Modeling Platform &mdash; RobotML  documentation</title>
     
-    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.0alpha',
+        VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="RobotML 2.0alpha documentation" href="../index.html" />
+    <link rel="top" title="RobotML  documentation" href="../index.html" />
     <link rel="next" title="RobotML Code Generators" href="../RobotMLCodeGenerators/index.html" />
     <link rel="prev" title="RobotML Meta-model" href="../RobotMLMetamodel/index.html" /> 
   </head>
@@ -40,9 +40,61 @@
         <li class="right" >
           <a href="../RobotMLMetamodel/index.html" title="RobotML Meta-model"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">RobotML 2.0alpha documentation</a> &raquo;</li> 
+        <li><a href="../index.html">RobotML  documentation</a> &raquo;</li> 
       </ul>
-    </div>  
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">RobotML Modeling Platform</a><ul>
+<li><a class="reference internal" href="#about-papyrus">About Papyrus</a></li>
+<li><a class="reference internal" href="#papyrus-tutorials">Papyrus tutorials</a></li>
+<li><a class="reference internal" href="#dsl-detailed">DSL detailed</a></li>
+<li><a class="reference internal" href="#domain-model">Domain model</a><ul>
+<li><a class="reference internal" href="#architecture-dsl">Architecture DSL</a><ul>
+<li><a class="reference internal" href="#domain-model-detailed">Domain model detailed</a><ul>
+<li><a class="reference internal" href="#robotic-system-package">Robotic System Package</a></li>
+<li><a class="reference internal" href="#robotic-environment-package">Robotic environment package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#juno-version">Juno version</a></li>
+<li><a class="reference internal" href="#kepler-version">Kepler version</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../RobotMLMetamodel/index.html"
+                        title="previous chapter">RobotML Meta-model</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../RobotMLCodeGenerators/index.html"
+                        title="next chapter">RobotML Code Generators</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/RobotMLModelingPlatform/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
 
     <div class="document">
       <div class="documentwrapper">
@@ -57,13 +109,13 @@
 </div>
 <div class="section" id="about-papyrus">
 <h2>About Papyrus<a class="headerlink" href="#about-papyrus" title="Permalink to this headline">¶</a></h2>
-<p><em class="xref std std-term">Papyrus</em> is aiming at providing an integrated and user-consumable environment for
-editing any kind of <em class="xref std std-term">EMF</em> <em class="xref std std-term">model</em> and particularly supporting <em class="xref std std-term">UML</em> and related modeling
-languages such as <em class="xref std std-term">SysML</em> and <em class="xref std std-term">MARTE</em>. Papyrus provides diagram editors for EMF-based
-modeling languages amongst them <em class="xref std std-term">UML</em> 2 and <em class="xref std std-term">SysML</em> and the glue required for integrating
-these editors (GMF-based or not) with other <em class="xref std std-term">MBD</em> and MDSD tools.</p>
-<p><em class="xref std std-term">Papyrus</em> provides a very advanced support for <em class="xref std std-term">UML</em> profiles enabling support for
-&#8220;pure&#8221; <em class="xref std std-term">DSL</em>. Every part of <em class="xref std std-term">Papyrus</em> may be customized: model explorer, diagram editors,
+<p><a class="reference internal" href="../Glossary.html#term-34"><em class="xref std std-term">Papyrus</em></a> is aiming at providing an integrated and user-consumable environment for
+editing any kind of <a class="reference internal" href="../Glossary.html#term-emf"><em class="xref std std-term">EMF</em></a> <a class="reference internal" href="../Glossary.html#term-model"><em class="xref std std-term">model</em></a> and particularly supporting <a class="reference internal" href="../Glossary.html#term-uml"><em class="xref std std-term">UML</em></a> and related modeling
+languages such as <a class="reference internal" href="../Glossary.html#term-sysml"><em class="xref std std-term">SysML</em></a> and <a class="reference internal" href="../Glossary.html#term-marte"><em class="xref std std-term">MARTE</em></a>. Papyrus provides diagram editors for EMF-based
+modeling languages amongst them <a class="reference internal" href="../Glossary.html#term-uml"><em class="xref std std-term">UML</em></a> 2 and <a class="reference internal" href="../Glossary.html#term-sysml"><em class="xref std std-term">SysML</em></a> and the glue required for integrating
+these editors (GMF-based or not) with other <a class="reference internal" href="../Glossary.html#term-mbd"><em class="xref std std-term">MBD</em></a> and MDSD tools.</p>
+<p><a class="reference internal" href="../Glossary.html#term-34"><em class="xref std std-term">Papyrus</em></a> provides a very advanced support for <a class="reference internal" href="../Glossary.html#term-uml"><em class="xref std std-term">UML</em></a> profiles enabling support for
+&#8220;pure&#8221; <a class="reference internal" href="../Glossary.html#term-dsl"><em class="xref std std-term">DSL</em></a>. Every part of <a class="reference internal" href="../Glossary.html#term-34"><em class="xref std std-term">Papyrus</em></a> may be customized: model explorer, diagram editors,
 property editors, etc.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
@@ -76,10 +128,10 @@ property editors, etc.</p>
 </div>
 <div class="section" id="dsl-detailed">
 <h2>DSL detailed<a class="headerlink" href="#dsl-detailed" title="Permalink to this headline">¶</a></h2>
-<p>One of the objectives of the <em class="xref std std-term">PROTEUS</em> project is to provide domain specific languages (and related
+<p>One of the objectives of the <a class="reference internal" href="../Glossary.html#term-proteus"><em class="xref std std-term">PROTEUS</em></a> project is to provide domain specific languages (and related
 tools like editors, consistency checkers, etc) suitable to specify missions, environments and robot
 behaviours that have been specified by robotics experts involved in the project. The discussions
-within the <em class="xref std std-term">PROTEUS</em> project have led to the decision of defining three <em class="xref std std-term">DSL</em> s.</p>
+within the <a class="reference internal" href="../Glossary.html#term-proteus"><em class="xref std std-term">PROTEUS</em></a> project have led to the decision of defining three <a class="reference internal" href="../Glossary.html#term-dsl"><em class="xref std std-term">DSL</em></a> s.</p>
 <p>1 The <a class="reference internal" href="#architecture-dsl"><em>Architecture DSL</em></a> which will ease the definition of specific robotic architectures (reactive,
 deliberative, hybrid) and specific components that form those architectures (sensors, actuators, planners).</p>
 <p>2 The &#8220;Control &amp; Communication DSL&#8221; that will control the robotic components and will ease
@@ -93,8 +145,8 @@ different components of an architecture described with the <a class="reference i
 <h2>Domain model<a class="headerlink" href="#domain-model" title="Permalink to this headline">¶</a></h2>
 <p>The domain model of a given domain specific language defines the concepts and the terminology
 of the language domain. The relationships between the concepts are described as well. In this
-section, we present the domain model of the <em class="xref std std-term">RobotML</em> <em class="xref std std-term">DSL</em> s based on the requirements defined in
-the previous section and on the knowledge base provided by the ontology. We have used <em class="xref std std-term">UML</em> class diagrams to represent the domain model. Figure 1 show a generic view of the RobotML
+section, we present the domain model of the <a class="reference internal" href="../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> <a class="reference internal" href="../Glossary.html#term-dsl"><em class="xref std std-term">DSL</em></a> s based on the requirements defined in
+the previous section and on the knowledge base provided by the ontology. We have used <a class="reference internal" href="../Glossary.html#term-uml"><em class="xref std std-term">UML</em></a> class diagrams to represent the domain model. Figure 1 show a generic view of the RobotML
 domain model which describe the architecture of the robotic system (ie. its internal structure), the
 behavior of components (through FSMs or algorithms) , the communications between them and the
 deployment of robotic systems to specific robotic platforms.</p>
@@ -160,9 +212,7 @@ evidencing the pace of time.</p>
 <div class="section" id="robotic-environment-package">
 <span id="id3"></span><h5>Robotic environment package<a class="headerlink" href="#robotic-environment-package" title="Permalink to this headline">¶</a></h5>
 <p>The <strong>environment</strong> is the highest possible &#8220;container&#8221; for the <strong>physical</strong> objects to exist, and it is
-considered as part of the architecture of a robotic system. Figure 8 shows the <strong>robotic environment</strong>
-package which enables the specification of different types of environments.</p>
-<img alt="The robotic environment package" class="align-center" src="RobotMLModelingPlatform/images/robotic_environment_package.png" />
+considered as part of the architecture of a robotic system.</p>
 <p>See <a class="reference external" href="http://www.google.fr">RobotML API documentation</a>.</p>
 </div>
 </div>
@@ -171,10 +221,10 @@ package which enables the specification of different types of environments.</p>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>You need to download the <a class="reference external" href="http://www.eclipse.org/downloads/packages/eclipse-modeling-tools/keplersr1">Eclipse Modelling tools</a>.
-Then extract the modeller on your computer and launch it. You need to install <em class="xref std std-term">Papyrus</em>, with <em class="xref std std-term">RobotML</em> extra feature, <em class="xref std std-term">Acceleo</em>, and <em class="xref std std-term">Subclipse</em>.</p>
+Then extract the modeller on your computer and launch it. You need to install <a class="reference internal" href="../Glossary.html#term-34"><em class="xref std std-term">Papyrus</em></a>, with <a class="reference internal" href="../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> extra feature, <a class="reference internal" href="../Glossary.html#term-acceleo"><em class="xref std std-term">Acceleo</em></a>, and <a class="reference internal" href="../Glossary.html#term-subclipse"><em class="xref std std-term">Subclipse</em></a>.</p>
 <ul class="simple">
-<li>To install <em class="xref std std-term">Acceleo</em>, clic on <strong>Help/install Modellign component</strong>, and selection <em class="xref std std-term">Acceleo</em>.</li>
-<li>To install <em class="xref std std-term">Papyrus</em> and <em class="xref std std-term">Subclipse</em>, clic on <strong>Help/Install new software...</strong>, and add the following update site</li>
+<li>To install <a class="reference internal" href="../Glossary.html#term-acceleo"><em class="xref std std-term">Acceleo</em></a>, clic on <strong>Help/install Modellign component</strong>, and selection <a class="reference internal" href="../Glossary.html#term-acceleo"><em class="xref std std-term">Acceleo</em></a>.</li>
+<li>To install <a class="reference internal" href="../Glossary.html#term-34"><em class="xref std std-term">Papyrus</em></a> and <a class="reference internal" href="../Glossary.html#term-subclipse"><em class="xref std std-term">Subclipse</em></a>, clic on <strong>Help/Install new software...</strong>, and add the following update site</li>
 </ul>
 </div>
 <div class="section" id="juno-version">
@@ -190,10 +240,10 @@ Then extract the modeller on your computer and launch it. You need to install <e
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><em class="xref std std-term">Papyrus</em></td>
+<tr class="row-even"><td><a class="reference internal" href="../Glossary.html#term-34"><em class="xref std std-term">Papyrus</em></a></td>
 <td><a class="reference external" href="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/juno">http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/juno</a></td>
 </tr>
-<tr class="row-odd"><td><em class="xref std std-term">Subclipse</em></td>
+<tr class="row-odd"><td><a class="reference internal" href="../Glossary.html#term-subclipse"><em class="xref std std-term">Subclipse</em></a></td>
 <td><a class="reference external" href="http://subclipse.tigris.org/update_1.10.x">http://subclipse.tigris.org/update_1.10.x</a></td>
 </tr>
 </tbody>
@@ -216,10 +266,10 @@ Then extract the modeller on your computer and launch it. You need to install <e
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><em class="xref std std-term">Papyrus</em> (nigthly)</td>
+<tr class="row-even"><td><a class="reference internal" href="../Glossary.html#term-34"><em class="xref std std-term">Papyrus</em></a> (nigthly)</td>
 <td><a class="reference external" href="http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/kepler">http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/kepler</a></td>
 </tr>
-<tr class="row-odd"><td><em class="xref std std-term">Subclipse</em></td>
+<tr class="row-odd"><td><a class="reference internal" href="../Glossary.html#term-subclipse"><em class="xref std std-term">Subclipse</em></a></td>
 <td><a class="reference external" href="http://subclipse.tigris.org/update_1.10.x">http://subclipse.tigris.org/update_1.10.x</a></td>
 </tr>
 </tbody>
@@ -231,58 +281,6 @@ Then extract the modeller on your computer and launch it. You need to install <e
 
 
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">RobotML Modeling Platform</a><ul>
-<li><a class="reference internal" href="#about-papyrus">About Papyrus</a></li>
-<li><a class="reference internal" href="#papyrus-tutorials">Papyrus tutorials</a></li>
-<li><a class="reference internal" href="#dsl-detailed">DSL detailed</a></li>
-<li><a class="reference internal" href="#domain-model">Domain model</a><ul>
-<li><a class="reference internal" href="#architecture-dsl">Architecture DSL</a><ul>
-<li><a class="reference internal" href="#domain-model-detailed">Domain model detailed</a><ul>
-<li><a class="reference internal" href="#robotic-system-package">Robotic System Package</a></li>
-<li><a class="reference internal" href="#robotic-environment-package">Robotic environment package</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#installation">Installation</a></li>
-<li><a class="reference internal" href="#juno-version">Juno version</a></li>
-<li><a class="reference internal" href="#kepler-version">Kepler version</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="../RobotMLMetamodel/index.html"
-                        title="previous chapter">RobotML Meta-model</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="../RobotMLCodeGenerators/index.html"
-                        title="next chapter">RobotML Code Generators</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../_sources/RobotMLModelingPlatform/index.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -299,12 +297,12 @@ Then extract the modeller on your computer and launch it. You need to install <e
         <li class="right" >
           <a href="../RobotMLMetamodel/index.html" title="RobotML Meta-model"
              >previous</a> |</li>
-        <li><a href="../index.html">RobotML 2.0alpha documentation</a> &raquo;</li> 
+        <li><a href="../index.html">RobotML  documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2009-2014, PROTEUS consortium.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+        &copy; Copyright 2009-2014, PROTEUS consortium, Nicolas Brodnan, Saadia Dhouib, Nicolas Dulac, Jean-Loup Farges, Bruno Patin.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.
     </div>
   </body>
 </html>

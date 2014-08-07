@@ -6,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>How-to : CycabTK Simulator &mdash; RobotML 2.0alpha documentation</title>
+    <title>How-to : CycabTK Simulator &mdash; RobotML  documentation</title>
     
-    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0alpha',
+        VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,9 +23,9 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="RobotML 2.0alpha documentation" href="../../index.html" />
+    <link rel="top" title="RobotML  documentation" href="../../index.html" />
     <link rel="up" title="Examples of Use" href="../ExamplesOfUse.html" />
-    <link rel="next" title="RobotML Meta-model" href="../../RobotMLMetamodel/index.html" />
+    <link rel="next" title="Platform Installation" href="../ModellingComponents.html" />
     <link rel="prev" title="Annex" href="ATKScenario/Annex.html" /> 
   </head>
   <body>
@@ -36,16 +36,59 @@
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../../RobotMLMetamodel/index.html" title="RobotML Meta-model"
+          <a href="../ModellingComponents.html" title="Platform Installation"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="ATKScenario/Annex.html" title="Annex"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li>
-          <li><a href="../index.html" >User Guide</a> &raquo;</li>
+        <li><a href="../../index.html">RobotML  documentation</a> &raquo;</li>
+          <li><a href="../index.html" >How to use RobotML</a> &raquo;</li>
           <li><a href="../ExamplesOfUse.html" accesskey="U">Examples of Use</a> &raquo;</li> 
       </ul>
-    </div>  
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">How-to : CycabTK Simulator</a><ul>
+<li><a class="reference internal" href="#cycabtk">CycabTK</a></li>
+<li><a class="reference internal" href="#installation">Installation</a><ul>
+<li><a class="reference internal" href="#install-from-the-proteus-repository-on-ubuntu-12-04-i386">Install from the proteus repository on Ubuntu 12.04 i386 :</a></li>
+<li><a class="reference internal" href="#install-from-sources">Install from sources :</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#test-installation">Test installation :</a></li>
+<li><a class="reference internal" href="#create-a-new-simulation">Create a new simulation</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="ATKScenario/Annex.html"
+                        title="previous chapter">Annex</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../ModellingComponents.html"
+                        title="next chapter">Platform Installation</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/HowToUseRobotML/ExamplesOfUse/HowToCycabTK.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
 
     <div class="document">
       <div class="documentwrapper">
@@ -76,8 +119,7 @@ plugins to simulate robots and sensors.</p>
 <h3>Install from the proteus repository on Ubuntu 12.04 i386 :<a class="headerlink" href="#install-from-the-proteus-repository-on-ubuntu-12-04-i386" title="Permalink to this headline">¶</a></h3>
 <p>If you use Ubuntu 12.04 i386, you just have to install the <strong>CycabTKSimulator</strong> package from the proteus repository
 (<a class="reference external" href="https://packages.greyc.fr/proteus">https://packages.greyc.fr/proteus</a>) :</p>
-<div class="highlight-python"><div class="highlight"><pre>$ apt-get install CycabTKSimulator
-</pre></div>
+<div class="highlight-python"><pre>$ apt-get install CycabTKSimulator</pre>
 </div>
 </div>
 <div class="section" id="install-from-sources">
@@ -88,16 +130,14 @@ plugins to simulate robots and sensors.</p>
 <div class="section" id="test-installation">
 <h2>Test installation :<a class="headerlink" href="#test-installation" title="Permalink to this headline">¶</a></h2>
 <p>To verify the installation, you can launch the tutorial launchfile :</p>
-<div class="highlight-python"><div class="highlight"><pre>$ roslaunch CycabTKSimulator cycabtk_tutorial.launch
-</pre></div>
+<div class="highlight-python"><pre>$ roslaunch CycabTKSimulator cycabtk_tutorial.launch</pre>
 </div>
-<p>After that, you should see a window like this :</p>
-<div class="figure">
-<img alt="HowToUseRobotML/ExamplesOfUse/HowToCycabTK_images/cycabtk_tutorial_screenshot.png:align:center" src="HowToUseRobotML/ExamplesOfUse/HowToCycabTK_images/cycabtk_tutorial_screenshot.png:align:center" />
-<p class="caption">You can move the robot by pressing the keyboard arrows.</p>
-<div class="legend">
-<p>You can check you have sensors / commands topics in ROS :</p>
-<div class="highlight-python"><div class="highlight"><pre>$ rostopic list
+<p>After that, you should see a window like this:</p>
+<img alt="cycab-TK screenshot" class="align-center" src="../../_images/cycabtk_tutorial_screenshot.png" />
+<p>You can move the robot by pressing the keyboard arrows.</p>
+<blockquote>
+<div><p>You can check you have sensors / commands topics in ROS :</p>
+<div class="highlight-python"><pre>$ rostopic list
 /clock
 /robot/camera/camera_info
 /robot/camera/image_raw
@@ -117,11 +157,9 @@ plugins to simulate robots and sensors.</p>
 /robot/twistCommand
 /rosout
 /rosout_agg
-/tf
-</pre></div>
+/tf</pre>
 </div>
-</div>
-</div>
+</div></blockquote>
 </div>
 <div class="section" id="create-a-new-simulation">
 <h2>Create a new simulation<a class="headerlink" href="#create-a-new-simulation" title="Permalink to this headline">¶</a></h2>
@@ -133,49 +171,6 @@ plugins to simulate robots and sensors.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../../index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">How-to : CycabTK Simulator</a><ul>
-<li><a class="reference internal" href="#cycabtk">CycabTK</a></li>
-<li><a class="reference internal" href="#installation">Installation</a><ul>
-<li><a class="reference internal" href="#install-from-the-proteus-repository-on-ubuntu-12-04-i386">Install from the proteus repository on Ubuntu 12.04 i386 :</a></li>
-<li><a class="reference internal" href="#install-from-sources">Install from sources :</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#test-installation">Test installation :</a></li>
-<li><a class="reference internal" href="#create-a-new-simulation">Create a new simulation</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="ATKScenario/Annex.html"
-                        title="previous chapter">Annex</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="../../RobotMLMetamodel/index.html"
-                        title="next chapter">RobotML Meta-model</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../../_sources/HowToUseRobotML/ExamplesOfUse/HowToCycabTK.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
       <div class="clearer"></div>
     </div>
     <div class="related">
@@ -185,19 +180,19 @@ plugins to simulate robots and sensors.</p>
           <a href="../../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="../../RobotMLMetamodel/index.html" title="RobotML Meta-model"
+          <a href="../ModellingComponents.html" title="Platform Installation"
              >next</a> |</li>
         <li class="right" >
           <a href="ATKScenario/Annex.html" title="Annex"
              >previous</a> |</li>
-        <li><a href="../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li>
-          <li><a href="../index.html" >User Guide</a> &raquo;</li>
+        <li><a href="../../index.html">RobotML  documentation</a> &raquo;</li>
+          <li><a href="../index.html" >How to use RobotML</a> &raquo;</li>
           <li><a href="../ExamplesOfUse.html" >Examples of Use</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2009-2014, PROTEUS consortium.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+        &copy; Copyright 2009-2014, PROTEUS consortium, Nicolas Brodnan, Saadia Dhouib, Nicolas Dulac, Jean-Loup Farges, Bruno Patin.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.
     </div>
   </body>
 </html>

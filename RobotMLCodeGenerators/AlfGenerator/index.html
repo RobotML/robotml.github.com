@@ -6,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>The Alf Generator API &mdash; RobotML 2.0alpha documentation</title>
+    <title>The Alf Generator API &mdash; RobotML  documentation</title>
     
-    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0alpha',
+        VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="RobotML 2.0alpha documentation" href="../../index.html" />
+    <link rel="top" title="RobotML  documentation" href="../../index.html" />
     <link rel="up" title="RobotML Code Generators" href="../index.html" />
     <link rel="next" title="RobotML web Portal" href="../../RobotMLWebPortal/index.html" />
     <link rel="prev" title="VLE RobotML Generator" href="../VLEGenerator/index.html" /> 
@@ -41,10 +41,56 @@
         <li class="right" >
           <a href="../VLEGenerator/index.html" title="VLE RobotML Generator"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li>
+        <li><a href="../../index.html">RobotML  documentation</a> &raquo;</li>
           <li><a href="../index.html" accesskey="U">RobotML Code Generators</a> &raquo;</li> 
       </ul>
-    </div>  
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">The Alf Generator API</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a><ul>
+<li><a class="reference internal" href="#alfservices">AlfServices</a></li>
+<li><a class="reference internal" href="#alfblock">AlfBlock</a></li>
+<li><a class="reference internal" href="#ialfgenerator">IAlfGenerator</a></li>
+<li><a class="reference internal" href="#alfgenerator">AlfGenerator</a></li>
+<li><a class="reference internal" href="#athena-alfgenerator">Athena_AlfGenerator</a></li>
+<li><a class="reference internal" href="#cpp-alfgenerator">CPP_AlfGenerator</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#how-to-use-an-existing-alf-generator">How to use an existing Alf generator</a></li>
+<li><a class="reference internal" href="#how-to-create-a-new-alf-generator">How to create a new Alf generator</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../VLEGenerator/index.html"
+                        title="previous chapter">VLE RobotML Generator</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../../RobotMLWebPortal/index.html"
+                        title="next chapter">RobotML web Portal</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/RobotMLCodeGenerators/AlfGenerator/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
 
     <div class="document">
       <div class="documentwrapper">
@@ -1891,19 +1937,18 @@
 </div>
 <div class="section" id="how-to-use-an-existing-alf-generator">
 <h2>How to use an existing Alf generator<a class="headerlink" href="#how-to-use-an-existing-alf-generator" title="Permalink to this headline">¶</a></h2>
-<p>You can use an Alf generator in your <em class="xref std std-term">RobotML</em> generator development.
-You have two solution to call an existing Alf generator. But that depend how you develop your <em class="xref std std-term">RobotML</em> generator.</p>
+<p>You can use an Alf generator in your <a class="reference internal" href="../../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> generator development.
+You have two solution to call an existing Alf generator. But that depend how you develop your <a class="reference internal" href="../../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> generator.</p>
 <ul class="simple">
-<li>If you use <em class="xref std std-term">Acceleo</em> template, you should to import the AlfServices into your template.Then call <cite>createAlfBloc</cite> to get an Alf bloc corresponding to your operation body, and call the right operation translation you need.</li>
+<li>If you use <a class="reference internal" href="../../Glossary.html#term-acceleo"><em class="xref std std-term">Acceleo</em></a> template, you should to import the AlfServices into your template.Then call <cite>createAlfBloc</cite> to get an Alf bloc corresponding to your operation body, and call the right operation translation you need.</li>
 </ul>
-<div class="highlight-ocl"><div class="highlight"><pre>[let behavior : OpaqueBehavior = element.oclAsType(OpaqueBahevior)]
+<div class="highlight-ocl"><pre>[let behavior : OpaqueBehavior = element.oclAsType(OpaqueBahevior)]
    [let bloc : alf::Block = createAlfBloc(behavior)]
       [if((bloc = null) =(false))]
          [translateAlfBlocTo_Athena(bloc)/]
        [/if]
    [/let]
-[/let]
-</pre></div>
+[/let]</pre>
 </div>
 <ul class="simple">
 <li>If you use JAVA class, you should to refrence the Alf generator API, and call the static methods <cite>createAlfBloc</cite> and the translation operation.</li>
@@ -1955,52 +2000,6 @@ You have two solution to call an existing Alf generator. But that depend how you
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../../index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">The Alf Generator API</a><ul>
-<li><a class="reference internal" href="#overview">Overview</a><ul>
-<li><a class="reference internal" href="#alfservices">AlfServices</a></li>
-<li><a class="reference internal" href="#alfblock">AlfBlock</a></li>
-<li><a class="reference internal" href="#ialfgenerator">IAlfGenerator</a></li>
-<li><a class="reference internal" href="#alfgenerator">AlfGenerator</a></li>
-<li><a class="reference internal" href="#athena-alfgenerator">Athena_AlfGenerator</a></li>
-<li><a class="reference internal" href="#cpp-alfgenerator">CPP_AlfGenerator</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#how-to-use-an-existing-alf-generator">How to use an existing Alf generator</a></li>
-<li><a class="reference internal" href="#how-to-create-a-new-alf-generator">How to create a new Alf generator</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="../VLEGenerator/index.html"
-                        title="previous chapter">VLE RobotML Generator</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="../../RobotMLWebPortal/index.html"
-                        title="next chapter">RobotML web Portal</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../../_sources/RobotMLCodeGenerators/AlfGenerator/index.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
       <div class="clearer"></div>
     </div>
     <div class="related">
@@ -2015,13 +2014,13 @@ You have two solution to call an existing Alf generator. But that depend how you
         <li class="right" >
           <a href="../VLEGenerator/index.html" title="VLE RobotML Generator"
              >previous</a> |</li>
-        <li><a href="../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li>
+        <li><a href="../../index.html">RobotML  documentation</a> &raquo;</li>
           <li><a href="../index.html" >RobotML Code Generators</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2009-2014, PROTEUS consortium.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+        &copy; Copyright 2009-2014, PROTEUS consortium, Nicolas Brodnan, Saadia Dhouib, Nicolas Dulac, Jean-Loup Farges, Bruno Patin.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.
     </div>
   </body>
 </html>

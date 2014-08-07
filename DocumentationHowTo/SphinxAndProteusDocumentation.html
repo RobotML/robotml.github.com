@@ -6,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Sphinx and RobotML documentation &mdash; RobotML 2.0alpha documentation</title>
+    <title>Sphinx and RobotML documentation &mdash; RobotML  documentation</title>
     
-    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.0alpha',
+        VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,9 +23,9 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="RobotML 2.0alpha documentation" href="../index.html" />
+    <link rel="top" title="RobotML  documentation" href="../index.html" />
     <link rel="next" title="Bugs and questions" href="BugsAndQuestions.html" />
-    <link rel="prev" title="Glossary" href="../Glossary.html" /> 
+    <link rel="prev" title="RobotML web Portal" href="../RobotMLWebPortal/index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -38,11 +38,49 @@
           <a href="BugsAndQuestions.html" title="Bugs and questions"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="../Glossary.html" title="Glossary"
+          <a href="../RobotMLWebPortal/index.html" title="RobotML web Portal"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">RobotML 2.0alpha documentation</a> &raquo;</li> 
+        <li><a href="../index.html">RobotML  documentation</a> &raquo;</li> 
       </ul>
-    </div>  
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Sphinx and RobotML documentation</a><ul>
+<li><a class="reference internal" href="#installation-of-sphinx">Installation of Sphinx</a></li>
+<li><a class="reference internal" href="#how-to-generate-with-sphinx">How to generate with Sphinx</a></li>
+<li><a class="reference internal" href="#eclipse-rst-plugin">ECLIPSE RsT plugin</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../RobotMLWebPortal/index.html"
+                        title="previous chapter">RobotML web Portal</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="BugsAndQuestions.html"
+                        title="next chapter">Bugs and questions</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/DocumentationHowTo/SphinxAndProteusDocumentation.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
 
     <div class="document">
       <div class="documentwrapper">
@@ -70,8 +108,7 @@
 <ol class="arabic simple">
 <li>open a terminal (process is different with respect to the different OS) 2. verify you have access to sphinx command (PATH to complete and it depends also of the OS used) 3. change location in the folder tree in order to position to the root of the documentation (in PROTEUS distribution case on Linux, it means folder XXX) 4. type hereafter command (if -b option is forgotten, default is html, read <a class="reference external" href="http://sphinx.pocoo.org/sphinx.pdf">documentation</a> for more information)</li>
 </ol>
-<div class="highlight-python"><div class="highlight"><pre>sphinx-build -b html . destination_directory
-</pre></div>
+<div class="highlight-python"><pre>sphinx-build -b html . destination_directory</pre>
 </div>
 <ol class="arabic simple" start="5">
 <li>you are now able to consider the result in the <em>destination_directory</em></li>
@@ -102,44 +139,6 @@
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Sphinx and RobotML documentation</a><ul>
-<li><a class="reference internal" href="#installation-of-sphinx">Installation of Sphinx</a></li>
-<li><a class="reference internal" href="#how-to-generate-with-sphinx">How to generate with Sphinx</a></li>
-<li><a class="reference internal" href="#eclipse-rst-plugin">ECLIPSE RsT plugin</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="../Glossary.html"
-                        title="previous chapter">Glossary</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="BugsAndQuestions.html"
-                        title="next chapter">Bugs and questions</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../_sources/DocumentationHowTo/SphinxAndProteusDocumentation.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
       <div class="clearer"></div>
     </div>
     <div class="related">
@@ -152,14 +151,14 @@
           <a href="BugsAndQuestions.html" title="Bugs and questions"
              >next</a> |</li>
         <li class="right" >
-          <a href="../Glossary.html" title="Glossary"
+          <a href="../RobotMLWebPortal/index.html" title="RobotML web Portal"
              >previous</a> |</li>
-        <li><a href="../index.html">RobotML 2.0alpha documentation</a> &raquo;</li> 
+        <li><a href="../index.html">RobotML  documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2009-2014, PROTEUS consortium.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+        &copy; Copyright 2009-2014, PROTEUS consortium, Nicolas Brodnan, Saadia Dhouib, Nicolas Dulac, Jean-Loup Farges, Bruno Patin.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.
     </div>
   </body>
 </html>

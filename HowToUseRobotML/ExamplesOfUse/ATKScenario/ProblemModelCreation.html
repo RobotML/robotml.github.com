@@ -6,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Your First Scenario - attack an airport - Problem model creation &mdash; RobotML 2.0alpha documentation</title>
+    <title>Your First Scenario - attack an airport - Problem model creation &mdash; RobotML  documentation</title>
     
-    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../../',
-        VERSION:     '2.0alpha',
+        VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <link rel="top" title="RobotML 2.0alpha documentation" href="../../../index.html" />
+    <link rel="top" title="RobotML  documentation" href="../../../index.html" />
     <link rel="up" title="Your First Scenario - attack an airport" href="../ATKScenario.html" />
     <link rel="next" title="Your First Scenario - attack an airport - Deployment" href="Deployment.html" />
     <link rel="prev" title="Your First Scenario - attack an airport - Launch RobotML tools" href="LaunchRobotMLTools.html" /> 
@@ -41,12 +41,82 @@
         <li class="right" >
           <a href="LaunchRobotMLTools.html" title="Your First Scenario - attack an airport - Launch RobotML tools"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li>
-          <li><a href="../../index.html" >User Guide</a> &raquo;</li>
+        <li><a href="../../../index.html">RobotML  documentation</a> &raquo;</li>
+          <li><a href="../../index.html" >How to use RobotML</a> &raquo;</li>
           <li><a href="../../ExamplesOfUse.html" >Examples of Use</a> &raquo;</li>
           <li><a href="../ATKScenario.html" accesskey="U">Your First Scenario - attack an airport</a> &raquo;</li> 
       </ul>
-    </div>  
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Your First Scenario - attack an airport - Problem model creation</a><ul>
+<li><a class="reference internal" href="#create-a-robotml-project">Create a RobotML project</a><ul>
+<li><a class="reference internal" href="#register-our-svn-reository">Register our SVN reository</a></li>
+<li><a class="reference internal" href="#checking-out-our-svn-repository-and-create-the-robotml-project">Checking out our SVN repository and create the RobotML project</a></li>
+<li><a class="reference internal" href="#modeling-our-problem">Modeling our problem</a><ul>
+<li><a class="reference internal" href="#model-creation">Model creation</a><ul>
+<li><a class="reference internal" href="#adding-a-new-model-in-the-project">Adding a new model in the project</a><ul>
+<li><a class="reference internal" href="#adding-required-object-in-the-model">Adding required object in the model</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#create-model-s-datatype">Create model&#8217;s DataType</a></li>
+<li><a class="reference internal" href="#create-basic-datatype">Create basic datatype</a></li>
+<li><a class="reference internal" href="#create-enumeration">Create enumeration</a></li>
+<li><a class="reference internal" href="#create-composed-datatype">Create composed datatype</a></li>
+<li><a class="reference internal" href="#create-our-external-librairy">Create our external librairy</a></li>
+<li><a class="reference internal" href="#create-our-external-librairy-s-functions">Create our external librairy&#8217;s functions</a><ul>
+<li><a class="reference internal" href="#adding-the-basic-model-objects">Adding the basic model objects</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#create-the-base-components">Create the base components</a></li>
+<li><a class="reference internal" href="#create-the-basics-components">Create the  basics components</a></li>
+<li><a class="reference internal" href="#create-the-systems-components">Create the systems components</a></li>
+<li><a class="reference internal" href="#create-the-robots-components">Create the robots components</a></li>
+<li><a class="reference internal" href="#create-the-scenary-component">Create the scenary component</a></li>
+<li><a class="reference internal" href="#link-the-components">Link the components</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#static-validation-model">Static validation model</a></li>
+<li><a class="reference internal" href="#the-deployment">The deployment</a><ul>
+<li><a class="reference internal" href="#create-a-new-deployment">Create a new deployment</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="LaunchRobotMLTools.html"
+                        title="previous chapter">Your First Scenario - attack an airport - Launch RobotML tools</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Deployment.html"
+                        title="next chapter">Your First Scenario - attack an airport - Deployment</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/HowToUseRobotML/ExamplesOfUse/ATKScenario/ProblemModelCreation.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
 
     <div class="document">
       <div class="documentwrapper">
@@ -77,7 +147,7 @@ Press <strong>Add a new SVN location</strong> button <img alt="add_svn_location"
 </div>
 <div class="section" id="checking-out-our-svn-repository-and-create-the-robotml-project">
 <h3>Checking out our SVN repository and create the RobotML project<a class="headerlink" href="#checking-out-our-svn-repository-and-create-the-robotml-project" title="Permalink to this headline">¶</a></h3>
-<img alt="SVN Checkout command" class="align-left" src="HowToUseRobotML/ExamplesOfUse/ATKScenario/../ATKScenario_images/svn_checkout.png" />
+<img alt="SVN Checkout command" class="align-left" src="../../../_images/svn_checkout_name.png" />
 <p>In the <strong>SVN repository exploring</strong> perspective, go in the <strong>SVN repositories</strong> view. Select the new location added and open it. Select the <strong>trunk</strong> node,
 and do right clic to select the <strong>Checkout</strong> command.
 Select <em>Check out as a project configured using new Project Wizard</em>.</p>
@@ -92,7 +162,7 @@ Select <em>Check out as a project configured using new Project Wizard</em>.</p>
 <img alt="Name project" class="align-center" src="../../../_images/name_project.png" />
 <p>With the <strong>Window</strong> menu, select the <strong>Java</strong> perspective. We should to view the new <strong>ATK_Scenario</strong> project in the <strong>Project explorer</strong> view.
 This projct contains the new RobotML project created.</p>
-<img alt="Project added into workspace" class="align-center" src="HowToUseRobotML/ExamplesOfUse/ATKScenario/../ATKScenario_images/added_project_into_wokspace.png" />
+<img alt="Project added into workspace" class="align-center" src="../../../_images/added_project_into_workspace.png" />
 </div>
 <div class="section" id="modeling-our-problem">
 <h3>Modeling our problem<a class="headerlink" href="#modeling-our-problem" title="Permalink to this headline">¶</a></h3>
@@ -242,7 +312,7 @@ In the <strong>Property</strong> view, select <strong>Profil</strong> and assign
 <p><em>A simple function</em></p>
 <p>In the <strong>ExternalLibrairies_ComponentDiagram</strong> view, select the <strong>Operation</strong> element in the <strong>RobotML tool panel</strong> and drag it on the <strong>libExternalFunction</strong> component. A new operation has added in the external librairy component, select it and rename as <strong>manageSASystem</strong>.
 Go on the profil tab and assign the <strong>Algorithm</strong> profil.</p>
-<p>Edit the properties and add the function arguments on clicking on <a href="#id1"><span class="problematic" id="id2">|add_parameter|</span></a> button <em>(See the</em> <a class="reference internal" href="Annex.html#annex"><em>Annex</em></a> <em>to know the parameters)</em>.</p>
+<p>Edit the properties and add the function arguments on clicking on <img alt="Add parameter button" class="align-middle" src="../../../_images/add_parameter_button.png" /> button <em>(See the</em> <a class="reference internal" href="Annex.html#annex"><em>Annex</em></a> <em>to know the parameters)</em>.</p>
 <p>Create the external function referenced in the <a class="reference internal" href="Annex.html#annex"><em>Annex</em></a>.</p>
 <p><em>An interaction</em>
 The interaction is a simple function but it only called on the activation component&#8217;s states. See <em class="xref std std-ref">Machine State</em> to known how modelling it.</p>
@@ -250,8 +320,7 @@ The interaction is a simple function but it only called on the activation compon
 <p>The processing is a pool of functions and it will be executed sequentially. It authorized adding action code in the modèle. A processing is called by an interaction.
 To add a processing select <strong>libExternalFunction</strong> component in the <strong>model explorer</strong>. Press right click and add a new <strong>OpaqueBehavior</strong>.</p>
 <p>Edit the properties to change name, add an language definition, and link this processing to an interaction. To modeling processing, we choose the <em class="xref std std-term">Alf</em> language definition. This language is known by all plateform&#8217;s generators and could be known by the custom generators (see <em class="xref std std-ref">Alf  .
-Generators API</em>). The action description code is write on the &#8220;body&#8221; property section. To link the processing with an interaction, clic on <a href="#id3"><span class="problematic" id="id4">|add_specification|</span></a> button in the <strong>Specification</strong> property section.</p>
-<img alt="Processing properties" class="align-center" src="HowToUseRobotML/ExamplesOfUse/ATKScenario/../ATKScenario_imaes/processing_properties.png" />
+Generators API</em>). The action description code is write on the &#8220;body&#8221; property section. To link the processing with an interaction, clic on <img alt="Add operation specification button" class="align-middle" src="../../../_images/add_parameter_button.png" /> button in the <strong>Specification</strong> property section.</p>
 <p>Create all the processing defined in the <a class="reference internal" href="Annex.html#annex"><em>Annex</em></a>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -292,7 +361,6 @@ In the scenario, our automat has 3 states:</p>
 <li>Select the <strong>Final state</strong> element and drag it on the diagram. Edit their properties and named it <strong>KILLED</strong>.</li>
 <li>Select the <strong>Transition</strong> element and draw the transition between &#8220;INIT / RUNNING&#8221; and &#8220;RUNNING / KILLED&#8221; states.</li>
 </ul>
-<img alt="Automat state machine digram" class="align-center" src="HowToUseRobotML/ExamplesOfUse/ATKScenario/../ATKScenario_images/SateMachineDiagram.png" />
 <p><em>Add transtion&#8217;s guard and effect</em>
 Normally we have already added the usally function in the model. If it is not do, then</p>
 <div class="admonition seealso">
@@ -349,7 +417,6 @@ In the property view, choose <strong>StatusList</strong> for the port type. By d
 </tr>
 </tbody>
 </table>
-<img alt="RobotML tab's property for the dataflow." class="align-center" src="HowToUseRobotML/ExamplesOfUse/ATKScenario/../ATKScenario_images/robotml_dataflow.png" />
 <p><em>Adding property</em>
 To add a property to the component, select the <strong>property</strong> element in <strong>RobotML tool panel</strong>, and drag it on the component. The new property is symbilzed by a rectangle. Named this property as <strong>esmDef</strong>, and edit their property.
 In the property view,choose <strong>esmDefinitions</strong> for the property type.</p>
@@ -458,7 +525,7 @@ When the validation been running, the error status is display on the <strong>Mod
 </div>
 <div class="section" id="the-deployment">
 <h4>The deployment<a class="headerlink" href="#the-deployment" title="Permalink to this headline">¶</a></h4>
-<p>The deployment is use to generate the sources code files to destination of a middleware or a simulator. For our scenary, our destination is the <em class="xref std std-term">VLE</em> simulator.</p>
+<p>The deployment is use to generate the sources code files to destination of a middleware or a simulator. For our scenary, our destination is the <a class="reference internal" href="../../../Glossary.html#term-vle"><em class="xref std std-term">VLE</em></a> simulator.</p>
 <div class="section" id="create-a-new-deployment">
 <h5>Create a new deployment<a class="headerlink" href="#create-a-new-deployment" title="Permalink to this headline">¶</a></h5>
 <p>To create a new deployment, open the model level 4, and select the root level node. Do right clic, and select <strong>add new diagram / new deployment diagram</strong>.</p>
@@ -470,76 +537,6 @@ When the validation been running, the error status is display on the <strong>Mod
 
 
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../../../index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Your First Scenario - attack an airport - Problem model creation</a><ul>
-<li><a class="reference internal" href="#create-a-robotml-project">Create a RobotML project</a><ul>
-<li><a class="reference internal" href="#register-our-svn-reository">Register our SVN reository</a></li>
-<li><a class="reference internal" href="#checking-out-our-svn-repository-and-create-the-robotml-project">Checking out our SVN repository and create the RobotML project</a></li>
-<li><a class="reference internal" href="#modeling-our-problem">Modeling our problem</a><ul>
-<li><a class="reference internal" href="#model-creation">Model creation</a><ul>
-<li><a class="reference internal" href="#adding-a-new-model-in-the-project">Adding a new model in the project</a><ul>
-<li><a class="reference internal" href="#adding-required-object-in-the-model">Adding required object in the model</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#create-model-s-datatype">Create model&#8217;s DataType</a></li>
-<li><a class="reference internal" href="#create-basic-datatype">Create basic datatype</a></li>
-<li><a class="reference internal" href="#create-enumeration">Create enumeration</a></li>
-<li><a class="reference internal" href="#create-composed-datatype">Create composed datatype</a></li>
-<li><a class="reference internal" href="#create-our-external-librairy">Create our external librairy</a></li>
-<li><a class="reference internal" href="#create-our-external-librairy-s-functions">Create our external librairy&#8217;s functions</a><ul>
-<li><a class="reference internal" href="#adding-the-basic-model-objects">Adding the basic model objects</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#create-the-base-components">Create the base components</a></li>
-<li><a class="reference internal" href="#create-the-basics-components">Create the  basics components</a></li>
-<li><a class="reference internal" href="#create-the-systems-components">Create the systems components</a></li>
-<li><a class="reference internal" href="#create-the-robots-components">Create the robots components</a></li>
-<li><a class="reference internal" href="#create-the-scenary-component">Create the scenary component</a></li>
-<li><a class="reference internal" href="#link-the-components">Link the components</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#static-validation-model">Static validation model</a></li>
-<li><a class="reference internal" href="#the-deployment">The deployment</a><ul>
-<li><a class="reference internal" href="#create-a-new-deployment">Create a new deployment</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="LaunchRobotMLTools.html"
-                        title="previous chapter">Your First Scenario - attack an airport - Launch RobotML tools</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Deployment.html"
-                        title="next chapter">Your First Scenario - attack an airport - Deployment</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../../../_sources/HowToUseRobotML/ExamplesOfUse/ATKScenario/ProblemModelCreation.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="../../../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -556,15 +553,15 @@ When the validation been running, the error status is display on the <strong>Mod
         <li class="right" >
           <a href="LaunchRobotMLTools.html" title="Your First Scenario - attack an airport - Launch RobotML tools"
              >previous</a> |</li>
-        <li><a href="../../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li>
-          <li><a href="../../index.html" >User Guide</a> &raquo;</li>
+        <li><a href="../../../index.html">RobotML  documentation</a> &raquo;</li>
+          <li><a href="../../index.html" >How to use RobotML</a> &raquo;</li>
           <li><a href="../../ExamplesOfUse.html" >Examples of Use</a> &raquo;</li>
           <li><a href="../ATKScenario.html" >Your First Scenario - attack an airport</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2009-2014, PROTEUS consortium.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+        &copy; Copyright 2009-2014, PROTEUS consortium, Nicolas Brodnan, Saadia Dhouib, Nicolas Dulac, Jean-Loup Farges, Bruno Patin.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.
     </div>
   </body>
 </html>

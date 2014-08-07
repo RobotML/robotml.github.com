@@ -6,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>VLE RobotML Generator &mdash; RobotML 2.0alpha documentation</title>
+    <title>VLE RobotML Generator &mdash; RobotML  documentation</title>
     
-    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0alpha',
+        VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="RobotML 2.0alpha documentation" href="../../index.html" />
+    <link rel="top" title="RobotML  documentation" href="../../index.html" />
     <link rel="up" title="RobotML Code Generators" href="../index.html" />
     <link rel="next" title="The Alf Generator API" href="../AlfGenerator/index.html" />
     <link rel="prev" title="RTMAPS RobotML Generator" href="../RTMAPSGenerator/index.html" /> 
@@ -41,27 +41,21 @@
         <li class="right" >
           <a href="../RTMAPSGenerator/index.html" title="RTMAPS RobotML Generator"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li>
+        <li><a href="../../index.html">RobotML  documentation</a> &raquo;</li>
           <li><a href="../index.html" accesskey="U">RobotML Code Generators</a> &raquo;</li> 
       </ul>
-    </div>  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body">
-            
-  <div class="section" id="vle-robotml-generator">
-<h1>VLE RobotML Generator<a class="headerlink" href="#vle-robotml-generator" title="Permalink to this headline">¶</a></h1>
-<p>TBD</p>
-</div>
-
-
-          </div>
-        </div>
-      </div>
+    </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">VLE RobotML Generator</a><ul>
+<li><a class="reference internal" href="#about">About</a></li>
+<li><a class="reference internal" href="#devs-models">DEVS models</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="../RTMAPSGenerator/index.html"
                         title="previous chapter">RTMAPS RobotML Generator</a></p>
@@ -88,6 +82,85 @@
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="vle-robotml-generator">
+<h1>VLE RobotML Generator<a class="headerlink" href="#vle-robotml-generator" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<p>The Virtual Laboratory Environment <a class="reference internal" href="../../Glossary.html#term-vle"><em class="xref std std-term">VLE</em></a> is a multi-modeling and simulation platform. It is a powerful modeler and simulator supporting the use of different formalisms for models specification and simulation.
+<a class="reference internal" href="../../Glossary.html#term-vle"><em class="xref std std-term">VLE</em></a> is particularly well adapted for complex models where the coupling of different formalisms is required. In addition to the classical use of one single formalism for modeling and simulation, <a class="reference internal" href="../../Glossary.html#term-vle"><em class="xref std std-term">VLE</em></a> can integrate, i.e. couple, heterogeneous formalisms in one coherent simulation model.</p>
+<p>For instance, <a class="reference internal" href="../../Glossary.html#term-vle"><em class="xref std std-term">VLE</em></a> supports, and is not limited to, the modeling and simulation of the following formalisms (stand alone or coupled together):</p>
+<ul class="simple">
+<li>Discrete Event Specifications</li>
+<li>Differential equations</li>
+<li>Difference equations</li>
+<li>Petri net</li>
+<li>Finite State Automata</li>
+</ul>
+<p><a class="reference internal" href="../../Glossary.html#term-vle"><em class="xref std std-term">VLE</em></a> supports the following modeling and simulation paradigms:</p>
+<ul class="simple">
+<li>System Dynamics</li>
+<li>Multi-Agent Systems, Multi-Agent Simulation</li>
+<li>Decision support systems</li>
+<li>Learning systems</li>
+</ul>
+<p><a class="reference internal" href="../../Glossary.html#term-vle"><em class="xref std std-term">VLE</em></a> is based on the theory of modeling and simulation initially developed by B.P. Zeigler in the 70&#8217;s and continuously enriched until now by an active international community.
+<a class="reference internal" href="../../Glossary.html#term-vle"><em class="xref std std-term">VLE</em></a> is based on the <a class="reference internal" href="../../Glossary.html#term-devs"><em class="xref std std-term">DEVS</em></a> formalism (Discrete Event systems Specification). <a class="reference internal" href="../../Glossary.html#term-vle"><em class="xref std std-term">VLE</em></a> provides a set of C++ libraries, the <em class="xref std std-term">VFL</em> and a lot of programs like a simulator, a graphical user interface to model and develop models and tools to analyze and visualize simulation outputs. The <em class="xref std std-term">VFL</em> are sufficiently well designed to allow the development of new simulators, models or new programs for modeling and analysis.</p>
+<p><a class="reference internal" href="../../Glossary.html#term-vle"><em class="xref std std-term">VLE</em></a>&#8216;s goals is to provide powerful tools for modeling, simulating and analysing complex dynamics systems. The development are complying with the :term`DEVS` specification DEVS and works made by the simulation community.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="http://www.vle-project.org">VLE official website</a></p>
+</div>
+</div>
+<div class="section" id="devs-models">
+<span id="devsmodels"></span><h2>DEVS models<a class="headerlink" href="#devs-models" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Passive</td>
+<td>DEVS model which makes nothing, which reacts to no external event and which generates no ouput-event.</td>
+</tr>
+<tr class="row-odd"><td>Counter</td>
+<td>Very simple model which counts the number of events received on all the input-ports of the model. No output-event is produced.</td>
+</tr>
+<tr class="row-even"><td>Conditional</td>
+<td>Model may require parameters that are expressed in condition form.</td>
+</tr>
+<tr class="row-odd"><td>Generator</td>
+<td>Generates an event every X time units (x can be a parameter).</td>
+</tr>
+<tr class="row-even"><td>Storage</td>
+<td>Replicate the input to output with a lag. If an input is present before the replication to output, so this input is ignored</td>
+</tr>
+<tr class="row-odd"><td>Binary Counter</td>
+<td>Send &#8220;1&#8221; if two &#8220;1&#8221; is received within a period.</td>
+</tr>
+<tr class="row-even"><td>Sampling</td>
+<td>Replicate with a frequency the last input.</td>
+</tr>
+</tbody>
+</table>
+<p>See <em class="xref std std-ref">RobotML VLE integration</em> to know the implementation specificities.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
       <div class="clearer"></div>
     </div>
     <div class="related">
@@ -102,13 +175,13 @@
         <li class="right" >
           <a href="../RTMAPSGenerator/index.html" title="RTMAPS RobotML Generator"
              >previous</a> |</li>
-        <li><a href="../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li>
+        <li><a href="../../index.html">RobotML  documentation</a> &raquo;</li>
           <li><a href="../index.html" >RobotML Code Generators</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2009-2014, PROTEUS consortium.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+        &copy; Copyright 2009-2014, PROTEUS consortium, Nicolas Brodnan, Saadia Dhouib, Nicolas Dulac, Jean-Loup Farges, Bruno Patin.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.
     </div>
   </body>
 </html>

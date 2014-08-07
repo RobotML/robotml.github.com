@@ -6,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Introduction to RobotML &mdash; RobotML 2.0alpha documentation</title>
+    <title>Introduction to RobotML &mdash; RobotML  documentation</title>
     
-    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.0alpha',
+        VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,8 +23,8 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="RobotML 2.0alpha documentation" href="../index.html" />
-    <link rel="next" title="PROTEUS as a project" href="ProteusProject.html" />
+    <link rel="top" title="RobotML  documentation" href="../index.html" />
+    <link rel="next" title="Life cycle" href="LifeCycle.html" />
     <link rel="prev" title="RobotML Documentation" href="../index.html" /> 
   </head>
   <body>
@@ -35,51 +35,36 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="ProteusProject.html" title="PROTEUS as a project"
+          <a href="LifeCycle.html" title="Life cycle"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="../index.html" title="RobotML Documentation"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">RobotML 2.0alpha documentation</a> &raquo;</li> 
+        <li><a href="../index.html">RobotML  documentation</a> &raquo;</li> 
       </ul>
-    </div>  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body">
-            
-  <div class="section" id="introduction-to-robotml">
-<h1>Introduction to RobotML<a class="headerlink" href="#introduction-to-robotml" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ProteusProject.html">PROTEUS as a project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ProteusRoboticCommunity.html">PROTEUS and the Robotic community</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AfterProteus.html">After PROTEUS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LifeCycle.html">Life cycle</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LifeCycleSupportingTools.html">Supporting Life cycle through associated tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DownloadingAndInstalling.html">Downloading and installing</a></li>
-</ul>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">It is not necessary for the reader to consider the three first topics that are only linked to how RobotML platform and associated elements were built.
-It is of more importance to read the description of the <a class="reference internal" href="LifeCycle.html#qs-l"><em>Life cycle</em></a> and the following pages.</p>
-</div>
-</div>
-
-
-          </div>
-        </div>
-      </div>
+    </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Introduction to <tt class="docutils literal"><span class="pre">RobotML</span></tt></a><ul>
+<li><a class="reference internal" href="#interactions-between-robotml-parts">Interactions between <tt class="docutils literal"><span class="pre">RobotML</span></tt> parts</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#robotml-quickstart">RobotML Quickstart</a></li>
+<li><a class="reference internal" href="#origin-of-robotml">Origin of RobotML</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="../index.html"
                         title="previous chapter">RobotML Documentation</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="ProteusProject.html"
-                        title="next chapter">PROTEUS as a project</a></p>
+  <p class="topless"><a href="LifeCycle.html"
+                        title="next chapter">Life cycle</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="../_sources/IntroductionToRobotML/index.txt"
@@ -100,6 +85,71 @@ It is of more importance to read the description of the <a class="reference inte
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="introduction-to-robotml">
+<span id="itr-i"></span><h1>Introduction to <a class="reference internal" href="../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a><a class="headerlink" href="#introduction-to-robotml" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> covers many things. In order to understand its underlying logic it is necessary to understand what
+are its different parts. <a class="reference internal" href="../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> is in fact composed of three main parts and some associated tools. These parts are:</p>
+<ol class="arabic simple">
+<li><strong>A modelling platform</strong> based upon <a class="reference internal" href="../Glossary.html#term-34"><em class="xref std std-term">Papyrus</em></a> that allows to represent Robotics systems and associated environments ;</li>
+<li><strong>Generators</strong> based upon <a class="reference internal" href="../Glossary.html#term-acceleo"><em class="xref std std-term">Acceleo</em></a> and allowing to deploy the models composed thanks to the above part towards a list of targets;</li>
+<li><strong>Associated tools</strong> that allow the <a class="reference internal" href="../Glossary.html#term-user"><em class="xref std std-term">user</em></a> to compile and execute the code generated thanks to the generators above. There are two types of targets:<ol class="arabic">
+<li><strong>Robotic middleware targets</strong>: This type of targets allow the robotician to ignore the details of sensors and actuators focussing on the processing of information (such as decision taking).</li>
+<li><strong>Environment simulators</strong>: this type of targets allow the robotician tp ake the robot(s) live somewhere, presents information to the sensors and exhibit the consequence of decision taken onto the &#8220;real&#8221; world.</li>
+</ol>
+</li>
+<li><strong>A Community portal</strong> called <a class="reference internal" href="../Glossary.html#term-rim"><em class="xref std std-term">RIM</em></a> portal (RIM means <strong>R</strong>obot <strong>I</strong>ndependant <strong>M</strong>odel) where the Robotic community can share models and the like allowing the interactions to occur.</li>
+</ol>
+<div class="section" id="interactions-between-robotml-parts">
+<span id="itr-i-trml"></span><h2>Interactions between <a class="reference internal" href="../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> parts<a class="headerlink" href="#interactions-between-robotml-parts" title="Permalink to this headline">¶</a></h2>
+<p>The different parts presented above are interacting one with another in order to answer the needs as already presented (see <a class="reference internal" href="../index.html#i-rmld"><em>RobotML Documentation</em></a>).
+These interactions have to be understood in order to apprehend the <a class="reference internal" href="../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> environment as a whole.
+The following figure presents the parts and their possible interactions.</p>
+<div class="figure align-center" id="itr-i-f1">
+<a class="reference internal image-reference" href="../_images/5-OriginOfDifferentImagesOfDocumentation.png"><img alt="Proteus Rationale graphical presentation" src="../_images/5-OriginOfDifferentImagesOfDocumentation.png" style="width: 700px;" /></a>
+<p class="caption"><em>PROTEUS Rationale</em></p>
+</div>
+<p>The sections that follow are detailing this schematic explaining how the interactions occur and what kind of interactions
+exists. This is what we called the
+The <em>Life Cycle</em> section details how the interactions are embodied in real life and
+the <a class="reference internal" href="../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> explains how the different developed tools and parts instantiate this life cycle.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="LifeCycle.html">Life cycle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LifeCycleSupportingTools.html">RobotML development and Life cycle</a></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is of more importance to read the description of the <a class="reference internal" href="LifeCycle.html#qs-l"><em>Life cycle</em></a> and the following pages.</p>
+</div>
+</div>
+<div class="section" id="robotml-quickstart">
+<span id="itr-i-rmlq"></span><h2>RobotML Quickstart<a class="headerlink" href="#robotml-quickstart" title="Permalink to this headline">¶</a></h2>
+<p>In this section, we&#8217;ll show you some steps in order to let you</p>
+</div>
+<div class="section" id="origin-of-robotml">
+<span id="itr-i-orml"></span><h2>Origin of RobotML<a class="headerlink" href="#origin-of-robotml" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference internal" href="../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> platform has been created thanks to the French <a class="reference internal" href="../Glossary.html#term-anr"><em class="xref std std-term">ANR</em></a> <a class="reference internal" href="../Glossary.html#term-proteus"><em class="xref std std-term">PROTEUS</em></a> project.
+It seems polite to say some words about it.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ProteusProject.html">PROTEUS as a project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ProteusRoboticCommunity.html">PROTEUS and the Robotic community</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
       <div class="clearer"></div>
     </div>
     <div class="related">
@@ -109,17 +159,17 @@ It is of more importance to read the description of the <a class="reference inte
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="ProteusProject.html" title="PROTEUS as a project"
+          <a href="LifeCycle.html" title="Life cycle"
              >next</a> |</li>
         <li class="right" >
           <a href="../index.html" title="RobotML Documentation"
              >previous</a> |</li>
-        <li><a href="../index.html">RobotML 2.0alpha documentation</a> &raquo;</li> 
+        <li><a href="../index.html">RobotML  documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2009-2014, PROTEUS consortium.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+        &copy; Copyright 2009-2014, PROTEUS consortium, Nicolas Brodnan, Saadia Dhouib, Nicolas Dulac, Jean-Loup Farges, Bruno Patin.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.
     </div>
   </body>
 </html>

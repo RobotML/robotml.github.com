@@ -6,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>OROCOS RobotML Generator &mdash; RobotML 2.0alpha documentation</title>
+    <title>OROCOS ROBOTML Generator &mdash; RobotML  documentation</title>
     
-    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0alpha',
+        VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="RobotML 2.0alpha documentation" href="../../index.html" />
+    <link rel="top" title="RobotML  documentation" href="../../index.html" />
     <link rel="up" title="RobotML Code Generators" href="../index.html" />
     <link rel="next" title="RTMAPS RobotML Generator" href="../RTMAPSGenerator/index.html" />
     <link rel="prev" title="MORSE RobotML Generator" href="../MORSEGenerator/index.html" /> 
@@ -41,27 +41,21 @@
         <li class="right" >
           <a href="../MORSEGenerator/index.html" title="MORSE RobotML Generator"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li>
+        <li><a href="../../index.html">RobotML  documentation</a> &raquo;</li>
           <li><a href="../index.html" accesskey="U">RobotML Code Generators</a> &raquo;</li> 
       </ul>
-    </div>  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body">
-            
-  <div class="section" id="orocos-robotml-generator">
-<h1>OROCOS RobotML Generator<a class="headerlink" href="#orocos-robotml-generator" title="Permalink to this headline">¶</a></h1>
-<p>TBD</p>
-</div>
-
-
-          </div>
-        </div>
-      </div>
+    </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">OROCOS ROBOTML Generator</a><ul>
+<li><a class="reference internal" href="#orocos-middleware-open-robot-control-software">OROCOS middleware (Open Robot Control Software)</a></li>
+<li><a class="reference internal" href="#orocos-code-generator">OROCOS Code Generator</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="../MORSEGenerator/index.html"
                         title="previous chapter">MORSE RobotML Generator</a></p>
@@ -88,6 +82,40 @@
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="orocos-robotml-generator">
+<h1>OROCOS ROBOTML Generator<a class="headerlink" href="#orocos-robotml-generator" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="orocos-middleware-open-robot-control-software">
+<h2>OROCOS middleware (Open Robot Control Software)<a class="headerlink" href="#orocos-middleware-open-robot-control-software" title="Permalink to this headline">¶</a></h2>
+<p>OROCOS is a real-time component-based framework, also called OROCOS-RTT (Real-Time Toolkit) for its real-time aspects. OROCOS components interact by exchanging data, events or services through ports. Data exchange is performed through input/output data flow ports. Services are implemented as Interface operations. OROCOS allows also the definition of components behaviors as state machines using the package rFSM.</p>
+</div>
+<div class="section" id="orocos-code-generator">
+<h2>OROCOS Code Generator<a class="headerlink" href="#orocos-code-generator" title="Permalink to this headline">¶</a></h2>
+<p>OROCOS code generator implements model to text transformations using Acceleo.
+Transformation rules link RobotML concepts (which gather the DSL architecture, the DSL control and the DSL communication) to OROCOS concepts. The code is available here <a class="reference external" href="https://github.com/RobotML/RobotML-SDK/tree/master/robotml-kepler/generators/OROCOS">https://github.com/RobotML/RobotML-SDK/tree/master/robotml-kepler/generators/OROCOS</a>
+The OROCOS code generator takes input from a RobotML model and provides:
+* OROCOS components (hpp, cpp files).
+* Interfaces (hpp files) which define a set of abstract operations.
+* Data Structures (.hpp files) representing user defined data types.
+* a configuration file (OROCOS Program Script: OPS file) to configurate communication between components.
+* RTT-LUA components (lua files) which load the state machines describing the behavior of components
+* LUA state machines (lua files) implemented using the rFSM package where states, transitions, events, effects and guard are explicitly specified.</p>
+<p>OROCOS generator aims at providing an executable application. To do so, a set of artifacts are also generated:
+- A makefile
+- A Cmakelists.txt where the components to be loaded are specified.
+- A manifest.xml file which specifies which libraries has to be imported.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
       <div class="clearer"></div>
     </div>
     <div class="related">
@@ -102,13 +130,13 @@
         <li class="right" >
           <a href="../MORSEGenerator/index.html" title="MORSE RobotML Generator"
              >previous</a> |</li>
-        <li><a href="../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li>
+        <li><a href="../../index.html">RobotML  documentation</a> &raquo;</li>
           <li><a href="../index.html" >RobotML Code Generators</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2009-2014, PROTEUS consortium.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+        &copy; Copyright 2009-2014, PROTEUS consortium, Nicolas Brodnan, Saadia Dhouib, Nicolas Dulac, Jean-Loup Farges, Bruno Patin.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.
     </div>
   </body>
 </html>

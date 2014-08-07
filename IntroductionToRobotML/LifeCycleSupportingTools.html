@@ -6,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Supporting Life cycle through associated tools &mdash; RobotML 2.0alpha documentation</title>
+    <title>Supporting Life cycle through associated tools &mdash; RobotML  documentation</title>
     
-    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.0alpha',
+        VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,9 +23,9 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="RobotML 2.0alpha documentation" href="../index.html" />
+    <link rel="top" title="RobotML  documentation" href="../index.html" />
     <link rel="up" title="Introduction to RobotML" href="index.html" />
-    <link rel="next" title="Downloading and installing" href="DownloadingAndInstalling.html" />
+    <link rel="next" title="PROTEUS as a project" href="ProteusProject.html" />
     <link rel="prev" title="Life cycle" href="LifeCycle.html" /> 
   </head>
   <body>
@@ -36,15 +36,61 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="DownloadingAndInstalling.html" title="Downloading and installing"
+          <a href="ProteusProject.html" title="PROTEUS as a project"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="LifeCycle.html" title="Life cycle"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">RobotML 2.0alpha documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Introduction to RobotML</a> &raquo;</li> 
+        <li><a href="../index.html">RobotML  documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Introduction to <tt class="docutils literal"><span class="pre">RobotML</span></tt></a> &raquo;</li> 
       </ul>
-    </div>  
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Supporting Life cycle through associated tools</a><ul>
+<li><a class="reference internal" href="#presentation">Presentation</a></li>
+<li><a class="reference internal" href="#short-stories">short stories</a><ul>
+<li><a class="reference internal" href="#betty-and-the-navaid">Betty and the navaid</a></li>
+<li><a class="reference internal" href="#richard-and-his-phd">Richard and his PhD</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#presentation-of-each-step-and-suppporting-tooling">Presentation of each step and suppporting tooling</a><ul>
+<li><a class="reference internal" href="#formal-robotician-portal">Formal Robotician Portal</a></li>
+<li><a class="reference internal" href="#robotml"><tt class="docutils literal"><span class="pre">RobotML</span></tt></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="LifeCycle.html"
+                        title="previous chapter">Life cycle</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="ProteusProject.html"
+                        title="next chapter">PROTEUS as a project</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/IntroductionToRobotML/LifeCycleSupportingTools.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
 
     <div class="document">
       <div class="documentwrapper">
@@ -76,7 +122,7 @@ create a problem. She characterises its access properties stating it is public f
 Those in charge of the portal, considering the information delivered agree on the creation of this space and then Betty is able
 to begin her job.</p>
 <p>She then upload to the portal through the defined channel and a space she wanted to be public a document describing what she
-needs the system to do and a video to illustrate it. She opens now the <em class="xref std std-term">RobotML</em> platform in order to model the scenario, specifying
+needs the system to do and a video to illustrate it. She opens now the <a class="reference internal" href="../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> platform in order to model the scenario, specifying
 her robot car, its associated system and the urban environment in which the scenario will take place. She precises in the model what
 should be measured through probes providing also a description of the criteria that will be derived of these metrics. Then, working
 with her IT department, she devised the generator and the environment models (libraries implementing walkers dynamic, car cinematic,
@@ -117,31 +163,31 @@ Thus, as he already had an account on the portal, he send the needed forms as pr
 He is now able to download a complete description and most importantly, their models.
 Shuffling through the three of them, he identified very soon that unhappily it would be very difficult to adapt the aircraft system model to integrate his algorithm proposal.
 On the contrary, Work onto the car system seems really easy and with work, adaptation to humanoïd is possible.</p>
-<p>Considering the first case, Richard now download the latest version of the <em class="xref std std-term">RobotML</em> platform and opens the car <em class="xref std std-term">problem</em>.
+<p>Considering the first case, Richard now download the latest version of the <a class="reference internal" href="../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> platform and opens the car <a class="reference internal" href="../Glossary.html#term-problem"><em class="xref std std-term">problem</em></a>.
 He can directly identify the component that would host his algorithm. Interface is almost the same but not exactly.
 Deciding not to optimise code, he introduces in the model a type translation component that adapts inputs to his algorithm needs.
-Then as there is no need on the output, he generates thanks to the platform using generator provided by the car <em class="xref std std-term">problem</em> <em class="xref std std-term">provider</em> a new simulator that includes his algorithm.
+Then as there is no need on the output, he generates thanks to the platform using generator provided by the car <a class="reference internal" href="../Glossary.html#term-problem"><em class="xref std std-term">problem</em></a> <a class="reference internal" href="../Glossary.html#term-provider"><em class="xref std std-term">provider</em></a> a new simulator that includes his algorithm.
 As it is he is now able to run tests and stores the data using the already defined probes and creating the metrics as defined in the problem description.
 Now using the criteria, he sees that he improves not so marginally localisation accuracy allowing the car to use less large roads.
-At this step he requests the <em class="xref std std-term">portal</em> responsible permission to open a <em class="xref std std-term">solution</em> page for him to record his results and do it.
+At this step he requests the <a class="reference internal" href="../Glossary.html#term-portal"><em class="xref std std-term">portal</em></a> responsible permission to open a <a class="reference internal" href="../Glossary.html#term-solution"><em class="xref std std-term">solution</em></a> page for him to record his results and do it.
 He publishes his achievements in th eproper review and goes on developing the theory associated with the algorithm using the insights gained thanks to the experimentation.</p>
 <p>Considering the second case, due to his Thesis work, Richard postpones the integration to future times.
 Three months before delivering his text to reviewers and willing to ease his mind he goes back to his idea to test the algorithm onto humanoïd.
 He again asks for permission to use the problem as his lease was time suspended.
-Again he obtained this permission from the <em class="xref std std-term">problem</em> <em class="xref std std-term">provider</em> and using his existing version of the platform opens the model in order to better understand the <em class="xref std std-term">robot</em> system.
-It really has to be adapted to accept his algorithm as the EM <em class="xref std std-term">sensors</em> are not providing the same type of information as those he waited for;
+Again he obtained this permission from the <a class="reference internal" href="../Glossary.html#term-problem"><em class="xref std std-term">problem</em></a> <a class="reference internal" href="../Glossary.html#term-provider"><em class="xref std std-term">provider</em></a> and using his existing version of the platform opens the model in order to better understand the <a class="reference internal" href="../Glossary.html#term-robot"><em class="xref std std-term">robot</em></a> system.
+It really has to be adapted to accept his algorithm as the EM <a class="reference internal" href="../Glossary.html#term-sensor"><em class="xref std std-term">sensors</em></a> are not providing the same type of information as those he waited for;
 Moreover, synchronisation needed between the two types of sensors is not at all the same.
-Richard adapts the model many times discussing with the <em class="xref std std-term">problem</em> <em class="xref std std-term">provider</em> in order to understand what some parts of the architecture are meaning.
+Richard adapts the model many times discussing with the <a class="reference internal" href="../Glossary.html#term-problem"><em class="xref std std-term">problem</em></a> <a class="reference internal" href="../Glossary.html#term-provider"><em class="xref std std-term">provider</em></a> in order to understand what some parts of the architecture are meaning.
 After some efforts and adaptations at the limit of the system capability he is able to generate the complete robot application.
 Doing the same job as previously he is able to issue results to oppose to the criteria defined and there he sees the limits of the algorithm tested.
-Discussing with the <em class="xref std std-term">provider</em> he sees a complete new way to understand the theory leading to a major update of the software.
+Discussing with the <a class="reference internal" href="../Glossary.html#term-provider"><em class="xref std std-term">provider</em></a> he sees a complete new way to understand the theory leading to a major update of the software.
 There again Richard opens a :term:<a href="#id1"><span class="problematic" id="id2">`</span></a>solution`space and uploads his solution.</p>
-<p>At this step, he considers that it could be a good idea to provide this code to the community and asks for opening a <em class="xref std std-term">module</em> <em class="xref std std-term">provider</em> space.
-When opened, he related this module to the two solutions developed and provide the model of the interface to be used inside the platform to be able to insert the algorithm in any other <em class="xref std std-term">problem</em>.
+<p>At this step, he considers that it could be a good idea to provide this code to the community and asks for opening a <a class="reference internal" href="../Glossary.html#term-module"><em class="xref std std-term">module</em></a> <a class="reference internal" href="../Glossary.html#term-provider"><em class="xref std std-term">provider</em></a> space.
+When opened, he related this module to the two solutions developed and provide the model of the interface to be used inside the platform to be able to insert the algorithm in any other <a class="reference internal" href="../Glossary.html#term-problem"><em class="xref std std-term">problem</em></a>.
 Eventually he also provieds the source code through a packaged file and a C library on x86 architecture.</p>
 <p>It&#8217;s time now to present his final results in front of his PhD Jury.
 All goes smoothly but during the questions time, in the audience, someone requests some specific explanations onto the determinism of the solution and if it could be embedded in some limited memory architecture.
-Answering positively, Richard is surprised after the Jury felicited him to be proposed a job from the questioner in order to come in the car company that provided the <em class="xref std std-term">problem</em>.</p>
+Answering positively, Richard is surprised after the Jury felicited him to be proposed a job from the questioner in order to come in the car company that provided the <a class="reference internal" href="../Glossary.html#term-problem"><em class="xref std std-term">problem</em></a>.</p>
 </div>
 </div>
 <div class="section" id="presentation-of-each-step-and-suppporting-tooling">
@@ -149,14 +195,14 @@ Answering positively, Richard is surprised after the Jury felicited him to be pr
 <p>These two stories are happy ones for sure and shows the type of impact that can be achieved if Robotic community agrees to use such a portal and its associated tools.</p>
 <div class="section" id="formal-robotician-portal">
 <h3>Formal Robotician Portal<a class="headerlink" href="#formal-robotician-portal" title="Permalink to this headline">¶</a></h3>
-<p>This portal is the first supporting tool and a very important one. In fact it is the place where everything can be exchanged, worked between <em class="xref std std-term">providers</em> and <em class="xref std std-term">users</em>.
-It manages the access, provides the  different needed spaces, <em class="xref std std-term">SVN</em> services, implements the life cycle.</p>
+<p>This portal is the first supporting tool and a very important one. In fact it is the place where everything can be exchanged, worked between <a class="reference internal" href="../Glossary.html#term-provider"><em class="xref std std-term">providers</em></a> and <a class="reference internal" href="../Glossary.html#term-user"><em class="xref std std-term">users</em></a>.
+It manages the access, provides the  different needed spaces, <a class="reference internal" href="../Glossary.html#term-svn"><em class="xref std std-term">SVN</em></a> services, implements the life cycle.</p>
 </div>
 <div class="section" id="robotml">
-<h3><em class="xref std std-term">RobotML</em><a class="headerlink" href="#robotml" title="Permalink to this headline">¶</a></h3>
+<h3><a class="reference internal" href="../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a><a class="headerlink" href="#robotml" title="Permalink to this headline">¶</a></h3>
 <p>This tool is not usable in itself as it is the definition of the language that is implemented in the tool to come.
 Nevertheless, the definition of this language is not to be confused with its implementation through any tool.
-Anybody able to answer this definition can provide model (either <em class="xref std std-term">problem</em> or <em class="xref std std-term">solution</em>).</p>
+Anybody able to answer this definition can provide model (either <a class="reference internal" href="../Glossary.html#term-problem"><em class="xref std std-term">problem</em></a> or <a class="reference internal" href="../Glossary.html#term-solution"><em class="xref std std-term">solution</em></a>).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -173,52 +219,6 @@ Anybody able to answer this definition can provide model (either <em class="xref
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Supporting Life cycle through associated tools</a><ul>
-<li><a class="reference internal" href="#presentation">Presentation</a></li>
-<li><a class="reference internal" href="#short-stories">short stories</a><ul>
-<li><a class="reference internal" href="#betty-and-the-navaid">Betty and the navaid</a></li>
-<li><a class="reference internal" href="#richard-and-his-phd">Richard and his PhD</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#presentation-of-each-step-and-suppporting-tooling">Presentation of each step and suppporting tooling</a><ul>
-<li><a class="reference internal" href="#formal-robotician-portal">Formal Robotician Portal</a></li>
-<li><a class="reference internal" href="#robotml"><tt class="docutils literal"><span class="pre">RobotML</span></tt></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="LifeCycle.html"
-                        title="previous chapter">Life cycle</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="DownloadingAndInstalling.html"
-                        title="next chapter">Downloading and installing</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../_sources/IntroductionToRobotML/LifeCycleSupportingTools.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
       <div class="clearer"></div>
     </div>
     <div class="related">
@@ -228,18 +228,18 @@ Anybody able to answer this definition can provide model (either <em class="xref
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="DownloadingAndInstalling.html" title="Downloading and installing"
+          <a href="ProteusProject.html" title="PROTEUS as a project"
              >next</a> |</li>
         <li class="right" >
           <a href="LifeCycle.html" title="Life cycle"
              >previous</a> |</li>
-        <li><a href="../index.html">RobotML 2.0alpha documentation</a> &raquo;</li>
-          <li><a href="index.html" >Introduction to RobotML</a> &raquo;</li> 
+        <li><a href="../index.html">RobotML  documentation</a> &raquo;</li>
+          <li><a href="index.html" >Introduction to <tt class="docutils literal"><span class="pre">RobotML</span></tt></a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2009-2014, PROTEUS consortium.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+        &copy; Copyright 2009-2014, PROTEUS consortium, Nicolas Brodnan, Saadia Dhouib, Nicolas Dulac, Jean-Loup Farges, Bruno Patin.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.
     </div>
   </body>
 </html>

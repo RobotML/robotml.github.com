@@ -6,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>RobotML platform installation from update site &mdash; RobotML 2.0alpha documentation</title>
+    <title>RobotML platform installation from update site &mdash; RobotML  documentation</title>
     
-    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0alpha',
+        VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="RobotML 2.0alpha documentation" href="../../index.html" /> 
+    <link rel="top" title="RobotML  documentation" href="../../index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -32,119 +32,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
-        <li><a href="../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li> 
+        <li><a href="../../index.html">RobotML  documentation</a> &raquo;</li> 
       </ul>
-    </div>  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body">
-            
-  <div class="section" id="robotml-platform-installation-from-update-site">
-<span id="dg-ifd-rpi"></span><h1><em class="xref std std-term">RobotML</em> platform installation from update site<a class="headerlink" href="#robotml-platform-installation-from-update-site" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>As it was discussed in the <a class="reference internal" href="../../HowToUseRobotML/PlatformInstallation/InstallRobotmlTooling.html#ug-pi-irt"><em>RobotML tooling installation page</em></a>, The RobotML platform is constituted of many components. As a developer or for your information as an advanced user, you can be interested to discover it. Here follows the detailed description of how to install its many components one after the other.</p>
-<p>Directives provided here allow to install the complete platform for modelling, code generation and validation.</p>
-</div>
-<div class="section" id="how-to-install-modelling-components">
-<h2>How to install Modelling components<a class="headerlink" href="#how-to-install-modelling-components" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><ol class="arabic">
-<li><p class="first">Install the latest version of eclipse Juno: you have to download it from <a class="reference external" href="http://www.eclipse.org/downloads/packages/eclipse-modeling-tools/junosr1">Juno eclipse website</a>, then, if java is installed and thus whatever the OS</p>
-</li>
-<li><p class="first">Install the latest version of Papyrus</p>
-<blockquote>
-<div><ol class="loweralpha simple">
-<li>Open the modelling panel: on the menu, choose <em>help</em> then in it choose <em>Install modeling components</em></li>
-<li>select <em class="xref std std-term">papyrus</em> component:</li>
-</ol>
-</div></blockquote>
-</li>
-</ol>
-</div></blockquote>
-<div class="figure align-center">
-<a class="reference internal image-reference" href="../../_images/ModelingComponents.png"><img alt="Modeling components installation panel" src="../../_images/ModelingComponents.png" style="width: 400px;" /></a>
-<p class="caption"><em>Modeling components installation panel</em></p>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The modelling panel is in fact just a shortcut to the classical eclipse installation methodology. After installing eclipse Juno, you can click on <em>Help then Install New Software</em> then add the different needed update site linked to the three different component quoted above (The <a class="reference internal" href="../../Glossary.html#g"><em>glossary</em></a> provides more information on where to find the specific needed information for each of them).</p>
-</div>
-</div>
-<div class="section" id="how-to-install-mandatory-components-for-robotml-platflorm">
-<h2>How to install mandatory components for RobotML platflorm<a class="headerlink" href="#how-to-install-mandatory-components-for-robotml-platflorm" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><ol class="arabic simple">
-<li>How to install <em class="xref std std-term">RobotML</em> Modeling tools: the language is based upon <em class="xref std std-term">papyrus</em> framework. It is installed thanks to the update site mechanism as (choose help/install new software in <em class="xref std std-term">eclipse</em>):</li>
-</ol>
-</div></blockquote>
-<div class="figure align-center">
-<a class="reference internal image-reference" href="../../_images/InstallNewSoftwarePanel.png"><img alt="Install new software panel" src="../../_images/InstallNewSoftwarePanel.png" style="width: 600px;" /></a>
-<p class="caption"><em>Install new software panel accessible from help menu</em></p>
-<div class="legend">
-<blockquote>
-<div><ol class="arabic simple" start="2">
-<li>It is necessary to create an update site in order to install <em class="xref std std-term">RobotML</em> thus after selecting add button, the following panel appears.</li>
-</ol>
-</div></blockquote>
-</div>
-</div>
-<div class="figure align-center">
-<a class="reference internal image-reference" href="../../_images/UpdateSiteDefinitionPanel.png"><img alt="Definition of update site panel" src="../../_images/UpdateSiteDefinitionPanel.png" style="width: 300px;" /></a>
-<p class="caption"><em>Definition of update site panel accessible from add button</em></p>
-<div class="legend">
-<blockquote>
-<div><blockquote>
-<div><ol class="loweralpha simple">
-<li>You should add a name to your update site. RobotML name is not mandatory but is useful if you have to edit it in order to recognise your update site easily in the list.</li>
-<li>Location is mandatory and is <em>http://proteus.bourges.univ-orleans.fr/modelling_platform/org.eclipse.papyrus.robotml.update.site</em>.</li>
-</ol>
-</div></blockquote>
-<ol class="arabic simple" start="3">
-<li>Select <em class="xref std std-term">RobotML</em> Modeling Tools and follow the procedure</li>
-</ol>
-</div></blockquote>
-</div>
-</div>
-<div class="figure align-center">
-<a class="reference internal image-reference" href="../../_images/SelectionOfRobotMLComponents.png"><img alt="Selection of RobotML update site components" src="../../_images/SelectionOfRobotMLComponents.png" style="width: 500px;" /></a>
-<p class="caption"><em>RobotML components to select</em></p>
-</div>
-</div>
-<div class="section" id="install-svn">
-<h2>Install SVN<a class="headerlink" href="#install-svn" title="Permalink to this headline">¶</a></h2>
-<p><em class="xref std std-term">SVN</em> is extremely important to the project as it is one of the <em class="xref std std-term">portal</em>/<em class="xref std std-term">RobotML</em> platform connection link. In order to install it, there are two steps:</p>
-<blockquote>
-<div><ol class="arabic">
-<li><p class="first">Find the latest version of Eclipse update site</p>
-<blockquote>
-<div><ol class="loweralpha simple">
-<li>at go to <a class="reference external" href="http://subclipse.tigris.org/servlets/ProjectProcess?pageID=p4wYuA">http://subclipse.tigris.org/servlets/ProjectProcess?pageID=p4wYuA</a></li>
-</ol>
-</div></blockquote>
-</li>
-</ol>
-</div></blockquote>
-<div class="figure align-center">
-<a class="reference internal image-reference" href="../../_images/InstallSVN-Portal.png"><img alt="Determination of SVN update site" src="../../_images/InstallSVN-Portal.png" style="width: 500px;" /></a>
-<p class="caption"><em>SVN update site web address</em></p>
-<div class="legend">
-<blockquote>
-<div><ol class="arabic simple" start="2">
-<li>Use the address in <em class="xref std std-term">eclipse</em> in order to install <em class="xref std std-term">SVN</em> component.</li>
-</ol>
-</div></blockquote>
-</div>
-</div>
-</div>
-</div>
-
-
-          </div>
-        </div>
-      </div>
+    </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../index.html">Table Of Contents</a></h3>
@@ -178,6 +68,116 @@
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="robotml-platform-installation-from-update-site">
+<span id="dg-ifd-rpi"></span><h1><a class="reference internal" href="../../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> platform installation from update site<a class="headerlink" href="#robotml-platform-installation-from-update-site" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>As it was discussed in the <a class="reference internal" href="../../HowToUseRobotML/PlatformInstallation/InstallRobotmlTooling.html#ug-pi-irt"><em>RobotML tooling installation page</em></a>, The RobotML platform is constituted of many components. As a developer or for your information as an advanced user, you can be interested to discover it. Here follows the detailed description of how to install its many components one after the other.</p>
+<p>Directives provided here allow to install the complete platform for modelling, code generation and validation.</p>
+</div>
+<div class="section" id="how-to-install-modelling-components">
+<h2>How to install Modelling components<a class="headerlink" href="#how-to-install-modelling-components" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Install the latest version of eclipse Juno: you have to download it from <a class="reference external" href="http://www.eclipse.org/downloads/packages/eclipse-modeling-tools/junosr1">Juno eclipse website</a>, then, if java is installed and thus whatever the OS</p>
+</li>
+<li><p class="first">Install the latest version of Papyrus</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>Open the modelling panel: on the menu, choose <em>help</em> then in it choose <em>Install modeling components</em></li>
+<li>select <a class="reference internal" href="../../Glossary.html#term-34"><em class="xref std std-term">papyrus</em></a> component:</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/ModelingComponents.png"><img alt="Modeling components installation panel" src="../../_images/ModelingComponents.png" style="width: 400px;" /></a>
+<p class="caption"><em>Modeling components installation panel</em></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The modelling panel is in fact just a shortcut to the classical eclipse installation methodology. After installing eclipse Juno, you can click on <em>Help then Install New Software</em> then add the different needed update site linked to the three different component quoted above (The <a class="reference internal" href="../../Glossary.html#g"><em>glossary</em></a> provides more information on where to find the specific needed information for each of them).</p>
+</div>
+</div>
+<div class="section" id="how-to-install-mandatory-components-for-robotml-platflorm">
+<h2>How to install mandatory components for RobotML platflorm<a class="headerlink" href="#how-to-install-mandatory-components-for-robotml-platflorm" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
+<li>How to install <a class="reference internal" href="../../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> Modeling tools: the language is based upon <a class="reference internal" href="../../Glossary.html#term-34"><em class="xref std std-term">papyrus</em></a> framework. It is installed thanks to the update site mechanism as (choose help/install new software in <a class="reference internal" href="../../Glossary.html#term-eclipse"><em class="xref std std-term">eclipse</em></a>):</li>
+</ol>
+</div></blockquote>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/InstallNewSoftwarePanel.png"><img alt="Install new software panel" src="../../_images/InstallNewSoftwarePanel.png" style="width: 600px;" /></a>
+<p class="caption"><em>Install new software panel accessible from help menu</em></p>
+<div class="legend">
+<blockquote>
+<div><ol class="arabic simple" start="2">
+<li>It is necessary to create an update site in order to install <a class="reference internal" href="../../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> thus after selecting add button, the following panel appears.</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/UpdateSiteDefinitionPanel.png"><img alt="Definition of update site panel" src="../../_images/UpdateSiteDefinitionPanel.png" style="width: 300px;" /></a>
+<p class="caption"><em>Definition of update site panel accessible from add button</em></p>
+<div class="legend">
+<blockquote>
+<div><blockquote>
+<div><ol class="loweralpha simple">
+<li>You should add a name to your update site. RobotML name is not mandatory but is useful if you have to edit it in order to recognise your update site easily in the list.</li>
+<li>Location is mandatory and is <em>http://proteus.bourges.univ-orleans.fr/modelling_platform/org.eclipse.papyrus.robotml.update.site</em>.</li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li>Select <a class="reference internal" href="../../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> Modeling Tools and follow the procedure</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/SelectionOfRobotMLComponents.png"><img alt="Selection of RobotML update site components" src="../../_images/SelectionOfRobotMLComponents.png" style="width: 500px;" /></a>
+<p class="caption"><em>RobotML components to select</em></p>
+</div>
+</div>
+<div class="section" id="install-svn">
+<h2>Install SVN<a class="headerlink" href="#install-svn" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="../../Glossary.html#term-svn"><em class="xref std std-term">SVN</em></a> is extremely important to the project as it is one of the <a class="reference internal" href="../../Glossary.html#term-portal"><em class="xref std std-term">portal</em></a>/<a class="reference internal" href="../../Glossary.html#term-robotml"><em class="xref std std-term">RobotML</em></a> platform connection link. In order to install it, there are two steps:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Find the latest version of Eclipse update site</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>at go to <a class="reference external" href="http://subclipse.tigris.org/servlets/ProjectProcess?pageID=p4wYuA">http://subclipse.tigris.org/servlets/ProjectProcess?pageID=p4wYuA</a></li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/InstallSVN-Portal.png"><img alt="Determination of SVN update site" src="../../_images/InstallSVN-Portal.png" style="width: 500px;" /></a>
+<p class="caption"><em>SVN update site web address</em></p>
+<div class="legend">
+<blockquote>
+<div><ol class="arabic simple" start="2">
+<li>Use the address in <a class="reference internal" href="../../Glossary.html#term-eclipse"><em class="xref std std-term">eclipse</em></a> in order to install <a class="reference internal" href="../../Glossary.html#term-svn"><em class="xref std std-term">SVN</em></a> component.</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
       <div class="clearer"></div>
     </div>
     <div class="related">
@@ -186,12 +186,12 @@
         <li class="right" style="margin-right: 10px">
           <a href="../../genindex.html" title="General Index"
              >index</a></li>
-        <li><a href="../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li> 
+        <li><a href="../../index.html">RobotML  documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2009-2014, PROTEUS consortium.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+        &copy; Copyright 2009-2014, PROTEUS consortium, Nicolas Brodnan, Saadia Dhouib, Nicolas Dulac, Jean-Loup Farges, Bruno Patin.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.
     </div>
   </body>
 </html>

@@ -6,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Install RobotML-sdk &mdash; RobotML 2.0alpha documentation</title>
+    <title>Install RobotML-sdk &mdash; RobotML  documentation</title>
     
-    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0alpha',
+        VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,9 +23,9 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="RobotML 2.0alpha documentation" href="../../index.html" />
-    <link rel="up" title="Platform Installation" href="../PlatformInstallation.html" />
-    <link rel="next" title="Examples of Use" href="../ExamplesOfUse.html" />
+    <link rel="top" title="RobotML  documentation" href="../../index.html" />
+    <link rel="up" title="Platform Installation" href="../ModellingComponents.html" />
+    <link rel="next" title="Generation" href="../RobotMLGenerationProcess/Generation.html" />
     <link rel="prev" title="Install RobotML Tooling" href="InstallRobotmlTooling.html" /> 
   </head>
   <body>
@@ -36,16 +36,56 @@
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../ExamplesOfUse.html" title="Examples of Use"
+          <a href="../RobotMLGenerationProcess/Generation.html" title="Generation"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="InstallRobotmlTooling.html" title="Install RobotML Tooling"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li>
-          <li><a href="../index.html" >User Guide</a> &raquo;</li>
-          <li><a href="../PlatformInstallation.html" accesskey="U">Platform Installation</a> &raquo;</li> 
+        <li><a href="../../index.html">RobotML  documentation</a> &raquo;</li>
+          <li><a href="../index.html" >How to use RobotML</a> &raquo;</li>
+          <li><a href="../ModellingComponents.html" accesskey="U">Platform Installation</a> &raquo;</li> 
       </ul>
-    </div>  
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Install RobotML-sdk</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#robotml-sdk-constitution">RobotML-sdk constitution</a></li>
+<li><a class="reference internal" href="#ubuntu-installation">Ubuntu installation</a></li>
+<li><a class="reference internal" href="#menu-installation">Menu installation</a></li>
+<li><a class="reference internal" href="#authoring">Authoring</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="InstallRobotmlTooling.html"
+                        title="previous chapter">Install <tt class="docutils literal"><span class="pre">RobotML</span></tt> Tooling</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../RobotMLGenerationProcess/Generation.html"
+                        title="next chapter">Generation</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/HowToUseRobotML/PlatformInstallation/InstallProteusDistribution.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
 
     <div class="document">
       <div class="documentwrapper">
@@ -54,11 +94,11 @@
             
   <div class="section" id="install-robotml-sdk">
 <span id="ug-pi-ipd"></span><h1>Install RobotML-sdk<a class="headerlink" href="#install-robotml-sdk" title="Permalink to this headline">¶</a></h1>
-<p>This presentation aims at helping you to install <em class="xref std std-term">RobotML-sdk</em>.</p>
+<p>This presentation aims at helping you to install <a class="reference internal" href="../../Glossary.html#term-robotml-sdk"><em class="xref std std-term">RobotML-sdk</em></a>.</p>
 <p>More information is available in different locations:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li>As this sdk was developed thanks to the <em class="xref std std-term">PROTEUS</em> project, information can be found on its <a class="reference external" href="http://anr-proteus.fr/">website,  anr-proteus.fr</a>;</li>
+<li>As this sdk was developed thanks to the <a class="reference internal" href="../../Glossary.html#term-proteus"><em class="xref std std-term">PROTEUS</em></a> project, information can be found on its <a class="reference external" href="http://anr-proteus.fr/">website,  anr-proteus.fr</a>;</li>
 <li>The <a class="reference external" href="http://anr-proteus.fr/">Formal robotic portal</a> is the place where all accessible information, data, tools, etc can be found;</li>
 <li>This very document includes a <a class="reference internal" href="../../old-DevGuide/InstallationForDevelopers/RevisitOfDistributionInstallation.html#dg-ifd-rodi"><em>detailed description</em></a> of the different tools installed and how to test their correct installation using a specific installer.</li>
 </ol>
@@ -68,9 +108,9 @@
 <div class="figure align-center">
 <a class="reference internal image-reference" href="../../_images/proteus.svg"><img alt="proteus" src="../../_images/proteus.svg" width="600px" /></a>
 </div>
-<p><em class="xref std std-term">RobotML-sdk</em> is a set of tools developed or selected within the PROTEUS project when specifying it. As already explained and shown again on the picture,
+<p><a class="reference internal" href="../../Glossary.html#term-robotml-sdk"><em class="xref std std-term">RobotML-sdk</em></a> is a set of tools developed or selected within the PROTEUS project when specifying it. As already explained and shown again on the picture,
 in order to provide the whole power of RobotML, there is a need to provide the different possible targets on which
-to generate actual behaviour for the robot either in <em class="xref std std-term">simulators</em> or in actual robots.
+to generate actual behaviour for the robot either in <a class="reference internal" href="../../Glossary.html#term-simulator"><em class="xref std std-term">simulators</em></a> or in actual robots.
 It is available as a set of Debian packages for the selected project&#8217;s operating system Ubuntu Linux distribution.</p>
 <p>Those tools are up-to-date on PROTEUS APT repository hosted by <a class="reference external" href="http://proteus.bourges.univ-orleans.fr">univ-orleans.fr</a>.</p>
 <div class="admonition warning">
@@ -129,46 +169,6 @@ It is available as a set of Debian packages for the selected project&#8217;s ope
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../../index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Install RobotML-sdk</a><ul>
-<li><a class="reference internal" href="#introduction">Introduction</a></li>
-<li><a class="reference internal" href="#robotml-sdk-constitution">RobotML-sdk constitution</a></li>
-<li><a class="reference internal" href="#ubuntu-installation">Ubuntu installation</a></li>
-<li><a class="reference internal" href="#menu-installation">Menu installation</a></li>
-<li><a class="reference internal" href="#authoring">Authoring</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="InstallRobotmlTooling.html"
-                        title="previous chapter">Install <tt class="docutils literal"><span class="pre">RobotML</span></tt> Tooling</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="../ExamplesOfUse.html"
-                        title="next chapter">Examples of Use</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../../_sources/HowToUseRobotML/PlatformInstallation/InstallProteusDistribution.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
       <div class="clearer"></div>
     </div>
     <div class="related">
@@ -178,19 +178,19 @@ It is available as a set of Debian packages for the selected project&#8217;s ope
           <a href="../../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="../ExamplesOfUse.html" title="Examples of Use"
+          <a href="../RobotMLGenerationProcess/Generation.html" title="Generation"
              >next</a> |</li>
         <li class="right" >
           <a href="InstallRobotmlTooling.html" title="Install RobotML Tooling"
              >previous</a> |</li>
-        <li><a href="../../index.html">RobotML 2.0alpha documentation</a> &raquo;</li>
-          <li><a href="../index.html" >User Guide</a> &raquo;</li>
-          <li><a href="../PlatformInstallation.html" >Platform Installation</a> &raquo;</li> 
+        <li><a href="../../index.html">RobotML  documentation</a> &raquo;</li>
+          <li><a href="../index.html" >How to use RobotML</a> &raquo;</li>
+          <li><a href="../ModellingComponents.html" >Platform Installation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2009-2014, PROTEUS consortium.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+        &copy; Copyright 2009-2014, PROTEUS consortium, Nicolas Brodnan, Saadia Dhouib, Nicolas Dulac, Jean-Loup Farges, Bruno Patin.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.
     </div>
   </body>
 </html>
